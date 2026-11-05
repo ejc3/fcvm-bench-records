@@ -27,3 +27,18 @@ included. Some third-party requests in the captured elmundo.es page carry the
 public IP address of the machine that captured the corpus (the same address is
 in fcvm's committed `bench/chromium/corpus-live/` bodies). Review that before
 making this repository public.
+
+## Raw records moved out of fcvm's tree
+
+Every raw file of every run fcvm kept under `bench/chromium/results/` at fcvm
+commit `7c62d332` (the per-request `reqbench.jsonl`, the analyzer's
+`analysis.json`, `restore-ack.jsonl`, the memory server's `logs/serve.log`,
+the replay listener and access logs, the scale runs' request, status,
+schedule and host-sample files, memory and hostcdp samples, and the cpuprobe
+curated records): 355 files, 1,291,655,008 bytes, at the same paths and with
+the same bytes. fcvm lists each file with its size and sha256 in
+`bench/chromium/results/records-<campaign>.json`, together with the commit
+here that holds it and the fcvm commit that last held it in its tree.
+`bench/chromium/records.py verify` in fcvm, with `FCVM_BENCH_RECORDS` naming
+a checkout of this repository, reads every listed file from both places and
+checks it.
