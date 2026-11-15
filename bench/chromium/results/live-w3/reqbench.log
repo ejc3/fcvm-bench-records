@@ -1,0 +1,871 @@
+==> Running gated Chromium request benchmark (uffd, 202 measured attempts per arm)...
+18:53:08 load=1.79 vm-processes=0
+18:53:08 run: BACKEND=uffd — starting serve for cb-live-w3 (mode=copy prefetch=on)
+18:53:09 run: serve pid 58639 -> reqbench.py
+html-fast rep=0 [warmup] ok=True blocking=156.4ms wall=6419.6ms teardown=94.2ms
+cdp       rep=0 [warmup] ok=True blocking=191.3ms wall=258.9ms teardown=63.5ms
+noop      rep=0 [warmup] ok=True blocking=36.2ms wall=179.1ms teardown=113.5ms
+noop      rep=1 [warmup] ok=True blocking=38.4ms wall=181.2ms teardown=113.5ms
+cdp       rep=1 [warmup] ok=True blocking=662.2ms wall=727.2ms teardown=63.5ms
+html-fast rep=1 [warmup] ok=True blocking=569.6ms wall=666.6ms teardown=90.7ms
+html-fast rep=2 [warmup] ok=True blocking=558.9ms wall=658.6ms teardown=91.5ms
+noop      rep=2 [warmup] ok=True blocking=36.6ms wall=184.1ms teardown=113.6ms
+cdp       rep=2 [warmup] ok=True blocking=519.5ms wall=584.4ms teardown=63.5ms
+cdp       rep=3 [warmup] ok=True blocking=463.3ms wall=528.3ms teardown=63.5ms
+html-fast rep=3 [warmup] ok=True blocking=355.5ms wall=454.7ms teardown=92.1ms
+noop      rep=3 [warmup] ok=True blocking=38.7ms wall=185.6ms teardown=113.5ms
+html-fast rep=4 [warmup] ok=True blocking=432.4ms wall=527.5ms teardown=88.2ms
+noop      rep=4 [warmup] ok=True blocking=36.5ms wall=182.7ms teardown=113.5ms
+cdp       rep=4 [warmup] ok=True blocking=505.4ms wall=570.4ms teardown=63.5ms
+noop      rep=5 [warmup] ok=True blocking=34.7ms wall=178.4ms teardown=113.5ms
+cdp       rep=5 [warmup] ok=True blocking=436.4ms wall=501.3ms teardown=63.5ms
+html-fast rep=5 [warmup] ok=True blocking=336.3ms wall=435.1ms teardown=92.1ms
+html-fast rep=6 [warmup] ok=True blocking=32739.3ms wall=32855.9ms teardown=107.5ms
+cdp       rep=6 [warmup] ok=True blocking=61596.3ms wall=61663.7ms teardown=63.5ms
+noop      rep=6 [warmup] ok=True blocking=38.9ms wall=186.5ms teardown=113.5ms
+cdp       rep=7 [warmup] ok=True blocking=5012.4ms wall=5129.4ms teardown=113.5ms
+noop      rep=7 [warmup] ok=True blocking=36.6ms wall=184.4ms teardown=113.5ms
+html-fast rep=7 [warmup] ok=True blocking=2256.2ms wall=2378.3ms teardown=112.9ms
+noop      rep=8 [warmup] ok=True blocking=38.5ms wall=184.8ms teardown=113.6ms
+html-fast rep=8 [warmup] ok=True blocking=2205.6ms wall=2333.8ms teardown=117.1ms
+cdp       rep=8 [warmup] ok=True blocking=2111.0ms wall=2226.1ms teardown=113.5ms
+cdp       rep=9 [warmup] ok=True blocking=558.3ms wall=623.3ms teardown=63.5ms
+html-fast rep=9 [warmup] ok=True blocking=527.3ms wall=638.3ms teardown=101.9ms
+noop      rep=9 [warmup] ok=True blocking=38.5ms wall=184.7ms teardown=113.5ms
+cdp       rep=10 [warmup] ok=True blocking=3456.8ms wall=3521.7ms teardown=63.5ms
+noop      rep=10 [warmup] ok=True blocking=38.4ms wall=183.4ms teardown=113.6ms
+html-fast rep=10 [warmup] ok=True blocking=264.5ms wall=372.1ms teardown=99.2ms
+noop      rep=11 [warmup] ok=True blocking=36.5ms wall=186.1ms teardown=113.6ms
+html-fast rep=11 [warmup] ok=True blocking=347.9ms wall=455.9ms teardown=99.9ms
+cdp       rep=11 [warmup] ok=True blocking=346.2ms wall=411.2ms teardown=63.5ms
+html-fast rep=12 [warmup] ok=True blocking=380.8ms wall=487.7ms teardown=99.3ms
+cdp       rep=12 [warmup] ok=True blocking=357.9ms wall=422.8ms teardown=63.5ms
+noop      rep=12 [warmup] ok=True blocking=36.2ms wall=188.2ms teardown=113.5ms
+html-fast rep=13 [warmup] ok=True blocking=1396.1ms wall=1507.2ms teardown=102.4ms
+noop      rep=13 [warmup] ok=True blocking=36.6ms wall=185.5ms teardown=113.6ms
+cdp       rep=13 [warmup] ok=True blocking=340.8ms wall=405.6ms teardown=63.4ms
+noop      rep=14 [warmup] ok=True blocking=36.3ms wall=186.2ms teardown=113.6ms
+html-fast rep=14 [warmup] ok=True blocking=135.8ms wall=243.8ms teardown=100.5ms
+cdp       rep=14 [warmup] ok=True blocking=198.6ms wall=263.6ms teardown=63.5ms
+html-fast rep=15 [warmup] ok=True blocking=601.0ms wall=703.5ms teardown=95.1ms
+noop      rep=15 [warmup] ok=True blocking=34.6ms wall=180.0ms teardown=113.6ms
+cdp       rep=15 [warmup] ok=True blocking=609.8ms wall=674.8ms teardown=63.5ms
+cdp       rep=16 [warmup] ok=True blocking=501.2ms wall=566.1ms teardown=63.5ms
+noop      rep=16 [warmup] ok=True blocking=36.4ms wall=183.7ms teardown=113.6ms
+html-fast rep=16 [warmup] ok=True blocking=648.7ms wall=760.7ms teardown=104.8ms
+cdp       rep=17 [warmup] ok=True blocking=433.1ms wall=498.1ms teardown=63.5ms
+noop      rep=17 [warmup] ok=True blocking=36.5ms wall=184.6ms teardown=113.5ms
+html-fast rep=17 [warmup] ok=True blocking=335.8ms wall=446.9ms teardown=101.5ms
+noop      rep=18 [warmup] ok=True blocking=34.6ms wall=184.9ms teardown=113.5ms
+html-fast rep=18 [warmup] ok=True blocking=529.7ms wall=636.6ms teardown=99.3ms
+cdp       rep=18 [warmup] ok=True blocking=570.4ms wall=635.4ms teardown=63.5ms
+cdp       rep=19 [warmup] ok=True blocking=364.5ms wall=429.4ms teardown=63.5ms
+noop      rep=19 [warmup] ok=True blocking=38.5ms wall=188.0ms teardown=113.5ms
+html-fast rep=19 [warmup] ok=True blocking=318.6ms wall=423.7ms teardown=96.0ms
+html-fast rep=20 [warmup] ok=True blocking=31485.9ms wall=31610.5ms teardown=115.7ms
+noop      rep=20 [warmup] ok=True blocking=34.8ms wall=179.4ms teardown=113.5ms
+cdp       rep=20 [warmup] ok=True blocking=60677.7ms wall=60792.7ms teardown=113.5ms
+noop      rep=21 [warmup] ok=True blocking=36.4ms wall=183.1ms teardown=113.6ms
+html-fast rep=21 [warmup] ok=True blocking=4651.4ms wall=4781.5ms teardown=117.7ms
+cdp       rep=21 [warmup] ok=True blocking=2031.8ms wall=2146.8ms teardown=113.5ms
+noop      rep=22 [warmup] ok=True blocking=36.3ms wall=186.2ms teardown=113.5ms
+cdp       rep=22 [warmup] ok=True blocking=773.0ms wall=837.9ms teardown=63.5ms
+html-fast rep=22 [warmup] ok=True blocking=2172.4ms wall=2295.6ms teardown=113.5ms
+noop      rep=23 [warmup] ok=True blocking=38.6ms wall=180.7ms teardown=113.6ms
+cdp       rep=23 [warmup] ok=True blocking=410.1ms wall=475.0ms teardown=63.4ms
+html-fast rep=23 [warmup] ok=True blocking=285.8ms wall=399.0ms teardown=105.6ms
+cdp       rep=24 [warmup] ok=True blocking=412.0ms wall=477.0ms teardown=63.5ms
+html-fast rep=24 [warmup] ok=True blocking=276.0ms wall=382.3ms teardown=98.7ms
+noop      rep=24 [warmup] ok=True blocking=38.5ms wall=183.5ms teardown=113.5ms
+cdp       rep=25 [warmup] ok=True blocking=411.7ms wall=476.7ms teardown=63.5ms
+noop      rep=25 [warmup] ok=True blocking=36.4ms wall=180.3ms teardown=113.5ms
+html-fast rep=25 [warmup] ok=True blocking=269.7ms wall=384.2ms teardown=104.9ms
+cdp       rep=26 [warmup] ok=True blocking=360.1ms wall=425.0ms teardown=63.5ms
+noop      rep=26 [warmup] ok=True blocking=38.4ms wall=183.2ms teardown=113.5ms
+html-fast rep=26 [warmup] ok=True blocking=265.9ms wall=374.5ms teardown=101.2ms
+html-fast rep=27 [warmup] ok=True blocking=306.2ms wall=411.4ms teardown=97.4ms
+noop      rep=27 [warmup] ok=True blocking=36.4ms wall=187.9ms teardown=113.5ms
+cdp       rep=27 [warmup] ok=True blocking=324.3ms wall=389.2ms teardown=63.5ms
+html-fast rep=28 ok=True blocking=144.0ms wall=252.3ms teardown=99.0ms
+cdp       rep=28 ok=True blocking=192.6ms wall=259.1ms teardown=63.5ms
+noop      rep=28 ok=True blocking=34.1ms wall=179.5ms teardown=113.6ms
+cdp       rep=29 ok=True blocking=663.6ms wall=728.8ms teardown=63.5ms
+html-fast rep=29 ok=True blocking=576.5ms wall=681.5ms teardown=97.5ms
+noop      rep=29 ok=True blocking=34.5ms wall=180.0ms teardown=113.6ms
+html-fast rep=30 ok=True blocking=486.8ms wall=591.7ms teardown=97.6ms
+noop      rep=30 ok=True blocking=36.4ms wall=182.2ms teardown=113.5ms
+cdp       rep=30 ok=True blocking=562.0ms wall=626.9ms teardown=63.4ms
+html-fast rep=31 ok=True blocking=337.9ms wall=447.2ms teardown=101.6ms
+noop      rep=31 ok=True blocking=38.8ms wall=183.9ms teardown=113.6ms
+cdp       rep=31 ok=True blocking=409.1ms wall=474.0ms teardown=63.5ms
+noop      rep=32 ok=True blocking=38.4ms wall=183.5ms teardown=113.5ms
+cdp       rep=32 ok=True blocking=520.2ms wall=585.2ms teardown=63.5ms
+html-fast rep=32 ok=True blocking=440.7ms wall=546.6ms teardown=97.7ms
+html-fast rep=33 ok=True blocking=619.4ms wall=727.4ms teardown=99.4ms
+noop      rep=33 ok=True blocking=36.3ms wall=185.9ms teardown=113.6ms
+cdp       rep=33 ok=True blocking=392.3ms wall=457.2ms teardown=63.5ms
+noop      rep=34 ok=True blocking=38.2ms wall=183.4ms teardown=113.5ms
+html-fast rep=34 ok=True blocking=30581.4ms wall=30704.6ms teardown=114.6ms
+cdp       rep=34 ok=True blocking=30610.2ms wall=30725.3ms teardown=113.6ms
+html-fast rep=35 ok=True blocking=2103.4ms wall=2232.4ms teardown=115.5ms
+cdp       rep=35 ok=True blocking=2525.1ms wall=2640.1ms teardown=113.5ms
+noop      rep=35 ok=True blocking=38.5ms wall=191.7ms teardown=113.5ms
+cdp       rep=36 ok=True blocking=850.5ms wall=915.4ms teardown=63.5ms
+noop      rep=36 ok=True blocking=36.4ms wall=184.8ms teardown=113.5ms
+html-fast rep=36 ok=True blocking=2100.4ms wall=2219.5ms teardown=109.3ms
+cdp       rep=37 ok=True blocking=359.8ms wall=424.7ms teardown=63.5ms
+noop      rep=37 ok=True blocking=38.5ms wall=183.2ms teardown=113.6ms
+html-fast rep=37 ok=True blocking=306.8ms wall=411.5ms teardown=96.2ms
+cdp       rep=38 ok=True blocking=359.0ms wall=425.2ms teardown=63.5ms
+noop      rep=38 ok=True blocking=36.5ms wall=180.1ms teardown=113.6ms
+html-fast rep=38 ok=True blocking=262.2ms wall=383.1ms teardown=111.8ms
+noop      rep=39 ok=True blocking=36.5ms wall=181.6ms teardown=113.6ms
+cdp       rep=39 ok=True blocking=324.5ms wall=389.4ms teardown=63.5ms
+html-fast rep=39 ok=True blocking=267.5ms wall=375.7ms teardown=100.3ms
+html-fast rep=40 ok=True blocking=302.7ms wall=413.9ms teardown=100.5ms
+cdp       rep=40 ok=True blocking=328.1ms wall=393.1ms teardown=63.5ms
+noop      rep=40 ok=True blocking=34.2ms wall=183.3ms teardown=113.5ms
+noop      rep=41 ok=True blocking=36.4ms wall=182.2ms teardown=113.5ms
+html-fast rep=41 ok=True blocking=267.1ms wall=376.8ms teardown=102.2ms
+cdp       rep=41 ok=True blocking=294.1ms wall=359.0ms teardown=63.4ms
+html-fast rep=42 ok=True blocking=136.1ms wall=245.4ms teardown=100.1ms
+noop      rep=42 ok=True blocking=34.4ms wall=182.2ms teardown=113.6ms
+cdp       rep=42 ok=True blocking=176.5ms wall=244.1ms teardown=63.5ms
+html-fast rep=43 ok=True blocking=593.6ms wall=712.8ms teardown=108.7ms
+cdp       rep=43 ok=True blocking=1627.6ms wall=1692.6ms teardown=63.5ms
+noop      rep=43 ok=True blocking=38.6ms wall=184.4ms teardown=113.5ms
+noop      rep=44 ok=True blocking=36.2ms wall=183.5ms teardown=113.6ms
+cdp       rep=44 ok=True blocking=3539.0ms wall=3603.9ms teardown=63.4ms
+html-fast rep=44 ok=True blocking=472.0ms wall=582.0ms teardown=99.2ms
+noop      rep=45 ok=True blocking=34.3ms wall=181.1ms teardown=113.6ms
+html-fast rep=45 ok=True blocking=372.3ms wall=484.0ms teardown=103.8ms
+cdp       rep=45 ok=True blocking=402.9ms wall=469.6ms teardown=63.5ms
+html-fast rep=46 ok=True blocking=446.6ms wall=558.0ms teardown=103.1ms
+cdp       rep=46 ok=True blocking=471.7ms wall=536.7ms teardown=63.5ms
+noop      rep=46 ok=True blocking=36.5ms wall=185.6ms teardown=113.6ms
+cdp       rep=47 ok=True blocking=384.3ms wall=449.2ms teardown=63.5ms
+html-fast rep=47 ok=True blocking=1314.5ms wall=1424.1ms teardown=101.3ms
+noop      rep=47 ok=True blocking=36.4ms wall=179.2ms teardown=113.6ms
+cdp       rep=48 ok=True blocking=30643.2ms wall=30760.4ms teardown=113.5ms
+html-fast rep=48 ok=True blocking=31481.6ms wall=31617.4ms teardown=125.0ms
+noop      rep=48 ok=True blocking=36.5ms wall=184.5ms teardown=113.6ms
+cdp       rep=49 ok=True blocking=2169.8ms wall=2284.9ms teardown=113.5ms
+noop      rep=49 ok=True blocking=36.3ms wall=184.6ms teardown=113.5ms
+html-fast rep=49 ok=True blocking=2190.9ms wall=2320.9ms teardown=115.9ms
+noop      rep=50 ok=True blocking=36.7ms wall=183.2ms teardown=113.5ms
+html-fast rep=50 ok=True blocking=838.3ms wall=956.7ms teardown=106.4ms
+cdp       rep=50 ok=True blocking=2008.3ms wall=2125.6ms teardown=113.6ms
+noop      rep=51 ok=True blocking=38.4ms wall=186.0ms teardown=113.5ms
+cdp       rep=51 ok=True blocking=341.0ms wall=406.0ms teardown=63.5ms
+html-fast rep=51 ok=True blocking=304.2ms wall=414.4ms teardown=101.9ms
+html-fast rep=52 ok=True blocking=274.8ms wall=391.1ms teardown=107.3ms
+noop      rep=52 ok=True blocking=38.7ms wall=189.9ms teardown=113.5ms
+cdp       rep=52 ok=True blocking=325.5ms wall=390.4ms teardown=63.5ms
+html-fast rep=53 ok=True blocking=291.0ms wall=399.6ms teardown=101.2ms
+cdp       rep=53 ok=True blocking=326.5ms wall=392.7ms teardown=63.5ms
+noop      rep=53 ok=True blocking=36.3ms wall=182.3ms teardown=113.6ms
+noop      rep=54 ok=True blocking=38.5ms wall=185.0ms teardown=113.6ms
+cdp       rep=54 ok=True blocking=359.4ms wall=474.4ms teardown=113.5ms
+html-fast rep=54 ok=True blocking=334.5ms wall=445.1ms teardown=101.8ms
+noop      rep=55 ok=True blocking=36.8ms wall=183.9ms teardown=113.6ms
+cdp       rep=55 ok=True blocking=328.1ms wall=393.1ms teardown=63.5ms
+html-fast rep=55 ok=True blocking=261.9ms wall=365.4ms teardown=95.5ms
+cdp       rep=56 ok=True blocking=195.2ms wall=263.0ms teardown=63.5ms
+noop      rep=56 ok=True blocking=38.3ms wall=181.9ms teardown=113.6ms
+html-fast rep=56 ok=True blocking=141.1ms wall=248.4ms teardown=97.5ms
+cdp       rep=57 ok=True blocking=626.7ms wall=691.7ms teardown=63.5ms
+html-fast rep=57 ok=True blocking=601.3ms wall=708.4ms teardown=98.4ms
+noop      rep=57 ok=True blocking=36.4ms wall=185.6ms teardown=113.6ms
+cdp       rep=58 ok=True blocking=512.3ms wall=577.2ms teardown=63.4ms
+noop      rep=58 ok=True blocking=34.2ms wall=181.4ms teardown=113.6ms
+html-fast rep=58 ok=True blocking=468.7ms wall=572.2ms teardown=96.8ms
+cdp       rep=59 ok=True blocking=423.3ms wall=488.2ms teardown=63.4ms
+noop      rep=59 ok=True blocking=36.4ms wall=184.1ms teardown=113.6ms
+html-fast rep=59 ok=True blocking=455.4ms wall=558.8ms teardown=94.2ms
+cdp       rep=60 ok=True blocking=492.3ms wall=557.3ms teardown=63.5ms
+noop      rep=60 ok=True blocking=36.2ms wall=181.8ms teardown=113.5ms
+html-fast rep=60 ok=True blocking=471.4ms wall=577.4ms teardown=98.7ms
+cdp       rep=61 ok=True blocking=400.1ms wall=465.1ms teardown=63.4ms
+html-fast rep=61 ok=True blocking=330.0ms wall=438.1ms teardown=99.6ms
+noop      rep=61 ok=True blocking=36.5ms wall=181.6ms teardown=113.5ms
+cdp       rep=62 ok=True blocking=30811.9ms wall=30926.9ms teardown=113.5ms
+noop      rep=62 ok=True blocking=36.2ms wall=184.9ms teardown=113.6ms
+html-fast rep=62 ok=True blocking=31474.3ms wall=31605.3ms teardown=120.3ms
+noop      rep=63 ok=True blocking=38.5ms wall=185.2ms teardown=113.6ms
+html-fast rep=63 ok=True blocking=4222.2ms wall=4349.1ms teardown=116.3ms
+cdp       rep=63 ok=True blocking=2234.1ms wall=2352.1ms teardown=113.5ms
+noop      rep=64 ok=True blocking=38.5ms wall=184.4ms teardown=113.5ms
+html-fast rep=64 ok=True blocking=849.6ms wall=964.5ms teardown=104.7ms
+cdp       rep=64 ok=True blocking=774.6ms wall=841.7ms teardown=63.5ms
+noop      rep=65 ok=True blocking=36.8ms wall=184.3ms teardown=113.6ms
+html-fast rep=65 ok=True blocking=264.2ms wall=377.4ms teardown=102.0ms
+cdp       rep=65 ok=True blocking=359.4ms wall=424.4ms teardown=63.5ms
+noop      rep=66 ok=True blocking=38.4ms wall=186.4ms teardown=113.5ms
+html-fast rep=66 ok=True blocking=304.0ms wall=426.2ms teardown=111.7ms
+cdp       rep=66 ok=True blocking=308.7ms wall=373.7ms teardown=63.5ms
+cdp       rep=67 ok=True blocking=360.1ms wall=427.6ms teardown=63.5ms
+noop      rep=67 ok=True blocking=36.6ms wall=183.2ms teardown=113.6ms
+html-fast rep=67 ok=True blocking=297.4ms wall=403.4ms teardown=97.6ms
+cdp       rep=68 ok=True blocking=359.2ms wall=424.6ms teardown=63.5ms
+noop      rep=68 ok=True blocking=36.4ms wall=182.0ms teardown=113.5ms
+html-fast rep=68 ok=True blocking=286.1ms wall=394.6ms teardown=101.1ms
+cdp       rep=69 ok=True blocking=326.8ms wall=391.8ms teardown=63.5ms
+noop      rep=69 ok=True blocking=38.5ms wall=186.8ms teardown=113.6ms
+html-fast rep=69 ok=True blocking=313.9ms wall=420.3ms teardown=98.6ms
+html-fast rep=70 ok=True blocking=140.3ms wall=251.9ms teardown=100.3ms
+noop      rep=70 ok=True blocking=38.4ms wall=184.6ms teardown=113.6ms
+cdp       rep=70 ok=True blocking=189.7ms wall=256.6ms teardown=63.5ms
+html-fast rep=71 ok=True blocking=586.8ms wall=698.4ms teardown=102.4ms
+noop      rep=71 ok=True blocking=38.8ms wall=189.1ms teardown=113.6ms
+cdp       rep=71 ok=True blocking=660.4ms wall=725.4ms teardown=63.5ms
+html-fast rep=72 ok=True blocking=491.9ms wall=598.6ms teardown=98.5ms
+cdp       rep=72 ok=True blocking=499.3ms wall=564.3ms teardown=63.5ms
+noop      rep=72 ok=True blocking=36.6ms wall=183.9ms teardown=113.6ms
+html-fast rep=73 ok=True blocking=361.5ms wall=477.8ms teardown=108.1ms
+noop      rep=73 ok=True blocking=36.6ms wall=180.7ms teardown=113.5ms
+cdp       rep=73 ok=True blocking=597.0ms wall=661.9ms teardown=63.4ms
+cdp       rep=74 ok=True blocking=500.0ms wall=565.0ms teardown=63.5ms
+html-fast rep=74 ok=True blocking=478.3ms wall=591.2ms teardown=104.6ms
+noop      rep=74 ok=True blocking=34.4ms wall=181.2ms teardown=113.6ms
+noop      rep=75 ok=True blocking=38.5ms wall=184.9ms teardown=113.5ms
+cdp       rep=75 ok=True blocking=391.4ms wall=456.4ms teardown=63.5ms
+html-fast rep=75 ok=True blocking=325.3ms wall=435.5ms teardown=101.4ms
+cdp       rep=76 ok=True blocking=60608.3ms wall=60723.7ms teardown=113.5ms
+noop      rep=76 ok=True blocking=38.6ms wall=184.5ms teardown=113.6ms
+html-fast rep=76 ok=True blocking=30766.2ms wall=30900.0ms teardown=121.4ms
+noop      rep=77 ok=True blocking=36.6ms wall=186.6ms teardown=113.6ms
+cdp       rep=77 ok=True blocking=3501.0ms wall=3616.0ms teardown=113.5ms
+html-fast rep=77 ok=True blocking=2636.1ms wall=2763.1ms teardown=116.2ms
+noop      rep=78 ok=True blocking=37.0ms wall=183.0ms teardown=113.6ms
+html-fast rep=78 ok=True blocking=2152.9ms wall=2278.0ms teardown=114.3ms
+cdp       rep=78 ok=True blocking=841.3ms wall=956.4ms teardown=113.5ms
+noop      rep=79 ok=True blocking=38.5ms wall=186.2ms teardown=113.6ms
+cdp       rep=79 ok=True blocking=409.1ms wall=476.8ms teardown=63.4ms
+html-fast rep=79 ok=True blocking=278.5ms wall=387.2ms teardown=100.1ms
+noop      rep=80 ok=True blocking=38.6ms wall=187.6ms teardown=113.6ms
+cdp       rep=80 ok=True blocking=379.7ms wall=446.8ms teardown=63.5ms
+html-fast rep=80 ok=True blocking=261.6ms wall=371.3ms teardown=101.2ms
+html-fast rep=81 ok=True blocking=284.9ms wall=396.7ms teardown=103.0ms
+cdp       rep=81 ok=True blocking=323.7ms wall=388.7ms teardown=63.5ms
+noop      rep=81 ok=True blocking=38.1ms wall=186.0ms teardown=113.6ms
+noop      rep=82 ok=True blocking=36.1ms wall=183.5ms teardown=113.6ms
+html-fast rep=82 ok=True blocking=287.6ms wall=398.8ms teardown=102.7ms
+cdp       rep=82 ok=True blocking=376.3ms wall=442.9ms teardown=63.5ms
+noop      rep=83 ok=True blocking=38.4ms wall=186.0ms teardown=113.5ms
+html-fast rep=83 ok=True blocking=264.8ms wall=374.4ms teardown=101.9ms
+cdp       rep=83 ok=True blocking=307.0ms wall=372.1ms teardown=63.5ms
+html-fast rep=84 ok=True blocking=139.6ms wall=251.1ms teardown=101.2ms
+cdp       rep=84 ok=True blocking=192.6ms wall=260.0ms teardown=63.5ms
+noop      rep=84 ok=True blocking=38.5ms wall=184.5ms teardown=113.5ms
+html-fast rep=85 ok=True blocking=599.0ms wall=708.2ms teardown=100.7ms
+noop      rep=85 ok=True blocking=38.5ms wall=183.2ms teardown=113.6ms
+cdp       rep=85 ok=True blocking=628.8ms wall=693.8ms teardown=63.5ms
+noop      rep=86 ok=True blocking=36.5ms wall=184.2ms teardown=113.5ms
+cdp       rep=86 ok=True blocking=542.2ms wall=607.2ms teardown=63.5ms
+html-fast rep=86 ok=True blocking=428.7ms wall=546.5ms teardown=109.2ms
+noop      rep=87 ok=True blocking=34.4ms wall=180.7ms teardown=113.6ms
+cdp       rep=87 ok=True blocking=407.1ms wall=473.3ms teardown=63.5ms
+html-fast rep=87 ok=True blocking=332.7ms wall=442.7ms teardown=101.6ms
+noop      rep=88 ok=True blocking=34.4ms wall=178.5ms teardown=113.5ms
+html-fast rep=88 ok=True blocking=1408.4ms wall=1525.7ms teardown=109.1ms
+cdp       rep=88 ok=True blocking=499.5ms wall=564.4ms teardown=63.5ms
+html-fast rep=89 ok=True blocking=318.2ms wall=430.6ms teardown=102.0ms
+cdp       rep=89 ok=True blocking=411.3ms wall=478.0ms teardown=63.5ms
+noop      rep=89 ok=True blocking=36.4ms wall=182.5ms teardown=113.5ms
+cdp       rep=90 ok=True blocking=30649.8ms wall=30764.8ms teardown=113.5ms
+noop      rep=90 ok=True blocking=36.6ms wall=183.0ms teardown=113.6ms
+html-fast rep=90 ok=True blocking=30574.6ms wall=30698.4ms teardown=113.0ms
+cdp       rep=91 ok=True blocking=5293.9ms wall=5411.0ms teardown=113.5ms
+noop      rep=91 ok=True blocking=34.5ms wall=183.0ms teardown=113.6ms
+html-fast rep=91 ok=True blocking=2181.5ms wall=2311.4ms teardown=116.7ms
+cdp       rep=92 ok=True blocking=2046.1ms wall=2164.1ms teardown=113.5ms
+noop      rep=92 ok=True blocking=38.5ms wall=189.1ms teardown=113.6ms
+html-fast rep=92 ok=True blocking=1754.8ms wall=1881.9ms teardown=116.8ms
+noop      rep=93 ok=True blocking=36.7ms wall=184.5ms teardown=113.6ms
+html-fast rep=93 ok=True blocking=287.4ms wall=401.9ms teardown=103.1ms
+cdp       rep=93 ok=True blocking=339.4ms wall=405.4ms teardown=63.5ms
+cdp       rep=94 ok=True blocking=324.5ms wall=389.5ms teardown=63.5ms
+html-fast rep=94 ok=True blocking=283.5ms wall=391.3ms teardown=98.6ms
+noop      rep=94 ok=True blocking=34.4ms wall=184.7ms teardown=113.6ms
+noop      rep=95 ok=True blocking=36.4ms wall=183.5ms teardown=113.6ms
+cdp       rep=95 ok=True blocking=326.8ms wall=391.8ms teardown=63.5ms
+html-fast rep=95 ok=True blocking=288.2ms wall=401.0ms teardown=102.4ms
+html-fast rep=96 ok=True blocking=300.0ms wall=412.8ms teardown=105.0ms
+noop      rep=96 ok=True blocking=36.4ms wall=186.2ms teardown=113.5ms
+cdp       rep=96 ok=True blocking=329.5ms wall=394.5ms teardown=63.5ms
+html-fast rep=97 ok=True blocking=263.4ms wall=377.2ms teardown=104.4ms
+noop      rep=97 ok=True blocking=36.4ms wall=182.8ms teardown=113.5ms
+cdp       rep=97 ok=True blocking=326.0ms wall=391.2ms teardown=63.5ms
+noop      rep=98 ok=True blocking=36.5ms wall=179.2ms teardown=113.5ms
+html-fast rep=98 ok=True blocking=145.5ms wall=264.9ms teardown=108.6ms
+cdp       rep=98 ok=True blocking=174.5ms wall=241.1ms teardown=63.5ms
+noop      rep=99 ok=True blocking=38.4ms wall=186.7ms teardown=113.6ms
+cdp       rep=99 ok=True blocking=593.2ms wall=658.2ms teardown=63.5ms
+html-fast rep=99 ok=True blocking=613.5ms wall=724.4ms teardown=102.2ms
+cdp       rep=100 ok=True blocking=576.3ms wall=641.3ms teardown=63.5ms
+html-fast rep=100 ok=True blocking=584.3ms wall=695.3ms teardown=101.8ms
+noop      rep=100 ok=True blocking=38.6ms wall=183.3ms teardown=113.5ms
+noop      rep=101 ok=True blocking=34.4ms wall=185.0ms teardown=113.6ms
+html-fast rep=101 ok=True blocking=347.7ms wall=450.3ms teardown=95.0ms
+cdp       rep=101 ok=True blocking=363.1ms wall=428.0ms teardown=63.5ms
+html-fast rep=102 ok=True blocking=440.2ms wall=545.0ms teardown=96.9ms
+cdp       rep=102 ok=True blocking=541.5ms wall=606.5ms teardown=63.5ms
+noop      rep=102 ok=True blocking=34.5ms wall=182.5ms teardown=113.6ms
+html-fast rep=103 ok=True blocking=326.3ms wall=430.8ms teardown=96.2ms
+cdp       rep=103 ok=True blocking=386.7ms wall=452.1ms teardown=63.5ms
+noop      rep=103 ok=True blocking=36.9ms wall=182.8ms teardown=113.6ms
+cdp       rep=104 ok=True blocking=60607.6ms wall=60724.5ms teardown=113.5ms
+html-fast rep=104 ok=True blocking=30661.4ms wall=30792.4ms teardown=118.0ms
+noop      rep=104 ok=True blocking=36.7ms wall=180.8ms teardown=113.6ms
+cdp       rep=105 ok=True blocking=2454.1ms wall=2571.4ms teardown=113.5ms
+html-fast rep=105 ok=True blocking=7623.4ms wall=7750.8ms teardown=114.1ms
+noop      rep=105 ok=True blocking=38.8ms wall=184.6ms teardown=113.6ms
+html-fast rep=106 ok=True blocking=1671.7ms wall=1795.4ms teardown=111.5ms
+noop      rep=106 ok=True blocking=36.7ms wall=185.1ms teardown=113.6ms
+cdp       rep=106 ok=True blocking=2106.7ms wall=2221.8ms teardown=113.6ms
+noop      rep=107 ok=True blocking=38.7ms wall=186.5ms teardown=113.6ms
+cdp       rep=107 ok=True blocking=362.2ms wall=427.1ms teardown=63.5ms
+html-fast rep=107 ok=True blocking=265.1ms wall=379.3ms teardown=103.0ms
+noop      rep=108 ok=True blocking=38.5ms wall=185.2ms teardown=113.6ms
+html-fast rep=108 ok=True blocking=272.4ms wall=382.4ms teardown=98.5ms
+cdp       rep=108 ok=True blocking=327.9ms wall=392.9ms teardown=63.5ms
+noop      rep=109 ok=True blocking=36.3ms wall=185.8ms teardown=113.6ms
+html-fast rep=109 ok=True blocking=272.4ms wall=379.9ms teardown=99.3ms
+cdp       rep=109 ok=True blocking=305.9ms wall=370.9ms teardown=63.5ms
+noop      rep=110 ok=True blocking=36.4ms wall=181.5ms teardown=113.5ms
+cdp       rep=110 ok=True blocking=344.4ms wall=409.3ms teardown=63.5ms
+html-fast rep=110 ok=True blocking=299.1ms wall=413.5ms teardown=104.8ms
+cdp       rep=111 ok=True blocking=325.8ms wall=390.8ms teardown=63.5ms
+html-fast rep=111 ok=True blocking=267.3ms wall=384.9ms teardown=106.5ms
+noop      rep=111 ok=True blocking=38.6ms wall=186.8ms teardown=113.5ms
+noop      rep=112 ok=True blocking=38.2ms wall=186.4ms teardown=113.6ms
+html-fast rep=112 ok=True blocking=142.2ms wall=253.9ms teardown=102.1ms
+cdp       rep=112 ok=True blocking=227.2ms wall=295.1ms teardown=63.5ms
+cdp       rep=113 ok=True blocking=591.0ms wall=655.9ms teardown=63.4ms
+noop      rep=113 ok=True blocking=36.5ms wall=188.4ms teardown=113.5ms
+html-fast rep=113 ok=True blocking=541.0ms wall=647.2ms teardown=98.9ms
+noop      rep=114 ok=True blocking=36.4ms wall=181.9ms teardown=113.6ms
+html-fast rep=114 ok=True blocking=435.2ms wall=548.0ms teardown=105.7ms
+cdp       rep=114 ok=True blocking=610.3ms wall=675.3ms teardown=63.5ms
+html-fast rep=115 ok=True blocking=332.1ms wall=441.3ms teardown=102.2ms
+cdp       rep=115 ok=True blocking=403.4ms wall=468.4ms teardown=63.5ms
+noop      rep=115 ok=True blocking=36.6ms wall=184.6ms teardown=113.5ms
+noop      rep=116 ok=True blocking=38.2ms wall=184.4ms teardown=113.6ms
+cdp       rep=116 ok=True blocking=617.2ms wall=682.1ms teardown=63.5ms
+html-fast rep=116 ok=True blocking=554.0ms wall=660.2ms teardown=99.1ms
+html-fast rep=117 ok=True blocking=320.4ms wall=423.1ms teardown=95.7ms
+cdp       rep=117 ok=True blocking=374.7ms wall=439.7ms teardown=63.5ms
+noop      rep=117 ok=True blocking=34.4ms wall=179.3ms teardown=113.6ms
+noop      rep=118 ok=True blocking=38.4ms wall=185.1ms teardown=113.6ms
+cdp       rep=118 ok=True blocking=30579.5ms wall=30694.5ms teardown=113.5ms
+html-fast rep=118 ok=True blocking=60679.4ms wall=60810.3ms teardown=119.6ms
+cdp       rep=119 ok=True blocking=3119.1ms wall=3234.1ms teardown=113.5ms
+html-fast rep=119 ok=True blocking=2125.2ms wall=2250.3ms teardown=113.8ms
+noop      rep=119 ok=True blocking=36.6ms wall=186.4ms teardown=113.5ms
+html-fast rep=120 ok=True blocking=928.2ms wall=1048.7ms teardown=110.8ms
+cdp       rep=120 ok=True blocking=869.7ms wall=934.7ms teardown=63.5ms
+noop      rep=120 ok=True blocking=36.5ms wall=183.0ms teardown=113.5ms
+html-fast rep=121 ok=True blocking=326.0ms wall=437.8ms teardown=99.8ms
+cdp       rep=121 ok=True blocking=346.5ms wall=411.5ms teardown=63.5ms
+noop      rep=121 ok=True blocking=34.4ms wall=184.2ms teardown=113.6ms
+html-fast rep=122 ok=True blocking=362.1ms wall=481.3ms teardown=110.4ms
+cdp       rep=122 ok=True blocking=327.6ms wall=392.6ms teardown=63.5ms
+noop      rep=122 ok=True blocking=36.8ms wall=187.0ms teardown=113.6ms
+cdp       rep=123 ok=True blocking=361.0ms wall=425.9ms teardown=63.5ms
+html-fast rep=123 ok=True blocking=356.5ms wall=463.3ms teardown=99.5ms
+noop      rep=123 ok=True blocking=38.7ms wall=187.7ms teardown=113.5ms
+html-fast rep=124 ok=True blocking=324.2ms wall=433.5ms teardown=100.8ms
+cdp       rep=124 ok=True blocking=357.8ms wall=422.8ms teardown=63.5ms
+noop      rep=124 ok=True blocking=34.4ms wall=183.6ms teardown=113.6ms
+html-fast rep=125 ok=True blocking=303.4ms wall=409.3ms teardown=97.9ms
+noop      rep=125 ok=True blocking=36.5ms wall=184.3ms teardown=113.5ms
+cdp       rep=125 ok=True blocking=308.2ms wall=373.2ms teardown=63.5ms
+html-fast rep=126 ok=True blocking=139.6ms wall=246.0ms teardown=97.0ms
+cdp       rep=126 ok=True blocking=194.4ms wall=259.4ms teardown=63.5ms
+noop      rep=126 ok=True blocking=38.6ms wall=185.3ms teardown=113.6ms
+html-fast rep=127 ok=True blocking=608.9ms wall=714.1ms teardown=97.7ms
+noop      rep=127 ok=True blocking=36.5ms wall=184.2ms teardown=113.6ms
+cdp       rep=127 ok=True blocking=629.7ms wall=694.7ms teardown=63.5ms
+cdp       rep=128 ok=True blocking=506.1ms wall=571.0ms teardown=63.5ms
+noop      rep=128 ok=True blocking=38.7ms wall=184.1ms teardown=113.5ms
+html-fast rep=128 ok=True blocking=576.4ms wall=694.6ms teardown=106.9ms
+noop      rep=129 ok=True blocking=38.6ms wall=183.0ms teardown=113.6ms
+cdp       rep=129 ok=True blocking=426.9ms wall=491.9ms teardown=63.5ms
+html-fast rep=129 ok=True blocking=474.1ms wall=591.7ms teardown=108.8ms
+noop      rep=130 ok=True blocking=36.6ms wall=181.8ms teardown=113.6ms
+html-fast rep=130 ok=True blocking=450.3ms wall=552.5ms teardown=95.3ms
+cdp       rep=130 ok=True blocking=505.6ms wall=570.6ms teardown=63.5ms
+html-fast rep=131 ok=True blocking=331.0ms wall=436.8ms teardown=99.2ms
+noop      rep=131 ok=True blocking=38.5ms wall=183.6ms teardown=113.6ms
+cdp       rep=131 ok=True blocking=387.9ms wall=452.8ms teardown=63.5ms
+noop      rep=132 ok=True blocking=34.4ms wall=185.8ms teardown=113.6ms
+cdp       rep=132 ok=True blocking=30591.2ms wall=30707.3ms teardown=113.5ms
+html-fast rep=132 ok=True blocking=30567.2ms wall=30696.2ms teardown=117.6ms
+noop      rep=133 ok=True blocking=38.6ms wall=187.2ms teardown=113.6ms
+html-fast rep=133 ok=True blocking=3163.8ms wall=3288.7ms teardown=113.9ms
+cdp       rep=133 ok=True blocking=2081.1ms wall=2196.1ms teardown=113.5ms
+html-fast rep=134 ok=True blocking=2077.7ms wall=2203.5ms teardown=114.8ms
+cdp       rep=134 ok=True blocking=845.7ms wall=910.7ms teardown=63.5ms
+noop      rep=134 ok=True blocking=38.4ms wall=184.4ms teardown=113.6ms
+html-fast rep=135 ok=True blocking=267.4ms wall=386.9ms teardown=109.8ms
+noop      rep=135 ok=True blocking=36.3ms wall=183.3ms teardown=113.7ms
+cdp       rep=135 ok=True blocking=359.4ms wall=474.5ms teardown=113.5ms
+cdp       rep=136 ok=True blocking=360.0ms wall=425.0ms teardown=63.5ms
+noop      rep=136 ok=True blocking=36.6ms wall=184.9ms teardown=113.6ms
+html-fast rep=136 ok=True blocking=271.7ms wall=389.4ms teardown=108.5ms
+html-fast rep=137 ok=True blocking=296.0ms wall=405.4ms teardown=100.1ms
+noop      rep=137 ok=True blocking=36.4ms wall=182.5ms teardown=113.5ms
+cdp       rep=137 ok=True blocking=310.1ms wall=375.1ms teardown=63.5ms
+noop      rep=138 ok=True blocking=34.2ms wall=182.5ms teardown=113.5ms
+cdp       rep=138 ok=True blocking=325.4ms wall=390.3ms teardown=63.4ms
+html-fast rep=138 ok=True blocking=290.1ms wall=399.0ms teardown=101.1ms
+html-fast rep=139 ok=True blocking=1307.1ms wall=1418.8ms teardown=104.1ms
+noop      rep=139 ok=True blocking=36.6ms wall=184.6ms teardown=113.6ms
+cdp       rep=139 ok=True blocking=1294.0ms wall=1358.9ms teardown=63.5ms
+html-fast rep=140 ok=True blocking=335.8ms wall=439.7ms teardown=96.6ms
+noop      rep=140 ok=True blocking=38.4ms wall=183.9ms teardown=113.6ms
+cdp       rep=140 ok=True blocking=394.8ms wall=459.8ms teardown=63.5ms
+noop      rep=141 ok=True blocking=38.8ms wall=185.3ms teardown=113.6ms
+cdp       rep=141 ok=True blocking=865.1ms wall=931.7ms teardown=63.5ms
+html-fast rep=141 ok=True blocking=937.2ms wall=1048.6ms teardown=104.0ms
+noop      rep=142 ok=True blocking=36.6ms wall=182.2ms teardown=113.6ms
+cdp       rep=142 ok=True blocking=531.5ms wall=596.4ms teardown=63.5ms
+html-fast rep=142 ok=True blocking=709.3ms wall=823.6ms teardown=106.2ms
+noop      rep=143 ok=True blocking=36.5ms wall=186.0ms teardown=113.6ms
+html-fast rep=143 ok=True blocking=371.3ms wall=481.1ms teardown=102.0ms
+cdp       rep=143 ok=True blocking=369.7ms wall=434.7ms teardown=63.5ms
+cdp       rep=144 ok=True blocking=516.5ms wall=581.4ms teardown=63.5ms
+html-fast rep=144 ok=True blocking=571.6ms wall=679.8ms teardown=99.8ms
+noop      rep=144 ok=True blocking=36.5ms wall=185.3ms teardown=113.6ms
+cdp       rep=145 ok=True blocking=387.5ms wall=452.4ms teardown=63.5ms
+html-fast rep=145 ok=True blocking=320.3ms wall=431.7ms teardown=102.9ms
+noop      rep=145 ok=True blocking=36.5ms wall=181.1ms teardown=113.6ms
+noop      rep=146 ok=True blocking=36.5ms wall=185.1ms teardown=113.6ms
+html-fast rep=146 ok=True blocking=30657.2ms wall=30795.8ms teardown=127.7ms
+cdp       rep=146 ok=True blocking=30630.4ms wall=30745.4ms teardown=113.5ms
+noop      rep=147 ok=True blocking=38.4ms wall=187.0ms teardown=113.6ms
+html-fast rep=147 ok=True blocking=2667.6ms wall=2802.1ms teardown=121.1ms
+cdp       rep=147 ok=True blocking=2118.6ms wall=2233.5ms teardown=113.5ms
+html-fast rep=148 ok=True blocking=2107.6ms wall=2233.3ms teardown=111.8ms
+noop      rep=148 ok=True blocking=36.5ms wall=182.0ms teardown=113.6ms
+cdp       rep=148 ok=True blocking=2754.4ms wall=2869.4ms teardown=113.5ms
+html-fast rep=149 ok=True blocking=280.0ms wall=393.6ms teardown=103.9ms
+cdp       rep=149 ok=True blocking=343.2ms wall=408.1ms teardown=63.4ms
+noop      rep=149 ok=True blocking=38.3ms wall=186.4ms teardown=113.6ms
+html-fast rep=150 ok=True blocking=305.2ms wall=416.2ms teardown=100.9ms
+noop      rep=150 ok=True blocking=36.3ms wall=181.4ms teardown=113.5ms
+cdp       rep=150 ok=True blocking=325.2ms wall=390.2ms teardown=63.5ms
+cdp       rep=151 ok=True blocking=1341.1ms wall=1406.0ms teardown=63.5ms
+noop      rep=151 ok=True blocking=36.4ms wall=184.5ms teardown=113.5ms
+html-fast rep=151 ok=True blocking=277.5ms wall=385.1ms teardown=99.1ms
+noop      rep=152 ok=True blocking=36.6ms wall=180.3ms teardown=113.6ms
+html-fast rep=152 ok=True blocking=318.6ms wall=430.9ms teardown=104.6ms
+cdp       rep=152 ok=True blocking=356.0ms wall=421.0ms teardown=63.5ms
+html-fast rep=153 ok=True blocking=261.1ms wall=370.3ms teardown=101.3ms
+noop      rep=153 ok=True blocking=36.4ms wall=184.5ms teardown=113.6ms
+cdp       rep=153 ok=True blocking=360.6ms wall=425.6ms teardown=63.5ms
+cdp       rep=154 ok=True blocking=209.0ms wall=274.0ms teardown=63.5ms
+noop      rep=154 ok=True blocking=36.7ms wall=182.3ms teardown=113.6ms
+html-fast rep=154 ok=True blocking=140.9ms wall=255.0ms teardown=103.1ms
+html-fast rep=155 ok=True blocking=594.9ms wall=710.5ms teardown=108.1ms
+cdp       rep=155 ok=True blocking=644.0ms wall=710.3ms teardown=63.5ms
+noop      rep=155 ok=True blocking=34.1ms wall=182.8ms teardown=113.6ms
+html-fast rep=156 ok=True blocking=478.9ms wall=589.8ms teardown=104.2ms
+cdp       rep=156 ok=True blocking=843.6ms wall=908.6ms teardown=63.5ms
+noop      rep=156 ok=True blocking=34.4ms wall=181.3ms teardown=113.6ms
+html-fast rep=157 ok=True blocking=349.2ms wall=457.6ms teardown=101.1ms
+cdp       rep=157 ok=True blocking=412.0ms wall=477.0ms teardown=63.5ms
+noop      rep=157 ok=True blocking=34.4ms wall=182.9ms teardown=113.6ms
+noop      rep=158 ok=True blocking=34.1ms wall=186.6ms teardown=113.5ms
+cdp       rep=158 ok=True blocking=504.2ms wall=569.0ms teardown=63.4ms
+html-fast rep=158 ok=True blocking=420.7ms wall=529.3ms teardown=101.2ms
+noop      rep=159 ok=True blocking=36.8ms wall=184.3ms teardown=113.6ms
+cdp       rep=159 ok=True blocking=385.3ms wall=450.2ms teardown=63.5ms
+html-fast rep=159 ok=True blocking=324.0ms wall=430.0ms teardown=98.1ms
+html-fast rep=160 ok=True blocking=60727.6ms wall=60854.3ms teardown=114.7ms
+noop      rep=160 ok=True blocking=36.5ms wall=187.4ms teardown=113.5ms
+cdp       rep=160 ok=True blocking=30557.7ms wall=30674.1ms teardown=113.6ms
+html-fast rep=161 ok=True blocking=2551.6ms wall=2680.7ms teardown=117.7ms
+cdp       rep=161 ok=True blocking=2706.0ms wall=2822.1ms teardown=113.5ms
+noop      rep=161 ok=True blocking=34.3ms wall=178.4ms teardown=113.6ms
+cdp       rep=162 ok=True blocking=2106.0ms wall=2221.0ms teardown=113.5ms
+html-fast rep=162 ok=True blocking=813.0ms wall=936.5ms teardown=112.3ms
+noop      rep=162 ok=True blocking=38.7ms wall=193.2ms teardown=113.6ms
+cdp       rep=163 ok=True blocking=344.7ms wall=410.7ms teardown=63.5ms
+noop      rep=163 ok=True blocking=36.4ms wall=184.1ms teardown=113.6ms
+html-fast rep=163 ok=True blocking=283.7ms wall=399.3ms teardown=106.1ms
+noop      rep=164 ok=True blocking=36.5ms wall=186.0ms teardown=113.5ms
+cdp       rep=164 ok=True blocking=323.5ms wall=388.5ms teardown=63.5ms
+html-fast rep=164 ok=True blocking=271.0ms wall=374.6ms teardown=95.9ms
+cdp       rep=165 ok=True blocking=328.4ms wall=393.4ms teardown=63.5ms
+html-fast rep=165 ok=True blocking=268.4ms wall=372.9ms teardown=97.1ms
+noop      rep=165 ok=True blocking=38.6ms wall=186.5ms teardown=113.6ms
+cdp       rep=166 ok=True blocking=375.1ms wall=440.3ms teardown=63.5ms
+html-fast rep=166 ok=True blocking=322.2ms wall=434.4ms teardown=104.2ms
+noop      rep=166 ok=True blocking=38.5ms wall=182.6ms teardown=113.6ms
+html-fast rep=167 ok=True blocking=264.3ms wall=373.0ms teardown=101.1ms
+noop      rep=167 ok=True blocking=36.5ms wall=181.2ms teardown=113.6ms
+cdp       rep=167 ok=True blocking=327.6ms wall=392.6ms teardown=63.5ms
+noop      rep=168 ok=True blocking=38.6ms wall=186.2ms teardown=113.5ms
+cdp       rep=168 ok=True blocking=1174.2ms wall=1239.1ms teardown=63.4ms
+html-fast rep=168 ok=True blocking=142.8ms wall=250.7ms teardown=98.9ms
+cdp       rep=169 ok=True blocking=649.1ms wall=714.1ms teardown=63.5ms
+html-fast rep=169 ok=True blocking=582.9ms wall=691.3ms teardown=101.6ms
+noop      rep=169 ok=True blocking=36.3ms wall=187.4ms teardown=113.6ms
+html-fast rep=170 ok=True blocking=470.2ms wall=582.5ms teardown=103.8ms
+cdp       rep=170 ok=True blocking=563.5ms wall=628.5ms teardown=63.5ms
+noop      rep=170 ok=True blocking=38.7ms wall=187.2ms teardown=113.5ms
+html-fast rep=171 ok=True blocking=354.1ms wall=467.8ms teardown=105.2ms
+cdp       rep=171 ok=True blocking=383.7ms wall=448.6ms teardown=63.4ms
+noop      rep=171 ok=True blocking=36.4ms wall=185.4ms teardown=113.6ms
+html-fast rep=172 ok=True blocking=538.9ms wall=647.8ms teardown=101.5ms
+cdp       rep=172 ok=True blocking=458.7ms wall=525.0ms teardown=63.5ms
+noop      rep=172 ok=True blocking=38.4ms wall=182.8ms teardown=113.6ms
+noop      rep=173 ok=True blocking=36.4ms wall=186.3ms teardown=113.5ms
+html-fast rep=173 ok=True blocking=1320.7ms wall=1424.0ms teardown=95.9ms
+cdp       rep=173 ok=True blocking=387.4ms wall=452.4ms teardown=63.5ms
+cdp       rep=174 ok=True blocking=30645.1ms wall=30762.1ms teardown=113.5ms
+html-fast rep=174 ok=True blocking=31261.6ms wall=31391.9ms teardown=119.1ms
+noop      rep=174 ok=True blocking=38.9ms wall=186.3ms teardown=113.5ms
+html-fast rep=175 ok=True blocking=3274.7ms wall=3409.3ms teardown=121.4ms
+noop      rep=175 ok=True blocking=39.0ms wall=188.2ms teardown=113.6ms
+cdp       rep=175 ok=True blocking=2166.7ms wall=2281.7ms teardown=113.5ms
+html-fast rep=176 ok=True blocking=818.1ms wall=936.6ms teardown=107.7ms
+noop      rep=176 ok=True blocking=38.7ms wall=191.9ms teardown=113.5ms
+cdp       rep=176 ok=True blocking=871.2ms wall=988.6ms teardown=113.6ms
+noop      rep=177 ok=True blocking=38.6ms wall=187.8ms teardown=113.6ms
+html-fast rep=177 ok=True blocking=300.8ms wall=411.8ms teardown=101.8ms
+cdp       rep=177 ok=True blocking=390.0ms wall=454.9ms teardown=63.5ms
+noop      rep=178 ok=True blocking=36.5ms wall=182.3ms teardown=113.5ms
+html-fast rep=178 ok=True blocking=272.1ms wall=376.8ms teardown=96.8ms
+cdp       rep=178 ok=True blocking=326.4ms wall=391.4ms teardown=63.5ms
+cdp       rep=179 ok=True blocking=308.6ms wall=373.6ms teardown=63.5ms
+html-fast rep=179 ok=True blocking=301.9ms wall=417.5ms teardown=107.8ms
+noop      rep=179 ok=True blocking=36.9ms wall=185.2ms teardown=113.6ms
+cdp       rep=180 ok=True blocking=376.7ms wall=441.7ms teardown=63.5ms
+html-fast rep=180 ok=True blocking=299.5ms wall=409.2ms teardown=101.3ms
+noop      rep=180 ok=True blocking=36.6ms wall=180.0ms teardown=113.5ms
+cdp       rep=181 ok=True blocking=324.3ms wall=391.3ms teardown=63.5ms
+noop      rep=181 ok=True blocking=38.4ms wall=186.0ms teardown=113.6ms
+html-fast rep=181 ok=True blocking=291.8ms wall=404.0ms teardown=103.3ms
+html-fast rep=182 ok=True blocking=148.6ms wall=270.3ms teardown=110.0ms
+cdp       rep=182 ok=True blocking=191.4ms wall=259.0ms teardown=63.4ms
+noop      rep=182 ok=True blocking=36.4ms wall=183.9ms teardown=113.6ms
+cdp       rep=183 ok=True blocking=659.7ms wall=724.6ms teardown=63.5ms
+html-fast rep=183 ok=True blocking=1598.4ms wall=1707.4ms teardown=100.5ms
+noop      rep=183 ok=True blocking=36.6ms wall=182.8ms teardown=113.5ms
+cdp       rep=184 ok=True blocking=568.8ms wall=633.8ms teardown=63.5ms
+noop      rep=184 ok=True blocking=36.5ms wall=182.1ms teardown=113.5ms
+html-fast rep=184 ok=True blocking=674.2ms wall=784.6ms teardown=102.8ms
+cdp       rep=185 ok=True blocking=1404.1ms wall=1469.1ms teardown=63.5ms
+html-fast rep=185 ok=True blocking=381.5ms wall=492.2ms teardown=102.2ms
+noop      rep=185 ok=True blocking=36.5ms wall=183.2ms teardown=113.6ms
+html-fast rep=186 ok=True blocking=533.9ms wall=654.9ms teardown=110.5ms
+noop      rep=186 ok=True blocking=38.7ms wall=181.5ms teardown=113.6ms
+cdp       rep=186 ok=True blocking=487.2ms wall=552.1ms teardown=63.4ms
+html-fast rep=187 ok=True blocking=337.7ms wall=449.0ms teardown=103.5ms
+cdp       rep=187 ok=True blocking=386.4ms wall=451.3ms teardown=63.5ms
+noop      rep=187 ok=True blocking=38.9ms wall=190.2ms teardown=113.6ms
+noop      rep=188 ok=True blocking=38.5ms wall=185.4ms teardown=113.6ms
+cdp       rep=188 ok=True blocking=30543.9ms wall=30660.2ms teardown=113.5ms
+html-fast rep=188 ok=True blocking=32529.0ms wall=32665.2ms teardown=124.5ms
+cdp       rep=189 ok=True blocking=3159.0ms wall=3276.2ms teardown=113.5ms
+html-fast rep=189 ok=True blocking=2255.6ms wall=2383.7ms teardown=116.5ms
+noop      rep=189 ok=True blocking=36.5ms wall=185.6ms teardown=113.6ms
+noop      rep=190 ok=True blocking=38.3ms wall=184.5ms teardown=113.6ms
+html-fast rep=190 ok=True blocking=2159.7ms wall=2283.9ms teardown=113.6ms
+cdp       rep=190 ok=True blocking=2074.1ms wall=2189.2ms teardown=113.5ms
+cdp       rep=191 ok=True blocking=343.6ms wall=411.3ms teardown=63.5ms
+html-fast rep=191 ok=True blocking=285.0ms wall=404.1ms teardown=109.3ms
+noop      rep=191 ok=True blocking=36.5ms wall=186.0ms teardown=113.6ms
+cdp       rep=192 ok=True blocking=324.4ms wall=389.4ms teardown=63.5ms
+html-fast rep=192 ok=True blocking=294.8ms wall=409.7ms teardown=105.4ms
+noop      rep=192 ok=True blocking=38.7ms wall=187.4ms teardown=113.6ms
+html-fast rep=193 ok=True blocking=354.1ms wall=466.9ms teardown=103.5ms
+cdp       rep=193 ok=True blocking=327.1ms wall=393.9ms teardown=63.5ms
+noop      rep=193 ok=True blocking=36.7ms wall=185.0ms teardown=113.6ms
+noop      rep=194 ok=True blocking=36.3ms wall=185.8ms teardown=113.6ms
+cdp       rep=194 ok=True blocking=408.9ms wall=473.9ms teardown=63.5ms
+html-fast rep=194 ok=True blocking=296.4ms wall=403.8ms teardown=98.9ms
+html-fast rep=195 ok=True blocking=330.1ms wall=441.8ms teardown=103.1ms
+noop      rep=195 ok=True blocking=38.8ms wall=188.8ms teardown=113.6ms
+cdp       rep=195 ok=True blocking=328.0ms wall=393.1ms teardown=63.5ms
+noop      rep=196 ok=True blocking=38.5ms wall=185.6ms teardown=113.6ms
+cdp       rep=196 ok=True blocking=191.8ms wall=258.3ms teardown=63.5ms
+html-fast rep=196 ok=True blocking=142.5ms wall=254.6ms teardown=101.5ms
+html-fast rep=197 ok=True blocking=598.4ms wall=710.5ms teardown=104.3ms
+noop      rep=197 ok=True blocking=36.4ms wall=176.9ms teardown=113.6ms
+cdp       rep=197 ok=True blocking=628.9ms wall=696.4ms teardown=63.5ms
+html-fast rep=198 ok=True blocking=482.8ms wall=599.7ms teardown=108.4ms
+noop      rep=198 ok=True blocking=36.8ms wall=182.9ms teardown=113.6ms
+cdp       rep=198 ok=True blocking=513.3ms wall=578.3ms teardown=63.5ms
+cdp       rep=199 ok=True blocking=389.2ms wall=454.1ms teardown=63.5ms
+html-fast rep=199 ok=True blocking=336.1ms wall=452.7ms teardown=107.9ms
+noop      rep=199 ok=True blocking=37.0ms wall=183.0ms teardown=113.6ms
+html-fast rep=200 ok=True blocking=517.2ms wall=631.8ms teardown=106.7ms
+noop      rep=200 ok=True blocking=36.5ms wall=181.9ms teardown=113.6ms
+cdp       rep=200 ok=True blocking=512.5ms wall=577.4ms teardown=63.5ms
+html-fast rep=201 ok=True blocking=327.8ms wall=442.4ms teardown=107.5ms
+cdp       rep=201 ok=True blocking=388.9ms wall=453.9ms teardown=63.4ms
+noop      rep=201 ok=True blocking=38.4ms wall=187.6ms teardown=113.6ms
+cdp       rep=202 ok=True blocking=61474.2ms wall=61589.3ms teardown=113.5ms
+noop      rep=202 ok=True blocking=38.6ms wall=187.8ms teardown=113.6ms
+html-fast rep=202 ok=True blocking=32436.9ms wall=32569.1ms teardown=121.0ms
+cdp       rep=203 ok=True blocking=2807.3ms wall=2922.4ms teardown=113.5ms
+html-fast rep=203 ok=True blocking=2112.2ms wall=2239.1ms teardown=115.6ms
+noop      rep=203 ok=True blocking=38.7ms wall=186.9ms teardown=113.6ms
+noop      rep=204 ok=True blocking=36.3ms wall=186.8ms teardown=113.6ms
+cdp       rep=204 ok=True blocking=2102.0ms wall=2217.1ms teardown=113.6ms
+html-fast rep=204 ok=True blocking=838.5ms wall=958.2ms teardown=109.4ms
+html-fast rep=205 ok=True blocking=279.0ms wall=395.9ms teardown=107.0ms
+noop      rep=205 ok=True blocking=38.5ms wall=192.3ms teardown=113.6ms
+cdp       rep=205 ok=True blocking=1358.3ms wall=1423.2ms teardown=63.5ms
+noop      rep=206 ok=True blocking=36.6ms wall=183.4ms teardown=113.6ms
+html-fast rep=206 ok=True blocking=267.2ms wall=389.0ms teardown=112.7ms
+cdp       rep=206 ok=True blocking=309.6ms wall=374.6ms teardown=63.5ms
+noop      rep=207 ok=True blocking=36.4ms wall=187.5ms teardown=113.6ms
+html-fast rep=207 ok=True blocking=292.5ms wall=401.1ms teardown=100.7ms
+cdp       rep=207 ok=True blocking=327.7ms wall=392.7ms teardown=63.5ms
+noop      rep=208 ok=True blocking=37.0ms wall=181.9ms teardown=113.6ms
+html-fast rep=208 ok=True blocking=301.7ms wall=420.3ms teardown=109.6ms
+cdp       rep=208 ok=True blocking=362.8ms wall=478.0ms teardown=113.5ms
+noop      rep=209 ok=True blocking=36.3ms wall=183.7ms teardown=113.6ms
+html-fast rep=209 ok=True blocking=266.8ms wall=377.9ms teardown=102.8ms
+cdp       rep=209 ok=True blocking=331.6ms wall=396.6ms teardown=63.5ms
+cdp       rep=210 ok=True blocking=208.5ms wall=275.1ms teardown=63.5ms
+noop      rep=210 ok=True blocking=38.4ms wall=184.9ms teardown=113.6ms
+html-fast rep=210 ok=True blocking=142.5ms wall=251.8ms teardown=100.8ms
+cdp       rep=211 ok=True blocking=643.7ms wall=710.1ms teardown=63.5ms
+noop      rep=211 ok=True blocking=38.3ms wall=187.9ms teardown=113.6ms
+html-fast rep=211 ok=True blocking=577.1ms wall=690.3ms teardown=104.2ms
+cdp       rep=212 ok=True blocking=499.2ms wall=564.2ms teardown=63.5ms
+noop      rep=212 ok=True blocking=34.5ms wall=184.5ms teardown=113.5ms
+html-fast rep=212 ok=True blocking=475.5ms wall=586.1ms teardown=102.1ms
+html-fast rep=213 ok=True blocking=372.1ms wall=482.5ms teardown=102.4ms
+noop      rep=213 ok=True blocking=36.6ms wall=183.8ms teardown=113.5ms
+cdp       rep=213 ok=True blocking=353.1ms wall=418.1ms teardown=63.5ms
+html-fast rep=214 ok=True blocking=536.9ms wall=647.8ms teardown=103.2ms
+noop      rep=214 ok=True blocking=36.4ms wall=184.0ms teardown=113.6ms
+cdp       rep=214 ok=True blocking=1518.3ms wall=1584.1ms teardown=63.5ms
+noop      rep=215 ok=True blocking=36.6ms wall=184.3ms teardown=113.5ms
+html-fast rep=215 ok=True blocking=323.8ms wall=445.5ms teardown=112.3ms
+cdp       rep=215 ok=True blocking=381.8ms wall=446.8ms teardown=63.4ms
+html-fast rep=216 ok=True blocking=31435.0ms wall=31563.6ms teardown=118.5ms
+cdp       rep=216 ok=True blocking=30580.4ms wall=30696.8ms teardown=113.5ms
+noop      rep=216 ok=True blocking=38.7ms wall=185.6ms teardown=113.6ms
+cdp       rep=217 ok=True blocking=5382.8ms wall=5499.1ms teardown=113.5ms
+noop      rep=217 ok=True blocking=36.5ms wall=181.9ms teardown=113.6ms
+html-fast rep=217 ok=True blocking=2195.2ms wall=2326.2ms teardown=118.2ms
+cdp       rep=218 ok=True blocking=799.9ms wall=915.0ms teardown=113.5ms
+html-fast rep=218 ok=True blocking=2075.6ms wall=2203.0ms teardown=113.2ms
+noop      rep=218 ok=True blocking=38.9ms wall=186.6ms teardown=113.6ms
+cdp       rep=219 ok=True blocking=423.2ms wall=488.2ms teardown=63.5ms
+html-fast rep=219 ok=True blocking=306.0ms wall=424.3ms teardown=109.0ms
+noop      rep=219 ok=True blocking=36.6ms wall=184.6ms teardown=113.6ms
+html-fast rep=220 ok=True blocking=385.4ms wall=497.0ms teardown=103.2ms
+cdp       rep=220 ok=True blocking=327.2ms wall=394.4ms teardown=63.5ms
+noop      rep=220 ok=True blocking=36.7ms wall=185.6ms teardown=113.6ms
+noop      rep=221 ok=True blocking=36.3ms wall=187.8ms teardown=113.6ms
+html-fast rep=221 ok=True blocking=304.0ms wall=412.3ms teardown=100.2ms
+cdp       rep=221 ok=True blocking=324.9ms wall=389.8ms teardown=63.5ms
+cdp       rep=222 ok=True blocking=328.0ms wall=392.9ms teardown=63.5ms
+html-fast rep=222 ok=True blocking=299.5ms wall=409.6ms teardown=101.4ms
+noop      rep=222 ok=True blocking=34.9ms wall=183.2ms teardown=113.6ms
+noop      rep=223 ok=True blocking=38.5ms wall=187.1ms teardown=113.6ms
+html-fast rep=223 ok=True blocking=335.4ms wall=443.3ms teardown=99.4ms
+cdp       rep=223 ok=True blocking=325.6ms wall=390.6ms teardown=63.5ms
+html-fast rep=224 ok=True blocking=144.3ms wall=254.0ms teardown=99.1ms
+noop      rep=224 ok=True blocking=38.8ms wall=188.4ms teardown=113.6ms
+cdp       rep=224 ok=True blocking=227.3ms wall=292.2ms teardown=63.5ms
+noop      rep=225 ok=True blocking=36.4ms wall=182.5ms teardown=113.5ms
+cdp       rep=225 ok=True blocking=630.1ms wall=695.1ms teardown=63.5ms
+html-fast rep=225 ok=True blocking=589.9ms wall=705.0ms teardown=107.0ms
+noop      rep=226 ok=True blocking=39.1ms wall=184.5ms teardown=113.6ms
+html-fast rep=226 ok=True blocking=554.7ms wall=672.0ms teardown=109.5ms
+cdp       rep=226 ok=True blocking=522.6ms wall=587.6ms teardown=63.5ms
+noop      rep=227 ok=True blocking=38.6ms wall=186.8ms teardown=113.6ms
+html-fast rep=227 ok=True blocking=324.8ms wall=439.8ms teardown=107.5ms
+cdp       rep=227 ok=True blocking=386.5ms wall=451.9ms teardown=63.5ms
+html-fast rep=228 ok=True blocking=543.7ms wall=655.9ms teardown=104.5ms
+noop      rep=228 ok=True blocking=36.4ms wall=184.0ms teardown=113.6ms
+cdp       rep=228 ok=True blocking=559.0ms wall=624.0ms teardown=63.5ms
+cdp       rep=229 ok=True blocking=385.9ms wall=450.9ms teardown=63.4ms
+noop      rep=229 ok=True blocking=34.3ms wall=188.0ms teardown=113.5ms
+html-fast rep=229 ok=True blocking=321.0ms wall=432.5ms teardown=100.7ms
+
+wrote /home/ubuntu/campaign/src/fcvm/bench/chromium/results/live-w3/reqbench/reqbench.jsonl
+19:20:01 run: applying publication gates
+==============================================================================
+REQUEST-OPTIMIZED A/B  --  medians with 95% bootstrap CIs
+==============================================================================
+  backend=uffd
+  input=/home/ubuntu/campaign/src/fcvm/bench/chromium/results/live-w3/reqbench/reqbench.jsonl
+  seed=20260808 arms=['cdp', 'html-fast', 'noop'] reps=202 warmup=28 url=https://example.com/,https://news.ycombinator.com/,https://developers.cloudflare.com/,https://blog.cloudflare.com/,https://en.wikipedia.org/,https://developer.mozilla.org/en-US/,https://www.elmundo.es/,https://www.rtp.pt/noticias/,https://www.theguardian.com/international,https://todomvc.com/examples/javascript-es6/dist/,https://todomvc.com/examples/react/dist/index.html,https://todomvc.com/examples/vue/dist/,https://todomvc.com/examples/angular/dist/browser/,https://todomvc.com/examples/preact/dist/
+  loadavg at start: ['1.79', '1.73', '1.07']
+
+  records: 690  warmup DISCARDED: 84  measured: 606  ok: 606  failed: 0
+  loadavg1 during run: min=0.4 median=1.2 max=8.7   <-- contention check (AGENTS.md)
+
+------------------------------------------------------------------------------
+AVAILABILITY PER ARM (medians below are computed over SUCCESSES ONLY)
+------------------------------------------------------------------------------
+  cdp       230/230 completed   failure 0.0% [0.00%, 1.59%] 95% CP
+  html-fast 230/230 completed   failure 0.0% [0.00%, 1.59%] 95% CP
+  noop      230/230 completed   failure 0.0% [0.00%, 1.59%] 95% CP
+
+------------------------------------------------------------------------------
+CDP SAMPLE-SIZE GATE (measured, non-warmup attempts; evaluated per backend)
+------------------------------------------------------------------------------
+  cdp       202/200 attempts  PASS
+  html-fast 202/200 attempts  PASS
+
+------------------------------------------------------------------------------
+DRIFT CONTROL (arm=noop: clone spawn + restore + teardown, NO page, NO CDP)
+------------------------------------------------------------------------------
+  first half : 36.58 [36.48, 36.79] ms n=101
+  second half: 36.56 [36.54, 36.94] ms n=101
+  drift (2nd - 1st): -0.0 ms, 95% CI [-0.2, 0.3]
+  equivalence margin: +/-10.0 ms
+  VERDICT: drift is practically equivalent within the declared margin
+
+------------------------------------------------------------------------------
+END-TO-END, CALLER-BLOCKING (spawn -> answer in hand). Measured, not composed.
+------------------------------------------------------------------------------
+  cdp       blocking  408 [387, 499] ms n=202
+  html-fast blocking  355 [330, 448] ms n=202
+  noop      blocking  36.57 [36.54, 36.70] ms n=202
+
+  WALL (spawn -> VM fully gone; what the MACHINE pays, not the caller)
+  cdp       wall      474 [453, 564] ms n=202
+  html-fast wall      467 [441, 555] ms n=202
+  noop      wall      184.44 [184.07, 184.63] ms n=202
+
+------------------------------------------------------------------------------
+DELTAS (negative = faster). CI crossing zero = NOT a result.
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+CDP ARMS: per-request stage decomposition (host -> --publish -> guest loopback)
+------------------------------------------------------------------------------
+  [cdp]
+    spawn_to_port_ms 36.57 [36.49, 36.69] ms n=202   (process spawn -> first TCP accept; stable readiness boundary)
+    state_to_port_ms 27.69 [27.66, 27.80] ms n=202   (first state discovery -> first TCP accept; diagnostic only)
+    resolve_ms       25.9 [25.3, 26.3] ms n=202
+    tcp_ms           0.04 [0.03, 0.04] ms n=202
+    upgrade_ms       2.36 [2.13, 2.70] ms n=202
+    enable_ms        2.03 [1.77, 2.22] ms n=202
+    connect_total_ms 30.89 [30.45, 31.29] ms n=202
+    navigate_ms      270 [236, 328] ms n=202
+    screenshot_ms    58.5 [55.9, 60.8] ms n=202
+    total_ms         371 [350, 461] ms n=202
+  [html-fast]
+    spawn_to_port_ms 36.56 [36.45, 36.73] ms n=202   (process spawn -> first TCP accept; stable readiness boundary)
+    state_to_port_ms 27.70 [27.68, 27.89] ms n=202   (first state discovery -> first TCP accept; diagnostic only)
+    resolve_ms       25.52 [25.09, 25.92] ms n=202
+    tcp_ms           0.03 [0.03, 0.04] ms n=202
+    upgrade_ms       2.25 [2.11, 2.52] ms n=202
+    enable_ms        2.21 [1.93, 2.36] ms n=202
+    connect_total_ms 30.61 [30.21, 30.97] ms n=202
+    navigate_ms      280 [237, 337] ms n=202
+    extract_ms       15 [4, 18] ms n=202
+    total_ms         317 [293, 411] ms n=202
+
+------------------------------------------------------------------------------
+PER URL (measured successes: blocking, navigate_load_event_ms, distinct screenshots)
+------------------------------------------------------------------------------
+  https://example.com/
+    cdp       n=15   blocking 194 [191, 227] ms  navigate_load_event_ms 42.7 [41.7, 45.5] ms  images 1
+    html-fast n=15   blocking 142.5 [140.3, 144.0] ms  navigate_load_event_ms 44.4 [42.6, 46.0] ms  images 0
+    noop      n=15   blocking 38.4 [36.5, 38.5] ms  navigate_load_event_ms n/a  images 0
+  https://news.ycombinator.com/
+    cdp       n=15   blocking 644 [629, 660] ms  navigate_load_event_ms 245 [232, 260] ms  images 11
+    html-fast n=15   blocking 595 [583, 609] ms  navigate_load_event_ms 247 [240, 252] ms  images 0
+    noop      n=15   blocking 36.5 [36.4, 38.5] ms  navigate_load_event_ms n/a  images 0
+  https://developers.cloudflare.com/
+    cdp       n=15   blocking 542 [513, 576] ms  navigate_load_event_ms 347 [337, 381] ms  images 2
+    html-fast n=15   blocking 483 [472, 576] ms  navigate_load_event_ms 343 [338, 378] ms  images 0
+    noop      n=15   blocking 36.50 [36.21, 36.82] ms  navigate_load_event_ms n/a  images 0
+  https://blog.cloudflare.com/
+    cdp       n=15   blocking 403 [384, 423] ms  navigate_load_event_ms 225 [194, 244] ms  images 1
+    html-fast n=15   blocking 354 [336, 372] ms  navigate_load_event_ms 224 [197, 244] ms  images 0
+    noop      n=15   blocking 36.55 [36.37, 36.97] ms  navigate_load_event_ms n/a  images 0
+  https://en.wikipedia.org/
+    cdp       n=15   blocking 506 [492, 542] ms  navigate_load_event_ms 198 [192, 279] ms  images 6
+    html-fast n=15   blocking 517 [450, 544] ms  navigate_load_event_ms 207 [187, 304] ms  images 0
+    noop      n=15   blocking 36.5 [34.5, 36.6] ms  navigate_load_event_ms n/a  images 0
+  https://developer.mozilla.org/en-US/
+    cdp       n=15   blocking 387.4 [385.3, 391.4] ms  navigate_load_event_ms 174 [167, 178] ms  images 2
+    html-fast n=15   blocking 326 [321, 338] ms  navigate_load_event_ms 170 [163, 177] ms  images 0
+    noop      n=15   blocking 36.5 [36.4, 38.4] ms  navigate_load_event_ms n/a  images 0
+  https://www.elmundo.es/
+    cdp       n=14   blocking 30637 [30585, 30812] ms  navigate_load_event_ms 30479 [30431, 30652] ms  images 4
+    html-fast n=14   blocking 31348 [30657, 32437] ms  navigate_load_event_ms 31170 [30473, 32248] ms  images 0
+    noop      n=14   blocking 37.5 [36.5, 38.6] ms  navigate_load_event_ms n/a  images 0
+  https://www.rtp.pt/noticias/
+    cdp       n=14   blocking 2616 [2200, 3159] ms  navigate_load_event_ms 1979 [1948, 2060] ms  images 14
+    html-fast n=14   blocking 2404 [2181, 2971] ms  navigate_load_event_ms 2043 [1988, 2113] ms  images 0
+    noop      n=14   blocking 37.5 [36.5, 38.6] ms  navigate_load_event_ms n/a  images 0
+  https://www.theguardian.com/international
+    cdp       n=14   blocking 1440 [846, 2090] ms  navigate_load_event_ms 1247 [630, 1910] ms  images 4
+    html-fast n=14   blocking 1713 [844, 2093] ms  navigate_load_event_ms 1479 [625, 1882] ms  images 0
+    noop      n=14   blocking 37.7 [36.6, 38.5] ms  navigate_load_event_ms n/a  images 0
+  https://todomvc.com/examples/javascript-es6/dist/
+    cdp       n=14   blocking 359 [344, 386] ms  navigate_load_event_ms 189 [175, 212] ms  images 1
+    html-fast n=14   blocking 284 [279, 304] ms  navigate_load_event_ms 184 [180, 205] ms  images 0
+    noop      n=14   blocking 37.6 [36.5, 38.5] ms  navigate_load_event_ms n/a  images 0
+  https://todomvc.com/examples/react/dist/index.html
+    cdp       n=14   blocking 326.0 [324.4, 327.9] ms  navigate_load_event_ms 174 [172, 191] ms  images 1
+    html-fast n=14   blocking 274 [271, 300] ms  navigate_load_event_ms 175 [172, 196] ms  images 0
+    noop      n=14   blocking 36.6 [36.5, 38.5] ms  navigate_load_event_ms n/a  images 0
+  https://todomvc.com/examples/vue/dist/
+    cdp       n=14   blocking 326.6 [323.7, 328.4] ms  navigate_load_event_ms 172 [166, 187] ms  images 1
+    html-fast n=14   blocking 292 [279, 301] ms  navigate_load_event_ms 194 [183, 202] ms  images 0
+    noop      n=14   blocking 36.4 [36.4, 36.9] ms  navigate_load_event_ms n/a  images 0
+  https://todomvc.com/examples/angular/dist/browser/
+    cdp       n=14   blocking 358 [336, 370] ms  navigate_load_event_ms 201 [199, 216] ms  images 1
+    html-fast n=14   blocking 300 [296, 312] ms  navigate_load_event_ms 200 [193, 215] ms  images 0
+    noop      n=14   blocking 36.4 [35.2, 36.6] ms  navigate_load_event_ms n/a  images 0
+  https://todomvc.com/examples/preact/dist/
+    cdp       n=14   blocking 326.4 [324.3, 328.1] ms  navigate_load_event_ms 169 [158, 174] ms  images 1
+    html-fast n=14   blocking 267 [264, 314] ms  navigate_load_event_ms 171 [167, 206] ms  images 0
+    noop      n=14   blocking 36.7 [36.4, 38.5] ms  navigate_load_event_ms n/a  images 0
+
+------------------------------------------------------------------------------
+STALL GATE (render.stages.navigate_load_event_ms, every record incl. warmup)
+------------------------------------------------------------------------------
+  not evaluated (no --stall-max-ms)
+
+------------------------------------------------------------------------------
+TEARDOWN -- three numbers, deliberately not summed into one
+------------------------------------------------------------------------------
+  [cdp] mode=normal
+    reap_wall_ms      63.44 [63.43, 63.44] ms n=202   (kill -> processes truly gone)
+    teardown_total_ms 63.47 [63.47, 63.48] ms n=202   (incl. synchronous on-disk reap)
+    all_gone: 230/230 confirmed
+    disk_cleanup: 230/230 confirmed
+  [html-fast] mode=fast
+    reap_wall_ms      51.1 [50.1, 52.1] ms n=202   (kill -> processes truly gone)
+    teardown_total_ms 103.1 [102.1, 104.2] ms n=202   (incl. synchronous on-disk reap)
+    disk_reap_ms      1.44 [1.42, 1.47] ms n=202   (state file + data dir)
+    machine_cpu_excess 50 [50, 58] ms n=202   (/proc/stat busy CPU; ambient and harness subtracted; per-record quantization bounds retained)
+    counter envelope    lo -82.0 [-84.4, -79.7] ms n=202  hi 140 [130, 149] ms n=202
+    reclaim_cpu_ms per child (/proc tick = 10 ms)
+      fcvm                 10.00 [10.00, 10.00] ms n=202   COMPLETE (zombie observed)
+      firecracker-def      0.00 [0.00, 0.00] ms n=202   COMPLETE (zombie observed)
+      pasta-4707649d2      0.00 [0.00, 0.00] ms n=202   COMPLETE (zombie observed)
+      sleep                < 20 ms (below /proc tick resolution, n=202)
+    request CPU: 202/202 measured requests with a complete reading
+      clone mean          2392.7 ms [1914.5, 2910.4] n=202
+        /proc tick quantization +0.0 to +160.0 ms (10 ms tick)
+      memory server mean  312.7 ms [310.9, 314.6] n=202
+      total mean          2705.3 ms [2226.2, 3224.4] n=202 (/proc tick quantization -36.8 to +196.8 ms)
+    all_gone: 230/230 confirmed
+    disk_cleanup: 230/230 confirmed
+  [noop] mode=normal
+    reap_wall_ms      113.52 [113.52, 113.52] ms n=202   (kill -> processes truly gone)
+    teardown_total_ms 113.56 [113.56, 113.56] ms n=202   (incl. synchronous on-disk reap)
+    all_gone: 230/230 confirmed
+    disk_cleanup: 230/230 confirmed
+
+wrote /home/ubuntu/campaign/src/fcvm/bench/chromium/results/live-w3/reqbench/analysis.json
+19:23:57 run: results in /home/ubuntu/campaign/src/fcvm/bench/chromium/results/live-w3/reqbench (backend=uffd, gated run exit 0)

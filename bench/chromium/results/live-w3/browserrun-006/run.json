@@ -1,0 +1,54 @@
+{
+ "api": "https://api.cloudflare.com/client/v4/accounts/{account}/browser-run/{op}",
+ "client": "browserrun.py: one request at a time over HTTPS from this host",
+ "client_location": "us-east-2",
+ "corpus": "live sites, fetched by Browser Run with Cloudflare's DNS",
+ "drift_control": {
+  "endpoint": "https://api.cloudflare.com/cdn-cgi/trace",
+  "method": "GET",
+  "scope": "client-to-Cloudflare edge, not browser backend"
+ },
+ "engines": [
+  "chromium",
+  "kitesurf"
+ ],
+ "image_type": "jpeg",
+ "loadavg_at_start": 0.83,
+ "ops": [
+  "screenshot",
+  "content"
+ ],
+ "quality": 80,
+ "reps": 14,
+ "seed": 20261114,
+ "started_at": 1794683650.6369495,
+ "urls": [
+  "https://example.com/",
+  "https://news.ycombinator.com/",
+  "https://developers.cloudflare.com/",
+  "https://blog.cloudflare.com/",
+  "https://en.wikipedia.org/",
+  "https://developer.mozilla.org/en-US/",
+  "https://www.elmundo.es/",
+  "https://www.rtp.pt/noticias/",
+  "https://www.theguardian.com/international",
+  "https://todomvc.com/examples/javascript-es6/dist/",
+  "https://todomvc.com/examples/react/dist/index.html",
+  "https://todomvc.com/examples/vue/dist/",
+  "https://todomvc.com/examples/angular/dist/browser/",
+  "https://todomvc.com/examples/preact/dist/"
+ ],
+ "via_https_proxy": false,
+ "viewport": {
+  "chromium": {
+   "deviceScaleFactor": 1,
+   "height": 600,
+   "width": 1280
+  },
+  "kitesurf": {
+   "height": 600,
+   "width": 1280
+  }
+ },
+ "warmup": 1
+}

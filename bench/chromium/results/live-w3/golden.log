@@ -1,0 +1,64 @@
+fuse-backend-rs: git+https://github.com/ejc3/fuse-backend-rs.git?branch=master#60364425ae45ac64e26d784c99ebf850544530b1
+fuser: git+https://github.com/ejc3/fuser.git?branch=read-buf-noreserve#711525f9a85c10088e6594e0589f61607550afa2
+==> Building...
+    Finished `release` profile [optimized] target(s) in 0.11s
+    Finished `release` profile [optimized] target(s) in 0.08s
+Generated config at: /home/ubuntu/.config/fcvm/rootfs-config.toml
+
+Customize the config file, then run:
+  sudo fcvm setup
+==> Building Chromium request-bench container image...
+18:52:48 building localhost/chromium-bench-req
+STEP 1/9: FROM docker.io/library/debian:bookworm-slim
+STEP 2/9: RUN apt-get update && apt-get install -y --no-install-recommends     chromium     python3     fonts-dejavu-core     && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/partial
+--> Using cache aa065359de98e25ddc3d57ab06930aee8b4c3901c97d5a8c0b9702779deb71b5
+--> aa065359de98
+STEP 3/9: ENV VK_ICD_FILENAMES=/usr/lib/chromium/./vk_swiftshader_icd.json
+--> Using cache 6acee654ee5c820c1c2b3b521801e6a690fa25cd4eca0f28e30b7ae3d0c19be8
+--> 6acee654ee5c
+STEP 4/9: COPY bench/chromium/pages/ /opt/bench/pages/
+--> Using cache f3a17ef62ebc4b51df1c4b3eef2163fab22d4bca0b43e12cde0e349531f8f167
+--> f3a17ef62ebc
+STEP 5/9: COPY bench/chromium/pageserver.py bench/chromium/render.py bench/chromium/entry.sh      bench/chromium/cdp_health.py bench/chromium/health_loop.py      bench/chromium/health_state.sh /opt/bench/
+--> Using cache 3614f39928702563fc936364fc6f38d6fc9e9b562906cde03b3a794edfa3e5f2
+--> 3614f3992870
+STEP 6/9: RUN chmod +x /opt/bench/entry.sh /opt/bench/render.py /opt/bench/pageserver.py      /opt/bench/cdp_health.py /opt/bench/health_state.sh
+--> Using cache dbcbccd0d95f32dbddf5e7f312fb0170d758f0acd964cf053cec953020026894
+--> dbcbccd0d95f
+STEP 7/9: EXPOSE 9222
+--> Using cache b97c7e9155d08173c20370896ce857dbe3b75e49042b83f2a6a84d5e838a86d1
+--> b97c7e9155d0
+STEP 8/9: HEALTHCHECK --interval=1s --timeout=5s --start-period=90s --retries=3     CMD ["/opt/bench/health_state.sh"]
+--> Using cache 788bbd002883c2ccfcda49607f1601a6f0852d41a874f7cdb752a67023a899f9
+--> 788bbd002883
+STEP 9/9: CMD ["/opt/bench/entry.sh"]
+--> Using cache e988aa69698d93874ad00bf0f6be9c80349e7e531eb29f6d966d45c91dd7f2b0
+COMMIT localhost/chromium-bench-req
+--> e988aa69698d
+Successfully tagged localhost/chromium-bench-req:latest
+e988aa69698d93874ad00bf0f6be9c80349e7e531eb29f6d966d45c91dd7f2b0
+18:52:49 build: published localhost/chromium-bench-req as sha256:e988aa69698d93874ad00bf0f6be9c80349e7e531eb29f6d966d45c91dd7f2b0
+==> /mnt/fcvm-btrfs already on btrfs
+==> Running fcvm setup (default kernel; builds only if release is absent)...
+sudo  ./target/release/fcvm setup --generate-config --force
+Generated config at: /root/.config/fcvm/rootfs-config.toml
+
+Customize the config file, then run:
+  sudo fcvm setup
+./target/release/fcvm setup --kernel-profile default --build-kernels --config "/mnt/nvme/campaign/src/fcvm/rootfs-config.toml"
+Setting up fcvm (this may take 5-10 minutes on first run)...
+  ✓ Kernel ready: /mnt/fcvm-btrfs/kernels/vmlinux-default-7.3.3-aarch64-ca1837829fd0.bin
+  ✓ Pasta ready: /mnt/fcvm-btrfs/pasta/pasta-4707649d2acb.bin
+
+Setting up kernel profile 'default': Default fcvm guest kernel
+  ✓ Profile kernel ready: /mnt/fcvm-btrfs/kernels/vmlinux-default-7.3.3-aarch64-ca1837829fd0.bin
+  ✓ Rootfs ready: /mnt/fcvm-btrfs/rootfs/layer2-8f669c1f42ef.raw
+  ✓ Initrd ready: /mnt/fcvm-btrfs/initrd/fc-agent-b74adf58cb67.initrd
+
+For 'default' profile, use:
+  fcvm podman run --kernel-profile default --privileged ...
+
+Setup complete! You can now run VMs with: fcvm podman run ...
+==> Creating golden snapshot (TAG=cb-live-w3, HUGEPAGES=0)...
+18:52:49 golden: podman prepare --tag cb-live-w3 (cold build, snapshot at the image health gate, hugepages=0)
+18:53:06 golden: done (cb-live-w3)

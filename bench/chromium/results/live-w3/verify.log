@@ -1,0 +1,19 @@
+==> Verifying CDP hops on a restored clone...
+18:53:06 verify: starting serve for cb-live-w3
+18:53:06 verify: serve pid 56742
+18:53:07 verify: clone pid=56854 host-side ip=127.0.0.2
+--- HOP A: healthcheck path, 127.0.0.1:9222 INSIDE the container ---
+healthy pages=1 id=FD36171610712DA2DCF3D968552F3AEE
+--- HOP D: baked resolver INSIDE the restored clone (dns_server=1.1.1.1, 0 host(s), 0 url(s)) ---
+  VERIFY_DNS_HOSTS and VERIFY_DNS_URLS unset: recording the snapshot's resolver, asserting nothing
+  OK evidence in /home/ubuntu/campaign/src/fcvm/bench/chromium/results/reqbench-f7ed0fc2b4d949c3bd9e7329425f6d02/verify-dns.json
+--- HOP B: GET /json/version from the HOST against 127.0.0.2:9222 ---
+  OK Chrome/156.0.8078.79 | protocol 1.3
+  note: non-IP Host header REJECTED (HTTP Error 500: Internal Server Error) — expected; connect by IP
+--- HOP C: WebSocket upgrade + one CDP command from the HOST ---
+{"ok":true,"cdp_host":"127.0.0.2:9222","url":"http://127.0.0.1:8000/medium.html","format":"jpeg","resolve_polls":[{"t_ms":20.08404499997596,"outcome":"page"}],"resolve_attempts":1,"target_prewired":false,"target_id":"FD36171610712DA2DCF3D968552F3AEE","ws_url":"ws://127.0.0.2:9222/devtools/page/FD36171610712DA2DCF3D968552F3AEE","idle_timeout":0,"image_bytes":61765,"image_sha256":"3d36b6f327c36b40ca955fa177d3819bad0d7c11f1730267c67fbdd026496eb8","width":1280,"height":657,"quality":80,"nav":{"response_end_ms":30.300000000000182,"dom_interactive_ms":85.80000000000018,"dom_content_loaded_end_ms":98.40000000000009,"load_event_start_ms":131.20000000000027,"dns_ms":0.0,"connect_ms":0.0,"tls_ms":0.0,"ttfb_ms":4.5,"resp_ms":2.599999999999909,"load_ms":131.20000000000027},"stages":{"resolve_ms":20.088261999944734,"tcp_ms":0.04007100005765096,"upgrade_ms":8.02239200004351,"enable_ms":6.356653000011647,"connect_total_ms":34.53441500005283,"navigate_command_ms":85.9564520000049,"navigate_load_event_ms":98.06346499999563,"navigate_ms":184.02136899999277,"idle_ms":0.0007700000423938036,"screenshot_ms":68.90042899999571,"decode_ms":0.17913299996052956,"nav_timing_ms":2.083618000028764,"total_ms":289.83296000001246}}
+--- target id stability ACROSS CLONES (-> can /json/list be skipped?) ---
+  clone1 (127.0.0.2) id=FD36171610712DA2DCF3D968552F3AEE
+  clone2 (127.0.0.3) id=FD36171610712DA2DCF3D968552F3AEE
+  STABLE across 2 clones — --ws-url prewiring is sound for this snapshot
+18:53:08 verify: done; both clone state/disk trees are absent

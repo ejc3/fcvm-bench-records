@@ -1,0 +1,15 @@
+{"status":200,"ok":true,"colo":"CMH","loadavg1":1.33,"wall_ms":10.6,"ts":1794682803.0592277,"rep":0,"warmup":true,"position":0}
+{"status":200,"ok":true,"colo":"CMH","loadavg1":2.28,"wall_ms":10.3,"ts":1794682817.4774404,"rep":1,"warmup":false,"position":4}
+{"status":200,"ok":true,"colo":"CMH","loadavg1":2.09,"wall_ms":9.2,"ts":1794682826.4536996,"rep":2,"warmup":false,"position":2}
+{"status":200,"ok":true,"colo":"CMH","loadavg1":1.92,"wall_ms":9.6,"ts":1794682828.7184699,"rep":3,"warmup":false,"position":0}
+{"status":200,"ok":true,"colo":"CMH","loadavg1":1.63,"wall_ms":8.7,"ts":1794682837.634267,"rep":4,"warmup":false,"position":1}
+{"status":200,"ok":true,"colo":"CMH","loadavg1":1.5,"wall_ms":10.6,"ts":1794682845.0577726,"rep":5,"warmup":false,"position":0}
+{"status":200,"ok":true,"colo":"CMH","loadavg1":1.37,"wall_ms":8.9,"ts":1794682858.391159,"rep":6,"warmup":false,"position":1}
+{"status":200,"ok":true,"colo":"CMH","loadavg1":0.9,"wall_ms":11.4,"ts":1794682886.222678,"rep":7,"warmup":false,"position":2}
+{"status":200,"ok":true,"colo":"CMH","loadavg1":5.07,"wall_ms":8.5,"ts":1794682927.9088411,"rep":8,"warmup":false,"position":4}
+{"status":200,"ok":true,"colo":"CMH","loadavg1":5.07,"wall_ms":10.5,"ts":1794682927.919415,"rep":9,"warmup":false,"position":0}
+{"status":200,"ok":true,"colo":"CMH","loadavg1":4.66,"wall_ms":9.9,"ts":1794682932.7103093,"rep":10,"warmup":false,"position":3}
+{"status":200,"ok":true,"colo":"CMH","loadavg1":4.66,"wall_ms":9.1,"ts":1794682936.5324488,"rep":11,"warmup":false,"position":4}
+{"status":200,"ok":true,"colo":"CMH","loadavg1":4.29,"wall_ms":10.5,"ts":1794682940.198522,"rep":12,"warmup":false,"position":2}
+{"status":200,"ok":true,"colo":"CMH","loadavg1":4.29,"wall_ms":11.1,"ts":1794682942.282319,"rep":13,"warmup":false,"position":1}
+{"status":200,"ok":true,"colo":"CMH","loadavg1":3.95,"wall_ms":10.6,"ts":1794682946.0024612,"rep":14,"warmup":false,"position":3}

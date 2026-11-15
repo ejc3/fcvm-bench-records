@@ -1,0 +1,871 @@
+{
+ "cells": {
+  "chromium/content": {
+   "attempts": 14,
+   "colos": [
+    "CMH"
+   ],
+   "failed": 0,
+   "loadavg1": {
+    "max": 1.44,
+    "median": 0.8300000000000001,
+    "min": 0.41
+   },
+   "p50_ms": 1231.8,
+   "per_page": {
+    "https://blog.cloudflare.com/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      213701,
+      213701
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 1656.4,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://developer.mozilla.org/en-US/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      78885,
+      78885
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 698.9,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://developers.cloudflare.com/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      218836,
+      218836
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 857.7,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://en.wikipedia.org/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      448273,
+      448273
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 1655.5,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://example.com/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      2826,
+      2826
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 539.1,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://news.ycombinator.com/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      37665,
+      37665
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 845.0,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/angular/dist/browser/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      4446,
+      4446
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 683.4,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/javascript-es6/dist/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      2263,
+      2263
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 590.4,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/preact/dist/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      3382,
+      3382
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 2658.3,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/react/dist/index.html": {
+     "attempts": 1,
+     "bytes_min_max": [
+      2503,
+      2503
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 12194.5,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/vue/dist/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      4105,
+      4105
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 642.6,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://www.elmundo.es/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      530307,
+      530307
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 3773.5,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://www.rtp.pt/noticias/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      676258,
+      676258
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 1977.0,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://www.theguardian.com/international": {
+     "attempts": 1,
+     "bytes_min_max": [
+      1511216,
+      1511216
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 1606.0,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    }
+   },
+   "rate_limit_wait_s": 0.0,
+   "succeeded": 14
+  },
+  "chromium/screenshot": {
+   "attempts": 14,
+   "colos": [
+    "CMH"
+   ],
+   "failed": 0,
+   "loadavg1": {
+    "max": 1.44,
+    "median": 0.835,
+    "min": 0.41
+   },
+   "p50_ms": 1341.5,
+   "per_page": {
+    "https://blog.cloudflare.com/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      56330,
+      56330
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 886.7,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://developer.mozilla.org/en-US/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      51748,
+      51748
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 908.9,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://developers.cloudflare.com/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      54698,
+      54698
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 1521.5,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://en.wikipedia.org/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      118878,
+      118878
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 1570.8,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://example.com/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      49425,
+      49425
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 731.3,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://news.ycombinator.com/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      87276,
+      87276
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 1625.3,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/angular/dist/browser/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      51832,
+      51832
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 1047.2,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/javascript-es6/dist/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      46394,
+      46394
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 664.1,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/preact/dist/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      44274,
+      44274
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 470.6,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/react/dist/index.html": {
+     "attempts": 1,
+     "bytes_min_max": [
+      49092,
+      49092
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 1770.7,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/vue/dist/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      33092,
+      33092
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 1161.5,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://www.elmundo.es/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      123300,
+      123300
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 2517.7,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://www.rtp.pt/noticias/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      108403,
+      108403
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 2812.3,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://www.theguardian.com/international": {
+     "attempts": 1,
+     "bytes_min_max": [
+      57135,
+      57135
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 2619.8,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    }
+   },
+   "rate_limit_wait_s": 0.0,
+   "succeeded": 14
+  },
+  "kitesurf/content": {
+   "attempts": 14,
+   "colos": [
+    "CMH"
+   ],
+   "failed": 0,
+   "loadavg1": {
+    "max": 1.44,
+    "median": 0.8200000000000001,
+    "min": 0.41
+   },
+   "p50_ms": 895.0,
+   "per_page": {
+    "https://blog.cloudflare.com/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      213176,
+      213176
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 886.4,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://developer.mozilla.org/en-US/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      78527,
+      78527
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 1052.0,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://developers.cloudflare.com/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      218024,
+      218024
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 1776.1,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://en.wikipedia.org/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      288669,
+      288669
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 738.4,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://example.com/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      2819,
+      2819
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 447.5,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://news.ycombinator.com/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      37730,
+      37730
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 583.1,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/angular/dist/browser/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      3451,
+      3451
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 907.0,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/javascript-es6/dist/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      2419,
+      2419
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 715.7,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/preact/dist/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      2495,
+      2495
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 489.3,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/react/dist/index.html": {
+     "attempts": 1,
+     "bytes_min_max": [
+      2585,
+      2585
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 806.9,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/vue/dist/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      2813,
+      2813
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 903.6,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://www.elmundo.es/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      514524,
+      514524
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 3487.5,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://www.rtp.pt/noticias/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      408695,
+      408695
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 2382.6,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://www.theguardian.com/international": {
+     "attempts": 1,
+     "bytes_min_max": [
+      1513258,
+      1513258
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 4117.5,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    }
+   },
+   "rate_limit_wait_s": 0.0,
+   "succeeded": 14
+  },
+  "kitesurf/screenshot": {
+   "attempts": 14,
+   "colos": [
+    "CMH"
+   ],
+   "failed": 0,
+   "loadavg1": {
+    "max": 1.57,
+    "median": 0.71,
+    "min": 0.41
+   },
+   "p50_ms": 2114.8,
+   "per_page": {
+    "https://blog.cloudflare.com/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      61629,
+      61629
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 4500.0,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://developer.mozilla.org/en-US/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      51510,
+      51510
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 3065.7,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://developers.cloudflare.com/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      58145,
+      58145
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 4106.9,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://en.wikipedia.org/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      111565,
+      111565
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 4573.9,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://example.com/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      50878,
+      50878
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 1076.3,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://news.ycombinator.com/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      82512,
+      82512
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 869.1,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/angular/dist/browser/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      52152,
+      52152
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 925.0,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/javascript-es6/dist/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      22113,
+      22113
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 933.2,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/preact/dist/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      44002,
+      44002
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 1048.3,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/react/dist/index.html": {
+     "attempts": 1,
+     "bytes_min_max": [
+      51449,
+      51449
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 1163.8,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://todomvc.com/examples/vue/dist/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      34541,
+      34541
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 965.4,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://www.elmundo.es/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      124585,
+      124585
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 15636.6,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://www.rtp.pt/noticias/": {
+     "attempts": 1,
+     "bytes_min_max": [
+      144243,
+      144243
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 4401.4,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    },
+    "https://www.theguardian.com/international": {
+     "attempts": 1,
+     "bytes_min_max": [
+      64103,
+      64103
+     ],
+     "distinct_outputs": 1,
+     "p50_ms": 11490.2,
+     "page_completed_in_check": true,
+     "statuses": [
+      200
+     ],
+     "succeeded": 1
+    }
+   },
+   "rate_limit_wait_s": 0.0,
+   "succeeded": 14
+  }
+ },
+ "drift_control": {
+  "attempts": 14,
+  "colos": [
+   "CMH"
+  ],
+  "failed": 0,
+  "succeeded": 14,
+  "wall_ms": {
+   "max": 11.8,
+   "median": 10.05,
+   "min": 9.0
+  }
+ },
+ "p50_convention": "statistics.median over successful measured requests",
+ "success_rule": "2xx with a well-formed body, and the page completed in the correctness pass (not blank, screenshot and content both worked)"
+}

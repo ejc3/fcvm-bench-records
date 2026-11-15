@@ -1,0 +1,91 @@
+{
+ "arms": [
+  "cdp",
+  "html-fast",
+  "noop"
+ ],
+ "browserrun_batches": [
+  {
+   "dir": "browserrun-001",
+   "first_ts": 1794682540.2596045,
+   "last_ts": 1794682677.8910491,
+   "requests": 60,
+   "summary": true
+  },
+  {
+   "dir": "browserrun-002",
+   "first_ts": 1794682803.8755965,
+   "last_ts": 1794682946.4315257,
+   "requests": 60,
+   "summary": true
+  },
+  {
+   "dir": "browserrun-003",
+   "first_ts": 1794683064.2219303,
+   "last_ts": 1794683191.3752918,
+   "requests": 60,
+   "summary": true
+  },
+  {
+   "dir": "browserrun-004",
+   "first_ts": 1794683311.7355425,
+   "last_ts": 1794683406.7092667,
+   "requests": 60,
+   "summary": true
+  },
+  {
+   "dir": "browserrun-005",
+   "first_ts": 1794683533.8169813,
+   "last_ts": 1794683649.897195,
+   "requests": 60,
+   "summary": true
+  },
+  {
+   "dir": "browserrun-006",
+   "first_ts": 1794683811.115064,
+   "last_ts": 1794683946.323169,
+   "requests": 60,
+   "summary": true
+  },
+  {
+   "dir": "browserrun-007",
+   "first_ts": 1794684077.3254876,
+   "last_ts": 1794684199.111851,
+   "requests": 60,
+   "summary": true
+  },
+  {
+   "dir": "browserrun-008",
+   "first_ts": 1794684333.6691492,
+   "last_ts": 1794684488.3795974,
+   "requests": 60,
+   "summary": true
+  }
+ ],
+ "cpu": 4,
+ "reps": 202,
+ "reqbench": {
+  "end": 1794684237.3309376,
+  "exit": 0,
+  "start": 1794682388.6205864
+ },
+ "resolver": "guest resolv.conf 1.1.1.1 (GUEST_DNS baked into the golden): live sites",
+ "tag": "cb-live-w3",
+ "urls": [
+  "https://example.com/",
+  "https://news.ycombinator.com/",
+  "https://developers.cloudflare.com/",
+  "https://blog.cloudflare.com/",
+  "https://en.wikipedia.org/",
+  "https://developer.mozilla.org/en-US/",
+  "https://www.elmundo.es/",
+  "https://www.rtp.pt/noticias/",
+  "https://www.theguardian.com/international",
+  "https://todomvc.com/examples/javascript-es6/dist/",
+  "https://todomvc.com/examples/react/dist/index.html",
+  "https://todomvc.com/examples/vue/dist/",
+  "https://todomvc.com/examples/angular/dist/browser/",
+  "https://todomvc.com/examples/preact/dist/"
+ ],
+ "warmup": 28
+}

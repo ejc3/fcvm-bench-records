@@ -1,0 +1,118 @@
+2026-11-14T19:19:52.096808Z  INFO fcvm::cgroup: no cgroup of the VM's own (needs root); the VM's memory is charged to the cgroup fcvm was started in reason=creating /sys/fs/cgroup/fcvm.slice: Permission denied (os error 13)
+2026-11-14T19:19:52.096856Z DEBUG fcvm::state::manager: load_state_by_pid: searching for VM pid=58639
+2026-11-14T19:19:52.097007Z DEBUG fcvm::state::manager: load_state_by_pid: found 1 VMs to search pid=58639 vm_count=1
+2026-11-14T19:19:52.097037Z DEBUG fcvm::state::manager: load_state_by_pid: found matching VM pid=58639 vm_id=vm-12188dc0351a4e768aebae8899a08cbd vm_name=None
+2026-11-14T19:19:52.097046Z  INFO fcvm::commands::snapshot: Cloning VM from serve PID 58639 (snapshot: cb-live-w3)
+2026-11-14T19:19:52.097089Z DEBUG fcvm::commands::common: acquired per-snapshot lock lock=/mnt/fcvm-btrfs/snapshots/cb-live-w3.lock exclusive=false
+2026-11-14T19:19:52.097165Z  INFO fcvm::commands::snapshot: loaded snapshot configuration snapshot=cb-live-w3 image=localhost/chromium-bench-req vcpu=4 mem_mib=1024
+2026-11-14T19:19:52.097535Z  INFO fcvm::setup::rootfs: loaded rootfs config config_file=/home/ubuntu/.config/fcvm/rootfs-config.toml config_sha=d93c58cb75a9
+2026-11-14T19:19:52.097722Z  INFO fcvm::setup::rootfs: loaded rootfs config config_file=/home/ubuntu/.config/fcvm/rootfs-config.toml config_sha=d93c58cb75a9
+2026-11-14T19:19:52.097897Z  INFO fcvm::setup::rootfs: loaded rootfs config config_file=/home/ubuntu/.config/fcvm/rootfs-config.toml config_sha=d93c58cb75a9
+2026-11-14T19:19:52.100218Z DEBUG fcvm::version_cache: binary derivation cache hit (disk) bin=/mnt/fcvm-btrfs/image-cache/d4827bec992811174275fc86cb905eec3a4210e4a7e2e2fff36ee3901fa6c596.storage-v2.img namespace="image-disk-sha256-v1:d61fed6cb5192b60f1388ce03e60ff15"
+2026-11-14T19:19:52.100268Z DEBUG fcvm::state::manager: cleanup_stale_state: starting scan state_dir=/mnt/fcvm-btrfs/state
+2026-11-14T19:19:52.100364Z DEBUG fcvm::state::manager: cleanup_stale_state: scan complete examined=1 removed=0
+2026-11-14T19:19:52.100437Z DEBUG fcvm::state::manager: save_state: starting save vm_id=vm-2ee6c73cae3d45ee9087359fe6066371 pid=Some(326914) state_dir=/mnt/fcvm-btrfs/state
+2026-11-14T19:19:52.100621Z DEBUG fcvm::state::manager: save_state: successfully saved state vm_id=vm-2ee6c73cae3d45ee9087359fe6066371 pid=Some(326914) path=/mnt/fcvm-btrfs/state/vm-2ee6c73cae3d45ee9087359fe6066371.json
+2026-11-14T19:19:52.100653Z  INFO fcvm::commands::snapshot: connecting to memory server uffd_socket=/mnt/fcvm-btrfs/uffd-cb-live-w3-58639-67157.sock serve_pid=58639
+2026-11-14T19:19:52.100695Z DEBUG fcvm::state::manager: cleanup_stale_state: starting scan state_dir=/mnt/fcvm-btrfs/state
+2026-11-14T19:19:52.100723Z  INFO fcvm::commands::podman::listeners: Output listener started socket=/mnt/fcvm-btrfs/vm-disks/vm-2ee6c73cae3d45ee9087359fe6066371/vsock.sock_4997
+2026-11-14T19:19:52.100743Z  INFO fcvm::network::egress_proxy: egress proxy started socket=/mnt/fcvm-btrfs/vm-disks/vm-2ee6c73cae3d45ee9087359fe6066371/vsock.sock_52000
+2026-11-14T19:19:52.100796Z DEBUG fcvm::state::manager: cleanup_stale_state: scan complete examined=2 removed=0
+2026-11-14T19:19:52.100863Z DEBUG fcvm::state::manager: save_state: starting save vm_id=vm-2ee6c73cae3d45ee9087359fe6066371 pid=Some(326914) state_dir=/mnt/fcvm-btrfs/state
+2026-11-14T19:19:52.101055Z DEBUG fcvm::state::manager: save_state: successfully saved state vm_id=vm-2ee6c73cae3d45ee9087359fe6066371 pid=Some(326914) path=/mnt/fcvm-btrfs/state/vm-2ee6c73cae3d45ee9087359fe6066371.json
+2026-11-14T19:19:52.101067Z  INFO fcvm::network::pasta: setting up rootless networking with pasta (bridge mode) vm_id=vm-2ee6c73cae3d45ee9087359fe6066371
+2026-11-14T19:19:52.101070Z  INFO fcvm::network::pasta: network configuration (pasta bridge mode, nsenter health checks) guest_ip=10.0.2.100 gateway=10.0.2.2 loopback_ip=Some("127.0.0.2")
+2026-11-14T19:19:52.101934Z  INFO fcvm::commands::snapshot: network configured for clone tap=tap-vm-2ee6c mac=02:89:8a:c3:d7:07
+2026-11-14T19:19:52.101974Z  INFO fcvm::commands::podman::listeners: Status listener started socket=/mnt/fcvm-btrfs/vm-disks/vm-2ee6c73cae3d45ee9087359fe6066371/vsock.sock_4999
+2026-11-14T19:19:52.101993Z  INFO fcvm::commands::podman::listeners: Boot-plan listener started (vsock) socket=/mnt/fcvm-btrfs/vm-disks/vm-2ee6c73cae3d45ee9087359fe6066371/vsock.sock_4995 bytes=209
+2026-11-14T19:19:52.102022Z  INFO fcvm::commands::podman::listeners: Restore-completion listener started (vsock) socket=/mnt/fcvm-btrfs/vm-disks/vm-2ee6c73cae3d45ee9087359fe6066371/vsock.sock_4994 expected_epoch=db251d0f-64f8-4f2a-b000-7d5896c2732e
+2026-11-14T19:19:52.102086Z DEBUG fcvm::commands::common: #608 coverage check passed embedded_vm_ids=["vm-9f59191320d54b53aefd885fb0bf061c"] covered_dirs=["/mnt/fcvm-btrfs/vm-disks/vm-9f59191320d54b53aefd885fb0bf061c"] data_dir=/mnt/fcvm-btrfs
+2026-11-14T19:19:52.102141Z DEBUG fcvm::version_cache: binary derivation cache hit (disk) bin=/mnt/fcvm-btrfs/firecracker/firecracker-default-1f1c3815abbf.bin namespace=""
+2026-11-14T19:19:52.102480Z DEBUG fcvm::commands::common: Found Firecracker 1.17.0 at "/mnt/fcvm-btrfs/firecracker/firecracker-default-1f1c3815abbf.bin"
+2026-11-14T19:19:52.102488Z  INFO fcvm::commands::common: restoring on Firecracker firecracker_bin=/mnt/fcvm-btrfs/firecracker/firecracker-default-1f1c3815abbf.bin reason="recorded by the snapshot"
+2026-11-14T19:19:52.102535Z  INFO fcvm::commands::common: spawning namespace holder for rootless networking cmd=["unshare", "--user", "--net", "--", "sleep", "infinity"]
+2026-11-14T19:19:52.104539Z  INFO fcvm::commands::common: namespace holder started holder_pid=327013
+2026-11-14T19:19:52.112088Z  INFO fcvm::commands::common: extended UID/GID mappings (0-65535) pid=327013
+2026-11-14T19:19:52.112973Z  INFO fcvm::utils: namespace ready (nsenter probe succeeded) holder_pid=327013 iterations=1 uid_map=0       1000          1
+         1     100000      65535 gid_map=0       1000          1
+         1     100000      65535
+2026-11-14T19:19:52.112992Z  INFO fcvm::storage::disk: creating CoW disk vm_id=vm-2ee6c73cae3d45ee9087359fe6066371
+2026-11-14T19:19:52.113771Z  INFO fcvm::commands::common: running network setup via nsenter holder_pid=327013
+2026-11-14T19:19:52.113915Z  INFO fcvm::storage::disk: creating instant reflink copy (btrfs CoW) base=/mnt/fcvm-btrfs/snapshots/cb-live-w3/disk/disk.raw disk=/mnt/fcvm-btrfs/vm-disks/vm-2ee6c73cae3d45ee9087359fe6066371/disks/rootfs.raw extents=Some(853)
+2026-11-14T19:19:52.116281Z DEBUG fcvm::commands::common: namespace ready after 2.510263ms
+2026-11-14T19:19:52.117082Z  INFO fcvm::storage::disk: reflink copy done disk=/mnt/fcvm-btrfs/vm-disks/vm-2ee6c73cae3d45ee9087359fe6066371/disks/rootfs.raw duration_ms=3
+2026-11-14T19:19:52.117087Z  INFO fcvm::commands::common: CoW disk prepared from snapshot rootfs=/mnt/fcvm-btrfs/vm-disks/vm-2ee6c73cae3d45ee9087359fe6066371/disks/rootfs.raw source_disk=/mnt/fcvm-btrfs/snapshots/cb-live-w3/disk/disk.raw
+2026-11-14T19:19:52.117091Z  INFO fcvm::commands::common: parallel disk + network setup complete holder_pid=327013
+2026-11-14T19:19:52.117122Z  INFO fcvm::commands::common: enabling mount namespace for path isolation view=/mnt/fcvm-btrfs/vm-disks redirects=["/mnt/fcvm-btrfs/vm-disks/vm-2ee6c73cae3d45ee9087359fe6066371 <- /mnt/fcvm-btrfs/vm-disks/vm-2ee6c73cae3d45ee9087359fe6066371"]
+2026-11-14T19:19:52.117126Z  INFO fcvm::commands::common: the snapshot load overrides every source path; the VMM runs without a mount namespace
+2026-11-14T19:19:52.122564Z  INFO fcvm::firecracker::vm: Firecracker Child.id() returned: Some(327020)
+2026-11-14T19:19:52.122576Z  INFO fcvm::network::pasta: starting pasta for rootless networking holder_pid=327013
+2026-11-14T19:19:52.122603Z  INFO fcvm::network::pasta: starting pasta for rootless networking namespace_pid=327013 pasta_tap=pasta0 pid_file=/mnt/fcvm-btrfs/vm-disks/vm-2ee6c73cae3d45ee9087359fe6066371/pasta.pid host_ipv6=Some("2600:1f16:10c7:8301:14d8:bd6:ffa0:6f16") port_mappings=1
+2026-11-14T19:19:52.122846Z  INFO fcvm::setup::rootfs: loaded rootfs config config_file=/home/ubuntu/.config/fcvm/rootfs-config.toml config_sha=d93c58cb75a9
+2026-11-14T19:19:52.123723Z  INFO fcvm::network::pasta: resolved pasta binary pasta_bin=/mnt/fcvm-btrfs/pasta/pasta-4707649d2acb.bin
+2026-11-14T19:19:52.123737Z  INFO fcvm::network::pasta: adding port forward proto=Tcp host_ip=127.0.0.2 host_port=9222 guest=10.0.2.100:9222
+2026-11-14T19:19:52.123741Z DEBUG fcvm::network::pasta: pasta arguments pasta_args=["--foreground", "--quiet", "-P", "/mnt/fcvm-btrfs/vm-disks/vm-2ee6c73cae3d45ee9087359fe6066371/pasta.pid", "--ns-ifname", "pasta0", "-a", "10.0.2.100", "-n", "255.255.255.0", "-g", "10.0.2.2", "--no-dhcp", "-a", "fd00::100", "-g", "fd00::2", "-o", "2600:1f16:10c7:8301:14d8:bd6:ffa0:6f16", "--no-ra", "--no-dhcpv6", "-t", "127.0.0.2/9222:9222", "-u", "none", "-T", "none", "-U", "none", "327013"]
+2026-11-14T19:19:52.123751Z DEBUG fcvm::network::pasta: pasta command cmd=Command { std: "/mnt/fcvm-btrfs/pasta/pasta-4707649d2acb.bin" "--foreground" "--quiet" "-P" "/mnt/fcvm-btrfs/vm-disks/vm-2ee6c73cae3d45ee9087359fe6066371/pasta.pid" "--ns-ifname" "pasta0" "-a" "10.0.2.100" "-n" "255.255.255.0" "-g" "10.0.2.2" "--no-dhcp" "-a" "fd00::100" "-g" "fd00::2" "-o" "2600:1f16:10c7:8301:14d8:bd6:ffa0:6f16" "--no-ra" "--no-dhcpv6" "-t" "127.0.0.2/9222:9222" "-u" "none" "-T" "none" "-U" "none" "327013", kill_on_drop: false }
+2026-11-14T19:19:52.125843Z  INFO fcvm::network::pasta: pasta ready (PID file created)
+2026-11-14T19:19:52.128859Z DEBUG fcvm::network::pasta: pasta TAP device present in namespace device=pasta0
+2026-11-14T19:19:52.128871Z DEBUG fcvm::network::pasta: running bridge setup script holder_pid=327013 script=ip link set pasta0 up; ip link add br0 type bridge; ip link set br0 address 02:fc:00:00:02:01; ip link set br0 up; ip link set pasta0 master br0; ip link set tap-vm-2ee6c master br0; ip addr add 10.0.2.1/24 dev br0
+2026-11-14T19:19:52.131820Z  INFO fcvm::network::pasta: pasta + bridge setup complete holder_pid=327013
+2026-11-14T19:19:52.131833Z  INFO fcvm::commands::common: loading snapshot with UFFD backend uffd_socket=/mnt/fcvm-btrfs/uffd-cb-live-w3-58639-67157.sock
+2026-11-14T19:19:52.136161Z  INFO fcvm::commands::common: snapshot load completed duration_ms=4 track_dirty_pages=false
+2026-11-14T19:19:52.136718Z  INFO fcvm::commands::common: balloon target settled on the restored VM duration_us=551 balloon_mib=None free_page_reporting=false set_by_caller=false
+2026-11-14T19:19:52.136922Z  INFO fcvm::commands::common: VM resume completed duration_ms=0 total_snapshot_ms=4
+2026-11-14T19:19:52.136995Z  INFO fcvm::commands::common: signaled fc-agent via MMDS restore_epoch=db251d0f-64f8-4f2a-b000-7d5896c2732e clone_ipv6=None
+2026-11-14T19:19:52.137003Z  INFO fcvm::commands::common: Saving fcvm PID: 326914
+2026-11-14T19:19:52.137045Z DEBUG fcvm::state::manager: save_state: starting save vm_id=vm-2ee6c73cae3d45ee9087359fe6066371 pid=Some(326914) state_dir=/mnt/fcvm-btrfs/state
+2026-11-14T19:19:52.137275Z DEBUG fcvm::state::manager: save_state: successfully saved state vm_id=vm-2ee6c73cae3d45ee9087359fe6066371 pid=Some(326914) path=/mnt/fcvm-btrfs/state/vm-2ee6c73cae3d45ee9087359fe6066371.json
+2026-11-14T19:19:52.137292Z  INFO fcvm::firecracker::vm: Firecracker Child.id() returned: Some(327020)
+2026-11-14T19:19:52.139835Z  INFO fcvm::network::egress_proxy: egress proxy: new multiplexed session
+2026-11-14T19:19:52.140845Z  INFO fcvm::console: [fc-agent] output vsock EPOLLERR (transport reset)
+2026-11-14T19:19:52.141232Z  INFO fcvm::console: [fc-agent] egress proxy session ended: vsock EPOLLERR (transport reset) (2328ms since session start)
+2026-11-14T19:19:52.141441Z  INFO fcvm::console: [fc-agent] egress proxy vsock disconnected, reconnecting...
+2026-11-14T19:19:52.141610Z  INFO fcvm::console: [fc-agent] egress proxy vsock connected (gen=2)
+2026-11-14T19:19:52.141875Z  INFO fcvm::console: [fc-agent] detected restore-epoch: db251d0f-64f8-4f2a-b000-7d5896c2732e
+2026-11-14T19:19:52.142164Z  INFO fcvm::console: [fc-agent] console reopened after restore (held since the snapshot boundary)
+2026-11-14T19:19:52.142809Z  INFO fcvm::console: [fc-agent] transparent huge pages: never
+2026-11-14T19:19:52.143183Z  INFO fcvm::console: [fc-agent] handling restore (epoch=db251d0f-64f8-4f2a-b000-7d5896c2732e)
+2026-11-14T19:19:52.143527Z  INFO fcvm::console: [fc-agent] restore: dropped the cached attributes of 0 mapped files
+2026-11-14T19:19:52.143903Z  INFO fcvm::console: [fc-agent] exec server: vsock transport reset (flag), re-registering listener
+2026-11-14T19:19:52.144229Z  INFO fcvm::console: [fc-agent] exec server: re-registered on vsock port 4998
+2026-11-14T19:19:52.144460Z  INFO fcvm::console: [fc-agent] flushed 5 inherited neighbours on eth0 (restored clone)
+2026-11-14T19:19:52.144674Z  INFO fcvm::console: [fc-agent] pinned 10.0.2.1 to 02:fc:00:00:02:01 (permanent)
+2026-11-14T19:19:52.144815Z  INFO fcvm::console: [fc-agent] no proxy settings configured
+2026-11-14T19:19:52.145150Z  INFO fcvm::console: [fc-agent] restore phase=host-identity epoch=db251d0f-64f8-4f2a-b000-7d5896c2732e elapsed_ms=0.244
+2026-11-14T19:19:52.145556Z  INFO fcvm::console: [fc-agent] gateway 10.0.2.2 ARP probe sent from 10.0.2.100 (eth0)
+2026-11-14T19:19:52.145899Z  INFO fcvm::console: [fc-agent] restore phase=tcp-cleanup epoch=db251d0f-64f8-4f2a-b000-7d5896c2732e begin
+2026-11-14T19:19:52.148191Z  INFO fcvm::console: [fc-agent] snapshot network cleanup complete: destroyed=8 already_gone=0 verified_armed=true link=UNTOUCHED gate=egress-open
+2026-11-14T19:19:52.148693Z  INFO fcvm::console: [fc-agent] restore phase=tcp-cleanup epoch=db251d0f-64f8-4f2a-b000-7d5896c2732e complete elapsed_ms=2.493 destroyed=8 already_gone=0
+2026-11-14T19:19:52.150127Z  INFO fcvm::console: [fc-agent] host clock round trips [105.582µs, 81.711µs, 60.949µs]; stepping to the 60.949µs one
+2026-11-14T19:19:52.150388Z  INFO fcvm::console: [fc-agent] received host time: 1794683992149590604 ns (read 50.345µs ago)
+2026-11-14T19:19:52.150633Z  INFO fcvm::console: [fc-agent] system clock synchronized from host (stepped +1607.457303 s)
+2026-11-14T19:19:52.150835Z  INFO fcvm::console: [fc-agent] egress proxy reconnected after restore (gen=2)
+2026-11-14T19:19:52.150988Z  INFO fcvm::console: [fc-agent] exec re-registered after restore
+2026-11-14T19:19:52.151392Z  INFO fcvm::console: [fc-agent] thawed 1 container cgroup(s)
+2026-11-14T19:19:52.151823Z  INFO fcvm::console: [fc-agent] snapshot network published: destroyed=8 already_gone=0 verified_armed=true link=UNTOUCHED gate=open
+2026-11-14T19:19:52.152277Z  INFO fcvm::console: [fc-agent] restore phases complete (epoch=db251d0f-64f8-4f2a-b000-7d5896c2732e): exec + egress ready elapsed_ms=8.396
+2026-11-14T19:19:52.152576Z  INFO fcvm::commands::snapshot: fc-agent acknowledged exact restore generation vm_id=vm-2ee6c73cae3d45ee9087359fe6066371 restore_epoch=db251d0f-64f8-4f2a-b000-7d5896c2732e guest_phases={"ack_connect_ms":1.206,"clock_ms":1.915,"egress_wait_ms":0.002,"exec_wait_ms":0.0,"gpu_ms":0.0,"gpus":0,"ipv6_ms":0.042,"neighbor_ms":0.731,"neighbour_pin_ms":0.989,"nfs_ms":0.002,"nfs_renew_failed":false,"nfs_renew_ms":0.0,"tcp_already_gone":0,"tcp_barrier_ms":0.156,"tcp_begin_console_ms":0.001,"tcp_cleanup_ms":2.493,"tcp_cleanup_untimed_ms":0.14,"tcp_complete_console_ms":0.022,"tcp_construct_ms":0.001,"tcp_destroy_datagrams":1,"tcp_destroy_ms":0.599,"tcp_destroyed":8,"tcp_egress_open_ms":0.402,"tcp_gate_arm_ms":0.137,"tcp_gate_egress_commit_ms":0.096,"tcp_gate_egress_read_ms":0.306,"tcp_gate_ingress_commit_ms":0.044,"tcp_gate_ingress_read_ms":0.063,"tcp_gate_netlink":true,"tcp_gate_udp_ipv4_ms":0.128,"tcp_gate_udp_ipv6_ms":0.0,"tcp_gate_verify_ipv4_ms":0.45,"tcp_gate_verify_ipv6_ms":0.335,"tcp_hook_ms":0.0,"tcp_lock_wait_ms":0.101,"tcp_reassert_ms":0.0,"tcp_reopen_ms":0.11,"tcp_verified":true,"tcp_verify_ms":0.892,"total_ms":8.396}
+2026-11-14T19:19:52.152597Z  INFO fcvm::commands::snapshot: VM cloned with UFFD memory vm_id=vm-2ee6c73cae3d45ee9087359fe6066371 vm_name=rb-16989727a07e4228a709da4a8f6d89f2-222-htmlfast
+✓ VM 'rb-16989727a07e4228a709da4a8f6d89f2-222-htmlfast' cloned from snapshot 'cb-live-w3' (UFFD mode)
+  Memory pages served on-demand by UFFD serve process
+  Disk uses CoW overlay
+{"ack_ms":50,"backend":"uffd","guest_phases":{"ack_connect_ms":1.206,"clock_ms":1.915,"egress_wait_ms":0.002,"exec_wait_ms":0.0,"gpu_ms":0.0,"gpus":0,"ipv6_ms":0.042,"neighbor_ms":0.731,"neighbour_pin_ms":0.989,"nfs_ms":0.002,"nfs_renew_failed":false,"nfs_renew_ms":0.0,"tcp_already_gone":0,"tcp_barrier_ms":0.156,"tcp_begin_console_ms":0.001,"tcp_cleanup_ms":2.493,"tcp_cleanup_untimed_ms":0.14,"tcp_complete_console_ms":0.022,"tcp_construct_ms":0.001,"tcp_destroy_datagrams":1,"tcp_destroy_ms":0.599,"tcp_destroyed":8,"tcp_egress_open_ms":0.402,"tcp_gate_arm_ms":0.137,"tcp_gate_egress_commit_ms":0.096,"tcp_gate_egress_read_ms":0.306,"tcp_gate_ingress_commit_ms":0.044,"tcp_gate_ingress_read_ms":0.063,"tcp_gate_netlink":true,"tcp_gate_udp_ipv4_ms":0.128,"tcp_gate_udp_ipv6_ms":0.0,"tcp_gate_verify_ipv4_ms":0.45,"tcp_gate_verify_ipv6_ms":0.335,"tcp_hook_ms":0.0,"tcp_lock_wait_ms":0.101,"tcp_reassert_ms":0.0,"tcp_reopen_ms":0.11,"tcp_verified":true,"tcp_verify_ms":0.892,"total_ms":8.396},"hypervisor":"firecracker","2026-11-14T19:19:52.152621Z DEBUG fcvm::commands::podman::listeners: Output connection established vm_id=vm-2ee6c73cae3d45ee9087359fe6066371 connection_count=1
+name":"rb-16989727a07e4228a709da4a8f6d89f2-222-htmlfast","snapshot":"cb-live-w3","status":"restored","vm_id":"vm-2ee6c73cae3d45ee9087359fe6066371"}
+2026-11-14T19:19:52.152640Z  INFO fcvm::commands::snapshot: fc-agent output connected, exec server ready vm_id=vm-2ee6c73cae3d45ee9087359fe6066371
+2026-11-14T19:19:52.152801Z  INFO fcvm::console: [fc-agent] restore-completion ACK connect syscall took 1 ms
+2026-11-14T19:19:52.152986Z  INFO fcvm::console: [fc-agent] restore-completion ACK connected in 1 ms
+2026-11-14T19:19:52.153127Z  INFO fcvm::console: [fc-agent] output vsock reconnect (flag)
+2026-11-14T19:19:52.153290Z  INFO fcvm::commands::podman::listeners: Container ready notification received vm_id=vm-2ee6c73cae3d45ee9087359fe6066371 healthcheck=true
+2026-11-14T19:19:52.153494Z  INFO fcvm::console: [fc-agent] container started, notified host via vsock
+2026-11-14T19:19:52.153806Z  INFO fcvm::console: [fc-agent] output vsock reconnected
+2026-11-14T19:19:52.154105Z  INFO fcvm::console: [fc-agent] vsock transport reset observed; fast-polling restore-epoch
+2026-11-14T19:19:52.156698Z  INFO fcvm::network::pasta: guest answered and its MAC is resolved guest_ip="10.0.2.100" probe_port=9222 readiness_ms=4.050414 rounds=1 stalled_attempts=0 neighbor=10.0.2.100 lladdr 02:da:3e:6c:57:cc REACHABLE
+2026-11-14T19:19:52.159326Z  INFO fcvm::console: [fc-agent] chronyd restarted after restore (epoch=db251d0f-64f8-4f2a-b000-7d5896c2732e) with 4 NTP source(s)
+2026-11-14T19:19:52.159379Z DEBUG fcvm::network::pasta: port forward ready addr=127.0.0.2:9222
+2026-11-14T19:19:52.160666Z  INFO fcvm::commands::common: VM lifecycle ready vm_id=vm-2ee6c73cae3d45ee9087359fe6066371
+2026-11-14T19:19:52.166951Z  INFO fcvm::console: [fc-agent] exec server: accepted connection on vsock port 4998
+2026-11-14T19:19:52.205427Z  INFO fcvm::console: [fc-agent] journald restarted after restore
+2026-11-14T19:19:52.205773Z  INFO fcvm::console: [fc-agent] exec server: accepted connection on vsock port 4998

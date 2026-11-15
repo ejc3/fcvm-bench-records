@@ -1,0 +1,427 @@
+{
+  "arm": "html-fast",
+  "blocking_ms": 156.36396699994748,
+  "budget_exhausted": false,
+  "budget_s": 60.0,
+  "captured_at": 1794682389.5645747,
+  "command_timeout_s": 20.0,
+  "control_path": "",
+  "elapsed_ms": 6159.615377000023,
+  "endpoint": "127.0.0.2:9222",
+  "errors": [],
+  "failure_class": null,
+  "failure_stage": null,
+  "fcvm_pid": 58850,
+  "guest": {
+    "active_mutating": {
+      "argv": [
+        "/home/ubuntu/campaign/src/fcvm/bench/chromium/results/live-w3/reqbench/runtime/46bde70962ba3e6bfab6a4b819abb0087c13a564125ccc94daf3db6e5ab8ad56/fcvm",
+        "exec",
+        "--pid",
+        "58850",
+        "--vm",
+        "--",
+        "sh",
+        "-c",
+        "printf '===fcvm-probe-section %s\\n' cdp_from_guest_loopback; ( printf 'GET /json/version HTTP/1.1\\r\\nHost: 127.0.0.1:9222\\r\\nConnection: close\\r\\n\\r\\n' | nc -w 2 127.0.0.1 9222 ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' cdp_from_guest_loopback \"$?\"\nprintf '===fcvm-probe-section %s\\n' mmds_latest; ( tok=$(printf 'PUT /latest/api/token HTTP/1.0\\r\\nX-metadata-token-ttl-seconds: 60\\r\\nConnection: close\\r\\n\\r\\n' | nc -w 2 169.254.169.254 80 | tr -d '\\r' | tail -1); printf 'GET /latest HTTP/1.0\\r\\nX-metadata-token: %s\\r\\nAccept: application/json\\r\\nConnection: close\\r\\n\\r\\n' \"$tok\" | nc -w 2 169.254.169.254 80 | tr -d '\\r' | tail -5 ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' mmds_latest \"$?\"\nprintf '===fcvm-probe-section %s\\n' arping_gateway; ( gw=$(ip route show default | awk '/via/{print $3; exit}'); echo \"gateway=$gw\"; arping -c 1 -w 2 -I eth0 \"$gw\" ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' arping_gateway \"$?\""
+      ],
+      "budget_limited": false,
+      "elapsed_ms": 6062.545851999971,
+      "mutates_guest_state": true,
+      "rc": 0,
+      "sections": {
+        "arping_gateway": {
+          "output": "gateway=10.0.2.2\nARPING 10.0.2.2 from 10.0.2.100 eth0\nUnicast reply from 10.0.2.2 [9A:55:9A:55:9A:55]  0.578ms\nSent 1 probes (1 broadcast(s))\nReceived 1 response(s)",
+          "rc": 0
+        },
+        "cdp_from_guest_loopback": {
+          "output": "HTTP/1.1 200 OK\nContent-Security-Policy:frame-ancestors 'none'\nContent-Length:442\nContent-Type:application/json; charset=UTF-8\n\n{\n   \"Browser\": \"Chrome/156.0.8078.79\",\n   \"File-Path-Style\": \"posix\",\n   \"Protocol-Version\": \"1.3\",\n   \"User-Agent\": \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36\",\n   \"V8-Version\": \"15.6.75.27\",\n   \"WebKit-Version\": \"537.36 (@a21ce95c24ce3964416f09ae1862f53f319eb4d0)\",\n   \"webSocketDebuggerUrl\": \"ws://127.0.0.1:9222/devtools/browser/71e921b9-f5c2-40b8-9467-3968f086543b\"\n}",
+          "rc": 0
+        },
+        "mmds_latest": {
+          "output": "Connection: keep-alive\nContent-Type: application/json\nContent-Length: 271\n\n{\"dns\":{\"search\":[],\"servers\":[\"1.1.1.1\"]},\"host-ipv6\":null,\"host-time\":\"1794682389\",\"host-time-ns\":\"1794682389446591495\",\"proxy\":{\"http_proxy\":null,\"https_proxy\":null,\"no_proxy\":null},\"restore-epoch\":\"55f1ce46-fc15-4f8a-92f6-97126b953fef\",\"transparent-hugepage\":\"never\"}===fcvm-probe-rc mmds_latest 0",
+          "rc": null
+        }
+      },
+      "stderr": "2026-11-14T18:53:09.665872Z DEBUG fcvm::state::manager: load_state_by_pid: searching for VM pid=58850\n2026-11-14T18:53:09.665997Z DEBUG fcvm::state::manager: load_state_by_pid: found 2 VMs to search pid=58850 vm_count=2\n2026-11-14T18:53:09.666043Z DEBUG fcvm::state::manager: load_state_by_pid: found matching VM pid=58850 vm_id=vm-edcb296c16924049a579df6730f80943 vm_name=Some(\"rb-16989727a07e4228a709da4a8f6d89f2-0-htmlfast\")\n2026-11-14T18:53:09.666051Z  INFO fcvm::commands::exec: connecting to VM exec server via vsock vm_id=vm-edcb296c16924049a579df6730f80943 socket=/mnt/fcvm-btrfs/vm-disks/vm-edcb296c16924049a579df6730f80943/vsock.sock port=4998\n2026-11-14T18:53:09.667356Z DEBUG fcvm::commands::exec: exec handshake: ACK received, sending GO attempt=1\n2026-11-14T18:53:09.667362Z DEBUG fcvm::commands::exec: exec handshake: GO sent, command starting\n2026-11-14T18:53:09.667366Z  INFO fcvm::commands::exec: exec request acknowledged, command starting command=[\"sh\", \"-c\", \"printf '===fcvm-probe-section %s\\\\n' cdp_from_guest_loopback; ( printf 'GET /json/version HTTP/1.1\\\\r\\\\nHost: 127.0.0.1:9222\\\\r\\\\nConnection: close\\\\r\\\\n\\\\r\\\\n' | nc -w 2 127.0.0.1 9222 ) 2>&1; printf '===fcvm-probe-rc %s %s\\\\n' cdp_from_guest_loopback \\\"$?\\\"\\nprintf '===fcvm-probe-section %s\\\\n' mmds_latest; ( tok=$(printf 'PUT /latest/api/token HTTP/1.0\\\\r\\\\nX-metadata-token-ttl-seconds: 60\\\\r\\\\nConnection: close\\\\r\\\\n\\\\r\\\\n' | nc -w 2 169.254.169.254 80 | tr -d '\\\\r' | tail -1); printf 'GET /latest HTTP/1.0\\\\r\\\\nX-metadata-token: %s\\\\r\\\\nAccept: application/json\\\\r\\\\nConnection: close\\\\r\\\\n\\\\r\\\\n' \\\"$tok\\\" | nc -w 2 169.254.169.254 80 | tr -d '\\\\r' | tail -5 ) 2>&1; printf '===fcvm-probe-rc %s %s\\\\n' mmds_latest \\\"$?\\\"\\nprintf '===fcvm-probe-section %s\\\\n' arping_gateway; ( gw=$(ip route show default | awk '/via/{print $3; exit}'); echo \\\"gateway=$gw\\\"; arping -c 1 -w 2 -I eth0 \\\"$gw\\\" ) 2>&1; printf '===fcvm-probe-rc %s %s\\\\n' arping_gateway \\\"$?\\\"\"] in_container=false interactive=false tty=false\n2026-11-14T18:53:09.667375Z DEBUG fcvm::commands::tty: run_tty_session_connected: stdin_fd=0, flags=0x20002, O_NONBLOCK=false\n",
+      "timed_out": false,
+      "timeout_s": 20.0
+    },
+    "passive": {
+      "argv": [
+        "/home/ubuntu/campaign/src/fcvm/bench/chromium/results/live-w3/reqbench/runtime/46bde70962ba3e6bfab6a4b819abb0087c13a564125ccc94daf3db6e5ab8ad56/fcvm",
+        "exec",
+        "--pid",
+        "58850",
+        "--vm",
+        "--",
+        "sh",
+        "-c",
+        "printf '===fcvm-probe-section %s\\n' guest_date; ( date -u +%Y-%m-%dT%H:%M:%SZ ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' guest_date \"$?\"\nprintf '===fcvm-probe-section %s\\n' guest_uptime; ( cat /proc/uptime ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' guest_uptime \"$?\"\nprintf '===fcvm-probe-section %s\\n' ip_addr; ( ip addr ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' ip_addr \"$?\"\nprintf '===fcvm-probe-section %s\\n' ip_link_stats; ( ip -s link ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' ip_link_stats \"$?\"\nprintf '===fcvm-probe-section %s\\n' ip_route; ( ip route ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' ip_route \"$?\"\nprintf '===fcvm-probe-section %s\\n' ip_neigh; ( ip neigh ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' ip_neigh \"$?\"\nprintf '===fcvm-probe-section %s\\n' proc_net_arp; ( cat /proc/net/arp ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' proc_net_arp \"$?\"\nprintf '===fcvm-probe-section %s\\n' proc_net_dev; ( cat /proc/net/dev ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' proc_net_dev \"$?\"\nprintf '===fcvm-probe-section %s\\n' listening_sockets; ( ss -ltnp ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' listening_sockets \"$?\"\nprintf '===fcvm-probe-section %s\\n' proc_net_tcp; ( cat /proc/net/tcp ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' proc_net_tcp \"$?\"\nprintf '===fcvm-probe-section %s\\n' chromium_processes; ( ps -eo pid,ppid,stat,etimes,comm,args | awk 'NR==1 || $5 ~ /^chrom/' ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' chromium_processes \"$?\"\nprintf '===fcvm-probe-section %s\\n' dmesg_tail; ( dmesg | tail -50 ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' dmesg_tail \"$?\"\nprintf '===fcvm-probe-section %s\\n' fc_agent_journal; ( journalctl -b --no-pager -o cat -n 400 | grep -F '[fc-agent]' | tail -40 ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' fc_agent_journal \"$?\""
+      ],
+      "budget_limited": false,
+      "elapsed_ms": 52.54848399999901,
+      "rc": 0,
+      "sections": {
+        "chromium_processes": {
+          "output": "    PID    PPID STAT ELAPSED COMMAND         COMMAND\n    506     445 Sl         2 chromium        /usr/lib/chromium/chromium --show-component-extension-options --enable-gpu-rasterization --no-default-browser-check --disable-pings --media-router=0 --disable-dev-shm-usage --enable-remote-extensions --load-extension= about:blank --headless=new --no-sandbox --remote-debugging-port=9222 --remote-debugging-address=0.0.0.0 --remote-allow-origins=* --ignore-certificate-errors --disable-gpu --disk-cache-size=0 --window-size=1280,800 --hide-scrollbars --mute-audio --no-first-run --no-default-browser-check --disable-background-networking --disable-breakpad --disable-component-update --user-data-dir=/dev/shm/ud/chrome-profile\n    522     445 Sl         1 chrome_crashpad /usr/lib/chromium/chrome_crashpad_handler --monitor-self --monitor-self-annotation=ptype=crashpad-handler --user-stream-region=4,65568 --database=/tmp/.config/chromium/Crash Reports --annotation=channel=built on Debian GNU/Linux 12 (bookworm) --annotation=lsb-release=Debian GNU/Linux 12 (bookworm) --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=156.0.8078.79 --initial-client-fd=7 --shared-client-connection\n    525     445 S          1 chrome_crashpad /usr/lib/chromium/chrome_crashpad_handler --no-periodic-tasks --monitor-self-annotation=ptype=crashpad-handler --database=/tmp/.config/chromium/Crash Reports --annotation=channel=built on Debian GNU/Linux 12 (bookworm) --annotation=lsb-release=Debian GNU/Linux 12 (bookworm) --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=156.0.8078.79 --initial-client-fd=4 --shared-client-connection\n    527     506 S          1 chromium        /usr/lib/chromium/chromium --type=zygote --no-zygote-sandbox --no-sandbox --headless=new --crashpad-handler-pid=0 --enable-crash-reporter=,built on Debian GNU/Linux 12 (bookworm) --noerrdialogs --user-data-dir=/dev/shm/ud/chrome-profile --change-stack-guard-on-fork=enable --no-first-run --ozone-platform=headless --ozone-override-screen-size=800,600 --use-angle=swiftshader-webgl\n    528     506 S          1 chromium        /usr/lib/chromium/chromium --type=zygote --no-sandbox --headless=new --crashpad-handler-pid=0 --enable-crash-reporter=,built on Debian GNU/Linux 12 (bookworm) --noerrdialogs --user-data-dir=/dev/shm/ud/chrome-profile --change-stack-guard-on-fork=enable --no-first-run --ozone-platform=headless --ozone-override-screen-size=800,600 --use-angle=swiftshader-webgl\n    567     527 Sl         1 chromium        /usr/lib/chromium/chromium --type=gpu-process --gpu-recent-crash-count=0 --no-sandbox --disable-dev-shm-usage --disable-breakpad --enable-gpu-rasterization --headless=new --ozone-platform=headless --use-angle=swiftshader-webgl --crashpad-handler-pid=0 --enable-crash-reporter=,built on Debian GNU/Linux 12 (bookworm) --noerrdialogs --user-data-dir=/dev/shm/ud/chrome-profile --change-stack-guard-on-fork=enable --gpu-preferences=YAAAAAAAAAAgAAAEAAAAAAAAAAAAAGAASAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAMAAAAAQAAAAAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --shared-files --field-trial-handle=3,i,8622382420168388782,453090065940617652,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=7,i,2778166963393725540,4687648911754588862,4 --trace-process-track-uuid=3190708988185955192\n    571     506 Sl         1 chromium        /usr/lib/chromium/chromium --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --no-sandbox --disable-dev-shm-usage --ignore-certificate-errors --use-angle=swiftshader-webgl --mute-audio --ignore-certificate-errors --crashpad-handler-pid=0 --enable-crash-reporter=,built on Debian GNU/Linux 12 (bookworm) --noerrdialogs --user-data-dir=/dev/shm/ud/chrome-profile --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,8622382420168388782,453090065940617652,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=7,i,2778166963393725540,4687648911754588862,4 --trace-process-track-uuid=3190708989122997041\n    611     528 Sl         1 chromium        /usr/lib/chromium/chromium --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=utility --no-sandbox --disable-dev-shm-usage --ignore-certificate-errors --use-angle=swiftshader-webgl --mute-audio --ignore-certificate-errors --crashpad-handler-pid=0 --enable-crash-reporter=,built on Debian GNU/Linux 12 (bookworm) --noerrdialogs --user-data-dir=/dev/shm/ud/chrome-profile --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,8622382420168388782,453090065940617652,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=7,i,2778166963393725540,4687648911754588862,4 --trace-process-track-uuid=3190708990060038890\n    629     528 SNl        1 chromium        /usr/lib/chromium/chromium --type=renderer --top-chrome-webui --crashpad-handler-pid=0 --enable-crash-reporter=,built on Debian GNU/Linux 12 (bookworm) --noerrdialogs --user-data-dir=/dev/shm/ud/chrome-profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --disable-breakpad --remote-debugging-port=9222 --ozone-platform=headless --disable-gpu-compositing --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=5 --launch-time-ticks=1234505 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,8622382420168388782,453090065940617652,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=7,i,2778166963393725540,4687648911754588862,4 --trace-process-track-uuid=3190708990997080739\n    640     528 SNl        1 chromium        /usr/lib/chromium/chromium --type=renderer --crashpad-handler-pid=0 --enable-crash-reporter=,built on Debian GNU/Linux 12 (bookworm) --noerrdialogs --user-data-dir=/dev/shm/ud/chrome-profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --disable-breakpad --remote-debugging-port=9222 --ozone-platform=headless --disable-gpu-compositing --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=6 --launch-time-ticks=1273029 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,8622382420168388782,453090065940617652,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=7,i,2778166963393725540,4687648911754588862,4 --trace-process-track-uuid=3190708991934122588\n    691     528 Sl         1 chromium        /usr/lib/chromium/chromium --type=renderer --crashpad-handler-pid=0 --enable-crash-reporter=,built on Debian GNU/Linux 12 (bookworm) --noerrdialogs --user-data-dir=/dev/shm/ud/chrome-profile --change-stack-guard-on-fork=enable --no-sandbox --disable-dev-shm-usage --disable-breakpad --remote-debugging-port=9222 --ozone-platform=headless --disable-gpu-compositing --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=8 --launch-time-ticks=1505863 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,8622382420168388782,453090065940617652,262144 --disable-features=PaintHolding --variations-seed-version --pseudonymization-salt-handle=7,i,2778166963393725540,4687648911754588862,4 --trace-process-track-uuid=3190708993808206286",
+          "rc": 0
+        },
+        "dmesg_tail": {
+          "output": "[    0.244165] systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.\n[    0.244679] systemd[1]: Listening on dm-event.socket - Device-mapper event daemon FIFOs.\n[    0.245126] systemd[1]: Listening on lvm2-lvmpolld.socket - LVM2 poll daemon socket.\n[    0.248107] systemd[1]: Listening on rpcbind.socket - RPCbind Server Activation Socket.\n[    0.248602] systemd[1]: Listening on syslog.socket - Syslog Socket.\n[    0.249072] systemd[1]: Listening on systemd-fsckd.socket - fsck to fsckd communication Socket.\n[    0.249662] systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.\n[    0.250137] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).\n[    0.254230] systemd[1]: Listening on systemd-journald.socket - Journal Socket.\n[    0.254660] systemd[1]: Listening on systemd-networkd.socket - Network Service Netlink Socket.\n[    0.255141] systemd[1]: systemd-pcrextend.socket - TPM2 PCR Extension (Varlink) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).\n[    0.255244] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.\n[    0.255743] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.\n[    0.256784] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...\n[    0.257743] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...\n[    0.258645] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...\n[    0.259235] systemd[1]: sys-kernel-tracing.mount - Kernel Trace File System was skipped because of an unmet condition check (ConditionPathExists=/sys/kernel/tracing).\n[    0.261284] systemd[1]: Starting systemd-journald.service - Journal Service...\n[    0.264105] systemd[1]: auth-rpcgss-module.service - Kernel Module supporting RPCSEC_GSS was skipped because of an unmet condition check (ConditionPathExists=/etc/krb5.keytab).\n[    0.264697] systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...\n[    0.265115] systemd[1]: kmod-static-nodes.service - Create List of Static Device Nodes was skipped because of an unmet condition check (ConditionFileNotEmpty=/lib/modules/7.3.3/modules.devname).\n[    0.265622] systemd[1]: Starting lvm2-monitor.service - Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...\n[    0.267138] systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...\n[    0.268282] systemd[1]: Starting modprobe@dm_mod.service - Load Kernel Module dm_mod...\n[    0.269345] systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...\n[    0.271673] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...\n[    0.272529] systemd-journald[129]: Collecting audit messages is disabled.\n[    0.277305] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...\n[    0.278368] systemd[1]: Starting modprobe@loop.service - Load Kernel Module loop...\n[    0.279726] systemd[1]: netplan-ovs-cleanup.service - OpenVSwitch configuration for cleanup was skipped because of an unmet condition check (ConditionFileIsExecutable=/usr/bin/ovs-vsctl).\n[    0.279835] systemd[1]: systemd-fsck-root.service - File System Check on Root Device was skipped because of an unmet condition check (ConditionPathIsReadWrite=!/).\n[    0.282023] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...\n[    0.284668] systemd[1]: Starting systemd-network-generator.service - Generate network units from Kernel command line...\n[    0.285159] systemd[1]: systemd-pcrmachine.service - TPM2 PCR Machine ID Measurement was skipped because of an unmet condition check (ConditionSecurity=measured-uki).\n[    0.287025] systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...\n[    0.288704] systemd[1]: Starting systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully...\n[    0.289203] systemd[1]: systemd-tpm2-setup-early.service - TPM2 SRK Setup (Early) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).\n[    0.290993] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...\n[    0.294744] systemd[1]: Started systemd-journald.service - Journal Service.\n[    0.330144] EXT4-fs (vda): re-mounted da3ec87b-3550-4f39-ab67-09f9e985ca0d.\n[    0.336273] systemd-journald[129]: Received client request to flush runtime journal.\n[    0.575704] EXT4-fs (vdb): mounted filesystem 10126bcc-1424-4b4a-aeb8-a3535474ab83 ro with ordered data mode. Quota mode: none.\n[    2.865940] random: crng reseeded due to virtual machine fork\n[    2.886079] systemd-journald[129]: Received SIGTERM from PID 1 (systemd).\n[    2.886193] systemd[1]: Stopping systemd-journald.service - Journal Service...\n[    2.890502] systemd[1]: systemd-journald.service: Deactivated successfully.\n[    2.890831] systemd[1]: Stopped systemd-journald.service - Journal Service.\n[    2.920470] systemd[1]: Starting systemd-journald.service - Journal Service...\n[    2.926942] systemd-journald[910]: Collecting audit messages is disabled.\n[    2.929141] systemd[1]: Started systemd-journald.service - Journal Service.",
+          "rc": 0
+        },
+        "fc_agent_journal": {
+          "output": "[fc-agent] starting",
+          "rc": 0
+        },
+        "guest_date": {
+          "output": "2026-11-14T18:53:09Z",
+          "rc": 0
+        },
+        "guest_uptime": {
+          "output": "2.99 7.26",
+          "rc": 0
+        },
+        "ip_addr": {
+          "output": "1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000\n    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00\n    inet 127.0.0.1/8 scope host lo\n       valid_lft forever preferred_lft forever\n    inet6 ::1/128 scope host \n       valid_lft forever preferred_lft forever\n2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000\n    link/ether 02:da:3e:6c:57:cc brd ff:ff:ff:ff:ff:ff\n    inet 10.0.2.100/24 brd 10.0.2.255 scope global eth0\n       valid_lft forever preferred_lft forever\n    inet6 fd00::100/64 scope global nodad \n       valid_lft forever preferred_lft forever\n    inet6 fe80::da:3eff:fe6c:57cc/64 scope link \n       valid_lft forever preferred_lft forever",
+          "rc": 0
+        },
+        "ip_link_stats": {
+          "output": "1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000\n    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00\n    RX:  bytes packets errors dropped  missed   mcast           \n        297569     330      0       0       0       0 \n    TX:  bytes packets errors dropped carrier collsns           \n        297569     330      0       0       0       0 \n2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1000\n    link/ether 02:da:3e:6c:57:cc brd ff:ff:ff:ff:ff:ff\n    RX:  bytes packets errors dropped  missed   mcast           \n        603889     894      0       0       0       0 \n    TX:  bytes packets errors dropped carrier collsns           \n         85670     729      0       0       0       0 ",
+          "rc": 0
+        },
+        "ip_neigh": {
+          "output": "10.0.2.2 dev eth0 lladdr 9a:55:9a:55:9a:55 REACHABLE \n10.0.2.1 dev eth0 lladdr 02:fc:00:00:02:01 PERMANENT \n169.254.169.254 dev eth0 lladdr 06:01:23:45:67:01 REACHABLE ",
+          "rc": 0
+        },
+        "ip_route": {
+          "output": "default via 10.0.2.2 dev eth0 \n10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.100 \n169.254.169.254 dev eth0 proto static scope link ",
+          "rc": 0
+        },
+        "listening_sockets": {
+          "output": "State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                                  \nLISTEN 0      4096      127.0.0.54:53         0.0.0.0:*    users:((\"systemd-resolve\",pid=209,fd=16))               \nLISTEN 0      4096       127.0.0.1:12345      0.0.0.0:*    users:((\"fc-agent\",pid=273,fd=13))                      \nLISTEN 0      5            0.0.0.0:8000       0.0.0.0:*    users:((\"python3\",pid=452,fd=3))                        \nLISTEN 0      10         127.0.0.1:9222       0.0.0.0:*    users:((\"chromium\",pid=506,fd=78))                      \nLISTEN 0      4096         0.0.0.0:111        0.0.0.0:*    users:((\"rpcbind\",pid=207,fd=4),(\"systemd\",pid=1,fd=37))\nLISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*    users:((\"systemd-resolve\",pid=209,fd=14))               \nLISTEN 0      4096         0.0.0.0:22         0.0.0.0:*    users:((\"systemd\",pid=1,fd=89))                         \nLISTEN 0      4096           [::1]:12345         [::]:*    users:((\"fc-agent\",pid=273,fd=12))                      \nLISTEN 0      4096            [::]:111           [::]:*    users:((\"rpcbind\",pid=207,fd=6),(\"systemd\",pid=1,fd=39))\nLISTEN 0      4096            [::]:22            [::]:*    users:((\"systemd\",pid=1,fd=90))                         ",
+          "rc": 0
+        },
+        "proc_net_arp": {
+          "output": "IP address       HW type     Flags       HW address            Mask     Device\n10.0.2.2         0x1         0x2         9a:55:9a:55:9a:55     *        eth0\n10.0.2.1         0x1         0x6         02:fc:00:00:02:01     *        eth0\n169.254.169.254  0x1         0x2         06:01:23:45:67:01     *        eth0",
+          "rc": 0
+        },
+        "proc_net_dev": {
+          "output": "Inter-|   Receive                                                |  Transmit\n face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs drop fifo colls carrier compressed\n    lo:  297569     330    0    0    0     0          0         0   297569     330    0    0    0     0       0          0\n  eth0:  604750     899    0    0    0     0          0         0    86316     736    0    0    0     0       0          0",
+          "rc": 0
+        },
+        "proc_net_tcp": {
+          "output": "  sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode                                                     \n   0: 3600007F:0035 00000000:0000 0A 00000000:00000000 00:00000000 00000000   991        0 415 1 ffff00000731cc00 100 0 0 10 5                       \n   1: 0100007F:3039 00000000:0000 0A 00000000:00000000 00:00000000 00000000     0        0 536 1 ffff00000731a600 100 0 0 10 0                       \n   2: 00000000:1F40 00000000:0000 0A 00000000:00000000 00:00000000 00000000     0        0 784 1 ffff000003928980 100 0 0 10 0                       \n   3: 0100007F:2406 00000000:0000 0A 00000000:00000000 00:00000000 00000000     0        0 2838 1 ffff000003929c80 100 0 0 10 0                      \n   4: 00000000:006F 00000000:0000 0A 00000000:00000000 00:00000000 00000000     0        0 2122 1 ffff00000392cc00 100 0 0 10 0                      \n   5: 3500007F:0035 00000000:0000 0A 00000000:00000000 00:00000000 00000000   991        0 413 1 ffff00000731c280 100 0 0 10 5                       \n   6: 00000000:0016 00000000:0000 0A 00000000:00000000 00:00000000 00000000     0        0 4509 1 ffff000007268000 100 0 0 10 0                      \n   7: 0100007F:1F40 0100007F:8648 06 00000000:00000000 03:000016CF 00000000     0        0 0 3 ffff000002bf3200                                      \n   8: 0100007F:8652 0100007F:1F40 06 00000000:00000000 03:00001712 00000000     0        0 0 3 ffff000023c63600                                      \n   9: 0100007F:1F40 0100007F:863C 06 00000000:00000000 03:000016CE 00000000     0        0 0 3 ffff00002a8c6b00                                      \n  10: 0100007F:C80C 0100007F:2406 06 00000000:00000000 03:000016C8 00000000     0        0 0 3 ffff0000132ff700                                      \n  11: 0100007F:C80E 0100007F:2406 06 00000000:00000000 03:000016CC 00000000     0        0 0 3 ffff00002a8c6600                                      \n  12: 0100007F:C820 0100007F:2406 06 00000000:00000000 03:00001731 00000000     0        0 0 3 ffff00002a8c6800                                      ",
+          "rc": 0
+        }
+      },
+      "stderr": "2026-11-14T18:53:09.572960Z DEBUG fcvm::state::manager: load_state_by_pid: searching for VM pid=58850\n2026-11-14T18:53:09.573081Z DEBUG fcvm::state::manager: load_state_by_pid: found 2 VMs to search pid=58850 vm_count=2\n2026-11-14T18:53:09.573122Z DEBUG fcvm::state::manager: load_state_by_pid: found matching VM pid=58850 vm_id=vm-edcb296c16924049a579df6730f80943 vm_name=Some(\"rb-16989727a07e4228a709da4a8f6d89f2-0-htmlfast\")\n2026-11-14T18:53:09.573130Z  INFO fcvm::commands::exec: connecting to VM exec server via vsock vm_id=vm-edcb296c16924049a579df6730f80943 socket=/mnt/fcvm-btrfs/vm-disks/vm-edcb296c16924049a579df6730f80943/vsock.sock port=4998\n2026-11-14T18:53:09.574946Z DEBUG fcvm::commands::exec: exec handshake: ACK received, sending GO attempt=1\n2026-11-14T18:53:09.574952Z DEBUG fcvm::commands::exec: exec handshake: GO sent, command starting\n2026-11-14T18:53:09.574954Z  INFO fcvm::commands::exec: exec request acknowledged, command starting command=[\"sh\", \"-c\", \"printf '===fcvm-probe-section %s\\\\n' guest_date; ( date -u +%Y-%m-%dT%H:%M:%SZ ) 2>&1; printf '===fcvm-probe-rc %s %s\\\\n' guest_date \\\"$?\\\"\\nprintf '===fcvm-probe-section %s\\\\n' guest_uptime; ( cat /proc/uptime ) 2>&1; printf '===fcvm-probe-rc %s %s\\\\n' guest_uptime \\\"$?\\\"\\nprintf '===fcvm-probe-section %s\\\\n' ip_addr; ( ip addr ) 2>&1; printf '===fcvm-probe-rc %s %s\\\\n' ip_addr \\\"$?\\\"\\nprintf '===fcvm-probe-section %s\\\\n' ip_link_stats; ( ip -s link ) 2>&1; printf '===fcvm-probe-rc %s %s\\\\n' ip_link_stats \\\"$?\\\"\\nprintf '===fcvm-probe-section %s\\\\n' ip_route; ( ip route ) 2>&1; printf '===fcvm-probe-rc %s %s\\\\n' ip_route \\\"$?\\\"\\nprintf '===fcvm-probe-section %s\\\\n' ip_neigh; ( ip neigh ) 2>&1; printf '===fcvm-probe-rc %s %s\\\\n' ip_neigh \\\"$?\\\"\\nprintf '===fcvm-probe-section %s\\\\n' proc_net_arp; ( cat /proc/net/arp ) 2>&1; printf '===fcvm-probe-rc %s %s\\\\n' proc_net_arp \\\"$?\\\"\\nprintf '===fcvm-probe-section %s\\\\n' proc_net_dev; ( cat /proc/net/dev ) 2>&1; printf '===fcvm-probe-rc %s %s\\\\n' proc_net_dev \\\"$?\\\"\\nprintf '===fcvm-probe-section %s\\\\n' listening_sockets; ( ss -ltnp ) 2>&1; printf '===fcvm-probe-rc %s %s\\\\n' listening_sockets \\\"$?\\\"\\nprintf '===fcvm-probe-section %s\\\\n' proc_net_tcp; ( cat /proc/net/tcp ) 2>&1; printf '===fcvm-probe-rc %s %s\\\\n' proc_net_tcp \\\"$?\\\"\\nprintf '===fcvm-probe-section %s\\\\n' chromium_processes; ( ps -eo pid,ppid,stat,etimes,comm,args | awk 'NR==1 || $5 ~ /^chrom/' ) 2>&1; printf '===fcvm-probe-rc %s %s\\\\n' chromium_processes \\\"$?\\\"\\nprintf '===fcvm-probe-section %s\\\\n' dmesg_tail; ( dmesg | tail -50 ) 2>&1; printf '===fcvm-probe-rc %s %s\\\\n' dmesg_tail \\\"$?\\\"\\nprintf '===fcvm-probe-section %s\\\\n' fc_agent_journal; ( journalctl -b --no-pager -o cat -n 400 | grep -F '[fc-agent]' | tail -40 ) 2>&1; printf '===fcvm-probe-rc %s %s\\\\n' fc_agent_journal \\\"$?\\\"\"] in_container=false interactive=false tty=false\n2026-11-14T18:53:09.574964Z DEBUG fcvm::commands::tty: run_tty_session_connected: stdin_fd=0, flags=0x20002, O_NONBLOCK=false\n",
+      "timed_out": false,
+      "timeout_s": 20.0
+    }
+  },
+  "host": {
+    "cdp_connect_now": {
+      "connected": true,
+      "elapsed_ms": 0.12556700005461607,
+      "endpoint": "127.0.0.2:9222",
+      "timeout_s": 2.0
+    },
+    "clone_state": {
+      "config": {
+        "balloon_free_page_reporting": false,
+        "balloon_mib": null,
+        "container_start_version": 1,
+        "dns_override": "1.1.1.1",
+        "extra_disks": [],
+        "firecracker_bin": "/mnt/fcvm-btrfs/firecracker/firecracker-default-1f1c3815abbf.bin",
+        "forward_localhost": [],
+        "gpus": [],
+        "guest": "linux",
+        "guest_thp": "never",
+        "guest_thp_restore": true,
+        "health_check_timeout": 5,
+        "health_check_url": null,
+        "hugepages": false,
+        "hypervisor": "Firecracker",
+        "image": "localhost/chromium-bench-req",
+        "image_disk_identity": "sha256:c82293f12a987cbc0f93049836b9aedfbd4abab3c78454333a70b6fad543688b",
+        "image_disk_path": "/mnt/fcvm-btrfs/image-cache/d4827bec992811174275fc86cb905eec3a4210e4a7e2e2fff36ee3901fa6c596.storage-v2.img",
+        "image_mode": "overlay",
+        "interactive": false,
+        "ipv6_prefix": null,
+        "kernel_profile": null,
+        "labels": {},
+        "memory_mib": 1024,
+        "network": {
+          "dns_search": null,
+          "dns_server": "1.1.1.1",
+          "guest_ip": "10.0.2.100/24",
+          "guest_ipv6": "fd00::100",
+          "guest_ipv6_local_only": false,
+          "guest_mac": "02:16:ac:e1:af:31",
+          "host_ip": "10.0.2.2",
+          "host_ipv6": "fd00::2",
+          "host_veth": null,
+          "http_proxy": null,
+          "https_proxy": null,
+          "loopback_ip": "127.0.0.2",
+          "namespace_name": null,
+          "tap_device": "tap-vm-edcb2"
+        },
+        "network_mode": "rootless",
+        "nfs_shares": [],
+        "original_vsock_vm_id": "vm-9f59191320d54b53aefd885fb0bf061c",
+        "pmem_devices": [],
+        "port_mappings": [
+          {
+            "guest_port": 9222,
+            "host_ip": null,
+            "host_port": 9222,
+            "proto": "tcp"
+          }
+        ],
+        "portable_volumes": false,
+        "process_type": "clone",
+        "published_guest_ports": [
+          {
+            "port": 9222,
+            "proto": "tcp"
+          }
+        ],
+        "restore_hook": null,
+        "serve_pid": 58639,
+        "snapshot_name": "cb-live-w3",
+        "source_vsock_socket_path": "/mnt/fcvm-btrfs/vm-disks/vm-edcb296c16924049a579df6730f80943/vsock.sock",
+        "tty": false,
+        "uffd_mode": null,
+        "user": null,
+        "username": null,
+        "vcpu": 4,
+        "volumes": [],
+        "vsock_socket_path": "/mnt/fcvm-btrfs/vm-disks/vm-edcb296c16924049a579df6730f80943/vsock.sock"
+      },
+      "created_at": "2026-11-14T18:53:09.411117276Z",
+      "exit_code": null,
+      "health_status": "healthy",
+      "holder_pid": 58949,
+      "last_updated": "2026-11-14T18:53:09.550898329Z",
+      "lifecycle_ready": true,
+      "name": "rb-16989727a07e4228a709da4a8f6d89f2-0-htmlfast",
+      "pid": 58850,
+      "pid_start_time": 67219,
+      "schema_version": 1,
+      "status": "running",
+      "vm_id": "vm-edcb296c16924049a579df6730f80943",
+      "vsock_epoch": 0
+    },
+    "fcvm_children": [
+      {
+        "alive": true,
+        "cmdline": "sleep infinity",
+        "comm": "sleep",
+        "pid": 58949,
+        "start_time": 67220,
+        "state": "S",
+        "stime_ms": 0.0,
+        "utime_ms": 0.0
+      },
+      {
+        "alive": true,
+        "cmdline": "/mnt/fcvm-btrfs/firecracker/firecracker-default-1f1c3815abbf.bin --api-sock /mnt/fcvm-btrfs/vm-disks/vm-edcb296c16924049a579df6730f80943/firecracker.sock --log-path /mnt/fcvm-btrfs/vm-disks/vm-edcb296c16924049a579df6730f80943/firecracker.log --level Info --show-level --show-log-origin",
+        "comm": "firecracker-def",
+        "pid": 58956,
+        "start_time": 67221,
+        "state": "S",
+        "stime_ms": 160.0,
+        "utime_ms": 200.0
+      },
+      {
+        "alive": true,
+        "cmdline": "/mnt/fcvm-btrfs/pasta/pasta-4707649d2acb.bin --foreground --quiet -P /mnt/fcvm-btrfs/vm-disks/vm-edcb296c16924049a579df6730f80943/pasta.pid --ns-ifname pasta0 -a 10.0.2.100 -n 255.255.255.0 -g 10.0.2.2 --no-dhcp -a fd00::100 -g fd00::2 -o 2600:1f16:10c7:8301:14d8:bd6:ffa0:6f16 --no-ra --no-dhcpv6 -t 127.0.0.2/9222:9222 -u none -T none -U none 58949",
+        "comm": "pasta-4707649d2",
+        "pid": 58959,
+        "start_time": 67221,
+        "state": "S",
+        "stime_ms": 0.0,
+        "utime_ms": 0.0
+      }
+    ],
+    "fcvm_process": {
+      "alive": true,
+      "cmdline": "/home/ubuntu/campaign/src/fcvm/bench/chromium/results/live-w3/reqbench/runtime/46bde70962ba3e6bfab6a4b819abb0087c13a564125ccc94daf3db6e5ab8ad56/fcvm snapshot run --pid 58639 --name rb-16989727a07e4228a709da4a8f6d89f2-0-htmlfast --no-dirty-tracking",
+      "comm": "fcvm",
+      "pid": 58850,
+      "start_time": 67219,
+      "state": "S",
+      "stime_ms": 20.0,
+      "utime_ms": 0.0
+    },
+    "holder_namespace": {
+      "attempts": [
+        {
+          "argv": [
+            "nsenter",
+            "-t",
+            "58949",
+            "-U",
+            "-n",
+            "--preserve-credentials",
+            "--",
+            "sh",
+            "-c",
+            "printf '===fcvm-probe-section %s\\n' ns_ip_addr; ( ip addr ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' ns_ip_addr \"$?\"\nprintf '===fcvm-probe-section %s\\n' ns_ip_link_stats; ( ip -s link ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' ns_ip_link_stats \"$?\"\nprintf '===fcvm-probe-section %s\\n' ns_ip_neigh; ( ip neigh ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' ns_ip_neigh \"$?\"\nprintf '===fcvm-probe-section %s\\n' ns_ip_route; ( ip route ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' ns_ip_route \"$?\"\nprintf '===fcvm-probe-section %s\\n' ns_bridge_link; ( bridge link ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' ns_bridge_link \"$?\"\nprintf '===fcvm-probe-section %s\\n' ns_listening_sockets; ( ss -ltn ) 2>&1; printf '===fcvm-probe-rc %s %s\\n' ns_listening_sockets \"$?\""
+          ],
+          "budget_limited": false,
+          "elapsed_ms": 28.41945099999066,
+          "nsenter_variant": "user+net",
+          "rc": 0,
+          "sections": {
+            "ns_bridge_link": {
+              "output": "2: tap-vm-edcb2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master br0 state forwarding priority 32 cost 2 \n3: pasta0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master br0 state forwarding priority 32 cost 2 ",
+              "rc": 0
+            },
+            "ns_ip_addr": {
+              "output": "1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000\n    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00\n    inet 127.0.0.1/8 scope host lo\n       valid_lft forever preferred_lft forever\n    inet6 ::1/128 scope host \n       valid_lft forever preferred_lft forever\n2: tap-vm-edcb2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master br0 state UP group default qlen 1000\n    link/ether 76:e8:fb:dc:9c:e1 brd ff:ff:ff:ff:ff:ff\n    inet6 fe80::74e8:fbff:fedc:9ce1/64 scope link tentative \n       valid_lft forever preferred_lft forever\n3: pasta0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master br0 state UNKNOWN group default qlen 1000\n    link/ether 02:be:85:3d:7b:ca brd ff:ff:ff:ff:ff:ff\n    inet6 fe80::be:85ff:fe3d:7bca/64 scope link tentative \n       valid_lft forever preferred_lft forever\n4: br0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000\n    link/ether 02:fc:00:00:02:01 brd ff:ff:ff:ff:ff:ff\n    inet 10.0.2.1/24 scope global br0\n       valid_lft forever preferred_lft forever\n    inet6 fe80::fc:ff:fe00:201/64 scope link tentative \n       valid_lft forever preferred_lft forever",
+              "rc": 0
+            },
+            "ns_ip_link_stats": {
+              "output": "1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000\n    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00\n    RX:  bytes packets errors dropped  missed   mcast           \n             0       0      0       0       0       0 \n    TX:  bytes packets errors dropped carrier collsns           \n             0       0      0       0       0       0 \n2: tap-vm-edcb2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master br0 state UP mode DEFAULT group default qlen 1000\n    link/ether 76:e8:fb:dc:9c:e1 brd ff:ff:ff:ff:ff:ff\n    RX:  bytes packets errors dropped  missed   mcast           \n         16038      46      0       0       0       0 \n    TX:  bytes packets errors dropped carrier collsns           \n         13051      64      0       0       0       0 \n3: pasta0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master br0 state UNKNOWN mode DEFAULT group default qlen 1000\n    link/ether 02:be:85:3d:7b:ca brd ff:ff:ff:ff:ff:ff\n    RX:  bytes packets errors dropped  missed   mcast           \n          9577      25      0       0       0       0 \n    TX:  bytes packets errors dropped carrier collsns           \n          6356      24      0       0       0       0 \n4: br0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DEFAULT group default qlen 1000\n    link/ether 02:fc:00:00:02:01 brd ff:ff:ff:ff:ff:ff\n    RX:  bytes packets errors dropped  missed   mcast           \n          9670      28      0       0       0       0 \n    TX:  bytes packets errors dropped carrier collsns           \n          3262      37      0       0       0       0 ",
+              "rc": 0
+            },
+            "ns_ip_neigh": {
+              "output": "10.0.2.100 dev br0 lladdr 02:da:3e:6c:57:cc REACHABLE ",
+              "rc": 0
+            },
+            "ns_ip_route": {
+              "output": "10.0.2.0/24 dev br0 proto kernel scope link src 10.0.2.1 ",
+              "rc": 0
+            },
+            "ns_listening_sockets": {
+              "output": "State Recv-Q Send-Q Local Address:Port Peer Address:PortProcess",
+              "rc": 0
+            }
+          },
+          "stderr": "",
+          "timed_out": false,
+          "timeout_s": 20.0
+        }
+      ],
+      "resolved_variant": "user+net"
+    },
+    "holder_pid": 58949,
+    "holder_procfs": {
+      "arp": {
+        "content": "IP address       HW type     Flags       HW address            Mask     Device\n10.0.2.100       0x1         0x2         02:da:3e:6c:57:cc     *        br0\n",
+        "path": "/proc/58949/net/arp"
+      },
+      "dev": {
+        "content": "Inter-|   Receive                                                |  Transmit\n face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs drop fifo colls carrier compressed\n    lo:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0\ntap-vm-edcb2:   15898      44    0    0    0     0          0         0    12689      59    0    0    0     0       0          0\npasta0:    9577      25    0    0    0     0          0         0     6356      24    0    0    0     0       0          0\n   br0:    9558      26    0    0    0     0          0         0     2990      33    0    0    0     0       0          0\n",
+        "path": "/proc/58949/net/dev"
+      },
+      "route": {
+        "content": "Iface\tDestination\tGateway \tFlags\tRefCnt\tUse\tMetric\tMask\t\tMTU\tWindow\tIRTT                                                       \nbr0\t0002000A\t00000000\t0001\t0\t0\t0\t00FFFFFF\t0\t0\t0                                                                                \n",
+        "path": "/proc/58949/net/route"
+      },
+      "tcp": {
+        "content": "  sl  local_address rem_address   st tx_queue rx_queue tr tm->when retrnsmt   uid  timeout inode                                                     \n   0: 0102000A:CB00 6402000A:2406 06 00000000:00000000 03:00001765 00000000     0        0 0 3 0000000000000000                                      \n   1: 0102000A:CB0E 6402000A:2406 06 00000000:00000000 03:00001765 00000000     0        0 0 3 0000000000000000                                      \n   2: 0102000A:CB12 6402000A:2406 06 00000000:00000000 03:0000176F 00000000     0        0 0 3 0000000000000000                                      \n   3: 0102000A:CB16 6402000A:2406 06 00000000:00000000 03:00001766 00000000     0        0 0 3 0000000000000000                                      \n",
+        "path": "/proc/58949/net/tcp"
+      }
+    },
+    "listeners": {
+      "argv": [
+        "ss",
+        "-H",
+        "-ltn",
+        "src",
+        "127.0.0.2"
+      ],
+      "budget_limited": false,
+      "elapsed_ms": 11.640421000038259,
+      "rc": 0,
+      "stderr": "",
+      "stdout": "LISTEN 0      128    127.0.0.2:9222 0.0.0.0:*\n",
+      "timed_out": false,
+      "timeout_s": 20.0
+    },
+    "loadavg": "1.79 1.73 1.07 3/1349 59220",
+    "log_markers": {
+      "lines": [
+        "2026-11-14T18:53:09.414194Z  INFO fcvm::network::pasta: setting up rootless networking with pasta (bridge mode) vm_id=vm-edcb296c16924049a579df6730f80943",
+        "2026-11-14T18:53:09.414196Z  INFO fcvm::network::pasta: network configuration (pasta bridge mode, nsenter health checks) guest_ip=10.0.2.100 gateway=10.0.2.2 loopback_ip=Some(\"127.0.0.2\")",
+        "2026-11-14T18:53:09.432958Z  INFO fcvm::network::pasta: starting pasta for rootless networking holder_pid=58949",
+        "2026-11-14T18:53:09.432985Z  INFO fcvm::network::pasta: starting pasta for rootless networking namespace_pid=58949 pasta_tap=pasta0 pid_file=/mnt/fcvm-btrfs/vm-disks/vm-edcb296c16924049a579df6730f80943/pasta.pid host_ipv6=Some(\"2600:1f16:10c7:8301:14d8:bd6:ffa0:6f16\") port_mappings=1",
+        "2026-11-14T18:53:09.434132Z  INFO fcvm::network::pasta: resolved pasta binary pasta_bin=/mnt/fcvm-btrfs/pasta/pasta-4707649d2acb.bin",
+        "2026-11-14T18:53:09.434149Z  INFO fcvm::network::pasta: adding port forward proto=Tcp host_ip=127.0.0.2 host_port=9222 guest=10.0.2.100:9222",
+        "2026-11-14T18:53:09.434153Z DEBUG fcvm::network::pasta: pasta arguments pasta_args=[\"--foreground\", \"--quiet\", \"-P\", \"/mnt/fcvm-btrfs/vm-disks/vm-edcb296c16924049a579df6730f80943/pasta.pid\", \"--ns-ifname\", \"pasta0\", \"-a\", \"10.0.2.100\", \"-n\", \"255.255.255.0\", \"-g\", \"10.0.2.2\", \"--no-dhcp\", \"-a\", \"fd00::100\", \"-g\", \"fd00::2\", \"-o\", \"2600:1f16:10c7:8301:14d8:bd6:ffa0:6f16\", \"--no-ra\", \"--no-dhcpv6\", \"-t\", \"127.0.0.2/9222:9222\", \"-u\", \"none\", \"-T\", \"none\", \"-U\", \"none\", \"58949\"]",
+        "2026-11-14T18:53:09.434162Z DEBUG fcvm::network::pasta: pasta command cmd=Command { std: \"/mnt/fcvm-btrfs/pasta/pasta-4707649d2acb.bin\" \"--foreground\" \"--quiet\" \"-P\" \"/mnt/fcvm-btrfs/vm-disks/vm-edcb296c16924049a579df6730f80943/pasta.pid\" \"--ns-ifname\" \"pasta0\" \"-a\" \"10.0.2.100\" \"-n\" \"255.255.255.0\" \"-g\" \"10.0.2.2\" \"--no-dhcp\" \"-a\" \"fd00::100\" \"-g\" \"fd00::2\" \"-o\" \"2600:1f16:10c7:8301:14d8:bd6:ffa0:6f16\" \"--no-ra\" \"--no-dhcpv6\" \"-t\" \"127.0.0.2/9222:9222\" \"-u\" \"none\" \"-T\" \"none\" \"-U\" \"none\" \"58949\", kill_on_drop: false }",
+        "2026-11-14T18:53:09.436216Z  INFO fcvm::network::pasta: pasta ready (PID file created)",
+        "2026-11-14T18:53:09.439862Z DEBUG fcvm::network::pasta: pasta TAP device present in namespace device=pasta0",
+        "2026-11-14T18:53:09.439883Z DEBUG fcvm::network::pasta: running bridge setup script holder_pid=58949 script=ip link set pasta0 up; ip link add br0 type bridge; ip link set br0 address 02:fc:00:00:02:01; ip link set br0 up; ip link set pasta0 master br0; ip link set tap-vm-edcb2 master br0; ip addr add 10.0.2.1/24 dev br0",
+        "2026-11-14T18:53:09.442778Z  INFO fcvm::network::pasta: pasta + bridge setup complete holder_pid=58949",
+        "2026-11-14T18:53:09.450875Z  INFO fcvm::console: [fc-agent] output vsock EPOLLERR (transport reset)",
+        "2026-11-14T18:53:09.451264Z  INFO fcvm::console: [fc-agent] egress proxy session ended: vsock EPOLLERR (transport reset) (2328ms since session start)",
+        "2026-11-14T18:53:09.451474Z  INFO fcvm::console: [fc-agent] egress proxy vsock disconnected, reconnecting...",
+        "2026-11-14T18:53:09.451642Z  INFO fcvm::console: [fc-agent] egress proxy vsock connected (gen=2)",
+        "2026-11-14T18:53:09.451900Z  INFO fcvm::console: [fc-agent] detected restore-epoch: 55f1ce46-fc15-4f8a-92f6-97126b953fef",
+        "2026-11-14T18:53:09.452187Z  INFO fcvm::console: [fc-agent] console reopened after restore (held since the snapshot boundary)",
+        "2026-11-14T18:53:09.452805Z  INFO fcvm::console: [fc-agent] transparent huge pages: never",
+        "2026-11-14T18:53:09.453264Z  INFO fcvm::console: [fc-agent] handling restore (epoch=55f1ce46-fc15-4f8a-92f6-97126b953fef)",
+        "2026-11-14T18:53:09.453592Z  INFO fcvm::console: [fc-agent] restore: dropped the cached attributes of 0 mapped files",
+        "2026-11-14T18:53:09.453951Z  INFO fcvm::console: [fc-agent] exec server: vsock transport reset (flag), re-registering listener",
+        "2026-11-14T18:53:09.454197Z  INFO fcvm::console: [fc-agent] exec server: re-registered on vsock port 4998",
+        "2026-11-14T18:53:09.454648Z  INFO fcvm::console: [fc-agent] flushed 5 inherited neighbours on eth0 (restored clone)",
+        "2026-11-14T18:53:09.454993Z  INFO fcvm::console: [fc-agent] pinned 10.0.2.1 to 02:fc:00:00:02:01 (permanent)",
+        "2026-11-14T18:53:09.455429Z  INFO fcvm::console: [fc-agent] no proxy settings configured",
+        "2026-11-14T18:53:09.455918Z  INFO fcvm::console: [fc-agent] restore phase=host-identity epoch=55f1ce46-fc15-4f8a-92f6-97126b953fef elapsed_ms=0.509",
+        "2026-11-14T18:53:09.457043Z  INFO fcvm::console: [fc-agent] gateway 10.0.2.2 ARP probe sent from 10.0.2.100 (eth0)",
+        "2026-11-14T18:53:09.457330Z  INFO fcvm::console: [fc-agent] restore phase=tcp-cleanup epoch=55f1ce46-fc15-4f8a-92f6-97126b953fef begin",
+        "2026-11-14T18:53:09.459412Z  INFO fcvm::console: [fc-agent] snapshot network cleanup complete: destroyed=8 already_gone=0 verified_armed=true link=UNTOUCHED gate=egress-open",
+        "2026-11-14T18:53:09.459885Z  INFO fcvm::console: [fc-agent] restore phase=tcp-cleanup epoch=55f1ce46-fc15-4f8a-92f6-97126b953fef complete elapsed_ms=2.056 destroyed=8 already_gone=0",
+        "2026-11-14T18:53:09.461062Z  INFO fcvm::console: [fc-agent] host clock round trips [1.354158ms, 73.054\u00b5s, 85.557\u00b5s]; stepping to the 73.054\u00b5s one",
+        "2026-11-14T18:53:09.461320Z  INFO fcvm::console: [fc-agent] received host time: 1794682389460471705 ns (read 149.641\u00b5s ago)",
+        "2026-11-14T18:53:09.461558Z  INFO fcvm::console: [fc-agent] system clock synchronized from host (stepped +4.767316 s)",
+        "2026-11-14T18:53:09.461767Z  INFO fcvm::console: [fc-agent] egress proxy reconnected after restore (gen=2)",
+        "2026-11-14T18:53:09.461921Z  INFO fcvm::console: [fc-agent] exec re-registered after restore",
+        "2026-11-14T18:53:09.462840Z  INFO fcvm::commands::snapshot: fc-agent acknowledged exact restore generation vm_id=vm-edcb296c16924049a579df6730f80943 restore_epoch=55f1ce46-fc15-4f8a-92f6-97126b953fef guest_phases={\"ack_connect_ms\":0.548,\"clock_ms\":1.863,\"egress_wait_ms\":0.002,\"exec_wait_ms\":0.0,\"gpu_ms\":0.0,\"gpus\":0,\"ipv6_ms\":0.003,\"neighbor_ms\":1.265,\"neighbour_pin_ms\":1.365,\"nfs_ms\":0.002,\"nfs_renew_failed\":false,\"nfs_renew_ms\":0.0,\"tcp_already_gone\":0,\"tcp_barrier_ms\":0.073,\"tcp_begin_console_ms\":0.001,\"tcp_cleanup_ms\":2.056,\"tcp_cleanup_untimed_ms\":0.016,\"tcp_complete_console_ms\":0.006,\"tcp_construct_ms\":0.148,\"tcp_destroy_datagrams\":1,\"tcp_destroy_ms\":0.195,\"tcp_destroyed\":8,\"tcp_egress_open_ms\":0.247,\"tcp_gate_arm_ms\":0.182,\"tcp_gate_egress_commit_ms\":0.07,\"tcp_gate_egress_read_ms\":0.177,\"tcp_gate_ingress_commit_ms\":0.029,\"tcp_gate_ingress_read_ms\":0.071,\"tcp_gate_netlink\":true,\"tcp_gate_udp_ipv4_ms\":0.18,\"tcp_gate_udp_ipv6_ms\":0.0,\"tcp_gate_verify_ipv4_ms\":0.211,\"tcp_gate_verify_ipv6_ms\":0.2,\"tcp_hook_ms\":0.001,\"tcp_lock_wait_ms\":0.709,\"tcp_reassert_ms\":0.0,\"tcp_reopen_ms\":0.103,\"tcp_verified\":true,\"tcp_verify_ms\":0.476,\"total_ms\":9.258}",
+        "{\"ack_ms\":47,\"backend\":\"uffd\",\"guest_phases\":{\"ack_connect_ms\":0.548,\"clock_ms\":1.863,\"egress_wait_ms\":0.002,\"exec_wait_ms\":0.0,\"gpu_ms\":0.0,\"gpus\":0,\"ipv6_ms\":0.003,\"neighbor_ms\":1.265,\"neighbour_pin_ms\":1.365,\"nfs_ms\":0.002,\"nfs_renew_failed\":false,\"nfs_renew_ms\":0.0,\"tcp_already_gone\":0,\"tcp_barrier_ms\":0.073,\"tcp_begin_console_ms\":0.001,\"tcp_cleanup_ms\":2.056,\"tcp_cleanup_untimed_ms\":0.016,\"tcp_complete_console_ms\":0.006,\"tcp_construct_ms\":0.148,\"tcp_destroy_datagrams\":1,\"tcp_destroy_ms\":0.195,\"tcp_destroyed\":8,\"tcp_egress_open_ms\":0.247,\"tcp_gate_arm_ms\":0.182,\"tcp_gate_egress_commit_ms\":0.07,\"tcp_gate_egress_read_ms\":0.177,\"tcp_gate_ingress_commit_ms\":0.029,\"tcp_gate_ingress_read_ms\":0.071,\"tcp_gate_netlink\":true,\"tcp_gate_udp_ipv4_ms\":0.18,\"tcp_gate_udp_ipv6_ms\":0.0,\"tcp_gate_verify_ipv4_ms\":0.211,\"tcp_gate_verify_ipv6_ms\":0.2,\"tcp_hook_ms\":0.001,\"tcp_lock_wait_ms\":0.709,\"tcp_reassert_ms\":0.0,\"tcp_reopen_ms\":0.103,\"tcp_verified\":true,\"tcp_verify_ms\":0.476,\"total_ms\":9.258},\"hypervisor\":\"firecracker\",\"name\":\"rb-16989727a07e4228a709da4a8f6d89f2-0-htmlfast\",\"snapshot\":\"cb-live-w3\",\"status\":\"restored\",\"vm_id\":\"vm-edcb296c16924049a579df6730f80943\"}",
+        "2026-11-14T18:53:09.463022Z  INFO fcvm::console: [fc-agent] thawed 1 container cgroup(s)",
+        "2026-11-14T18:53:09.463474Z  INFO fcvm::console: [fc-agent] snapshot network published: destroyed=8 already_gone=0 verified_armed=true link=UNTOUCHED gate=open",
+        "2026-11-14T18:53:09.463907Z  INFO fcvm::console: [fc-agent] restore phases complete (epoch=55f1ce46-fc15-4f8a-92f6-97126b953fef): exec + egress ready elapsed_ms=9.258",
+        "2026-11-14T18:53:09.464121Z  INFO fcvm::console: [fc-agent] restore-completion ACK connect syscall took 0 ms",
+        "2026-11-14T18:53:09.464305Z  INFO fcvm::console: [fc-agent] restore-completion ACK connected in 1 ms",
+        "2026-11-14T18:53:09.464456Z  INFO fcvm::console: [fc-agent] output vsock reconnect (flag)",
+        "2026-11-14T18:53:09.465085Z  INFO fcvm::console: [fc-agent] output vsock reconnected",
+        "2026-11-14T18:53:09.465290Z  INFO fcvm::console: [fc-agent] container started, notified host via vsock",
+        "2026-11-14T18:53:09.465763Z  INFO fcvm::console: [fc-agent] vsock transport reset observed; fast-polling restore-epoch",
+        "2026-11-14T18:53:09.466954Z  INFO fcvm::network::pasta: guest answered and its MAC is resolved guest_ip=\"10.0.2.100\" probe_port=9222 readiness_ms=4.041078 rounds=1 stalled_attempts=0 neighbor=10.0.2.100 lladdr 02:da:3e:6c:57:cc REACHABLE",
+        "2026-11-14T18:53:09.469488Z DEBUG fcvm::network::pasta: port forward ready addr=127.0.0.2:9222",
+        "2026-11-14T18:53:09.470444Z  INFO fcvm::console: [fc-agent] chronyd restarted after restore (epoch=55f1ce46-fc15-4f8a-92f6-97126b953fef) with 4 NTP source(s)",
+        "2026-11-14T18:53:09.476533Z  INFO fcvm::console: [fc-agent] exec server: accepted connection on vsock port 4998",
+        "2026-11-14T18:53:09.511860Z  INFO fcvm::console: [fc-agent] journald restarted after restore",
+        "2026-11-14T18:53:09.518811Z  INFO fcvm::console: [fc-agent] exec server: accepted connection on vsock port 4998",
+        "2026-11-14T18:53:09.562149Z  WARN fcvm::pasta: Flow 1 (TCP connection (spliced)): shutdown() on HOST: Transport endpoint is not connected",
+        "2026-11-14T18:53:09.573576Z  INFO fcvm::console: [fc-agent] exec server: accepted connection on vsock port 4998",
+        "2026-11-14T18:53:09.666543Z  INFO fcvm::console: [fc-agent] exec server: accepted connection on vsock port 4998"
+      ],
+      "matched": 56,
+      "path": "/home/ubuntu/campaign/src/fcvm/bench/chromium/results/live-w3/reqbench/rb-16989727a07e4228a709da4a8f6d89f2-0-htmlfast.log",
+      "truncated": false
+    },
+    "pasta": {
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/mnt/fcvm-btrfs/pasta-vm-edcb2.pid'",
+      "pid_file": "/mnt/fcvm-btrfs/pasta-vm-edcb2.pid"
+    }
+  },
+  "interrupted_by_signal": 0,
+  "log_path": "/home/ubuntu/campaign/src/fcvm/bench/chromium/results/live-w3/reqbench/rb-16989727a07e4228a709da4a8f6d89f2-0-htmlfast.log",
+  "name": "rb-16989727a07e4228a709da4a8f6d89f2-0-htmlfast",
+  "rep": 0,
+  "request_error": null,
+  "role": "control",
+  "run_id": "16989727a07e4228a709da4a8f6d89f2",
+  "schema": "fcvm-cdp-failure-probe-v1",
+  "state_path": "/mnt/fcvm-btrfs/state/vm-edcb296c16924049a579df6730f80943.json",
+  "vm_id": "vm-edcb296c16924049a579df6730f80943"
+}

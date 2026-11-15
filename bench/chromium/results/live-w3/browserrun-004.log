@@ -1,0 +1,92 @@
+correctness chromium ok  example.com_root
+correctness chromium ok  news.ycombinator.com_root
+correctness chromium ok  developers.cloudflare.com_root
+correctness chromium ok  blog.cloudflare.com_root
+correctness chromium ok  en.wikipedia.org_root
+correctness chromium ok  developer.mozilla.org_en-US
+correctness chromium ok  www.elmundo.es_root
+correctness chromium ok  www.rtp.pt_noticias
+correctness chromium ok  www.theguardian.com_international
+correctness chromium ok  todomvc.com_examples-javascript-es6-dist
+correctness chromium ok  todomvc.com_examples-react-dist-index.html
+correctness chromium ok  todomvc.com_examples-vue-dist
+correctness chromium ok  todomvc.com_examples-angular-dist-browser
+correctness chromium ok  todomvc.com_examples-preact-dist
+correctness kitesurf ok  example.com_root
+correctness kitesurf ok  news.ycombinator.com_root
+correctness kitesurf ok  developers.cloudflare.com_root
+correctness kitesurf ok  blog.cloudflare.com_root
+correctness kitesurf ok  en.wikipedia.org_root
+correctness kitesurf ok  developer.mozilla.org_en-US
+correctness kitesurf ok  www.elmundo.es_root
+correctness kitesurf ok  www.rtp.pt_noticias
+correctness kitesurf ok  www.theguardian.com_international
+correctness kitesurf ok  todomvc.com_examples-javascript-es6-dist
+correctness kitesurf ok  todomvc.com_examples-react-dist-index.html
+correctness kitesurf ok  todomvc.com_examples-vue-dist
+correctness kitesurf ok  todomvc.com_examples-angular-dist-browser
+correctness kitesurf ok  todomvc.com_examples-preact-dist
+kitesurf content    rep   0 ok     645.1 ms CMH 
+kitesurf screenshot rep   0 ok    1049.7 ms CMH 
+chromium content    rep   0 ok     864.9 ms CMH 
+chromium screenshot rep   0 ok     492.7 ms CMH 
+kitesurf screenshot rep   1 ok     958.2 ms CMH 
+chromium screenshot rep   1 ok    1056.2 ms CMH 
+kitesurf content    rep   1 ok     871.5 ms CMH 
+chromium content    rep   1 ok     776.5 ms CMH 
+kitesurf screenshot rep   2 ok    3040.7 ms CMH 
+chromium screenshot rep   2 ok    1071.9 ms CMH 
+chromium content    rep   2 ok     852.9 ms CMH 
+kitesurf content    rep   2 ok    1241.9 ms CMH 
+chromium content    rep   3 ok    1788.3 ms CMH 
+kitesurf screenshot rep   3 ok    4734.2 ms CMH 
+kitesurf content    rep   3 ok    1459.1 ms CMH 
+chromium screenshot rep   3 ok    1069.0 ms CMH 
+chromium content    rep   4 ok     817.1 ms CMH 
+chromium screenshot rep   4 ok     974.3 ms CMH 
+kitesurf screenshot rep   4 ok    1922.3 ms CMH 
+kitesurf content    rep   4 ok    1319.5 ms CMH 
+chromium screenshot rep   5 ok     764.7 ms CMH 
+kitesurf screenshot rep   5 ok    2750.3 ms CMH 
+chromium content    rep   5 ok    1276.6 ms CMH 
+kitesurf content    rep   5 ok    1667.8 ms CMH 
+chromium screenshot rep   6 ok    2977.6 ms CMH 
+kitesurf content    rep   6 ok    2260.3 ms CMH 
+chromium content    rep   6 ok    2391.1 ms CMH 
+kitesurf screenshot rep   6 ok   11031.9 ms CMH 
+chromium content    rep   7 ok    2668.5 ms CMH 
+kitesurf content    rep   7 ok    2548.3 ms CMH 
+chromium screenshot rep   7 ok    2083.7 ms CMH 
+kitesurf screenshot rep   7 ok    5397.4 ms CMH 
+kitesurf content    rep   8 ok    3331.6 ms CMH 
+chromium content    rep   8 ok    1343.8 ms CMH 
+chromium screenshot rep   8 ok    2522.2 ms CMH 
+kitesurf screenshot rep   8 ok    6362.3 ms CMH 
+chromium screenshot rep   9 ok     821.5 ms CMH 
+kitesurf screenshot rep   9 ok     912.6 ms CMH 
+chromium content    rep   9 ok     488.7 ms CMH 
+kitesurf content    rep   9 ok     485.0 ms CMH 
+kitesurf screenshot rep  10 ok     887.7 ms CMH 
+kitesurf content    rep  10 ok     760.0 ms CMH 
+chromium screenshot rep  10 ok     545.4 ms CMH 
+chromium content    rep  10 ok    1164.1 ms CMH 
+chromium screenshot rep  11 ok     756.3 ms CMH 
+kitesurf content    rep  11 ok     554.5 ms CMH 
+kitesurf screenshot rep  11 ok     577.3 ms CMH 
+chromium content    rep  11 ok     664.8 ms CMH 
+kitesurf screenshot rep  12 ok     669.0 ms CMH 
+chromium screenshot rep  12 ok     753.8 ms CMH 
+kitesurf content    rep  12 ok    1138.0 ms CMH 
+chromium content    rep  12 ok     508.2 ms CMH 
+chromium screenshot rep  13 ok     750.3 ms CMH 
+kitesurf screenshot rep  13 ok     618.2 ms CMH 
+kitesurf content    rep  13 ok     497.9 ms CMH 
+chromium content    rep  13 ok     840.1 ms CMH 
+kitesurf content    rep  14 ok     698.6 ms CMH 
+kitesurf screenshot rep  14 ok     747.1 ms CMH 
+chromium screenshot rep  14 ok     530.4 ms CMH 
+chromium content    rep  14 ok     595.5 ms CMH 
+chromium/content: 14/14 succeeded, p50 846.5 ms, colos ['CMH']
+chromium/screenshot: 14/14 succeeded, p50 897.9 ms, colos ['CMH']
+kitesurf/content: 14/14 succeeded, p50 1190.0 ms, colos ['CMH']
+kitesurf/screenshot: 14/14 succeeded, p50 1440.2 ms, colos ['CMH']
