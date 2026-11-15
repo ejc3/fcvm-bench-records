@@ -1,0 +1,35 @@
+
+ ⛅️ wrangler 4.131.2
+────────────────────
+kitesurf-local has access to the following bindings:
+Binding                                                                                   Resource                  Mode
+env.FIXTURES (kitesurf-fixtures)                                                          Worker                    local [not connected]
+env.FONT_ASSETS                                                                           Assets                    local
+env.KITESURF_ENV ("local")                                                                Environment Variable      local
+env.KITESURF_VERSION ("dev")                                                              Environment Variable      local
+env.KITESURF_RESOURCE_DRAIN_QUIET_TURNS ("5")                                             Environment Variable      local
+env.KITESURF_SIMULATE_PROD_EVAL ("")                                                      Environment Variable      local
+env.KITESURF_DISABLE_PARTIAL_RASTER ("")                                                  Environment Variable      local
+env.KITESURF_PAGE_CPU_MS_CAP ("")                                                         Environment Variable      local
+env.KITESURF_PAGE_WALL_MS_CAP ("")                                                        Environment Variable      local
+env.KITESURF_LAG_WATCHDOG ("1")                                                           Environment Variable      local
+env.KITESURF_INSPECTOR_BASE_URL ("/inspector/inspector.html")                             Environment Variable      local
+env.KITESURF_INSPECTOR_FALLBACK_URL ("https://chrome-devtools-frontend.apps...")          Environment Variable      local
+env.KITESURF_ALLOW_PRIVATE_NETWORK ("")                                                   Environment Variable      local
+env.WEB_BOT_AUTH_SIGNATURE_AGENT ("")                                                     Environment Variable      local
+env.KITESURF_OTLP_ENDPOINT ("http://localhost:4318/v1/traces")                            Environment Variable      local
+env.LOADER                                                                                Worker Loader             local
+
+
+Service bindings, Durable Object bindings, and Tail consumers connect to other Wrangler or Vite dev processes running locally, with their connection status indicated by [connected] or [not connected]. For more details, refer to https://developers.cloudflare.com/workers/runtime-apis/bindings/service-bindings/#local-development
+
+[wrangler:warn] Unable to fetch the `Request.cf` object! Falling back to a default placeholder...
+Error: getaddrinfo ENOTFOUND workers.cloudflare.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)
+    at GetAddrInfoReqWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mEACCES: permission denied, mkdir '/home/ubuntu/.config/.wrangler'[0m
+
+
+[32mIf you think this is a bug then please create an issue at https://github.com/cloudflare/workers-sdk/issues/new/choose[0m
+🪵  Logs were written to "/home/ubuntu/campaign/src/fcvm/bench/chromium/results/corpusextra-ks-fa13c8e5ea1b4cc090d4559a8ec500c4/kitesurf/wrangler-logs/wrangler-2026-11-15_06-13-59_899.log"

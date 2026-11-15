@@ -1,0 +1,81 @@
+fuse-backend-rs: git+https://github.com/ejc3/fuse-backend-rs.git?branch=master#60364425ae45ac64e26d784c99ebf850544530b1
+fuser: git+https://github.com/ejc3/fuser.git?branch=read-buf-noreserve#711525f9a85c10088e6594e0589f61607550afa2
+==> Building...
+    Finished `release` profile [optimized] target(s) in 0.14s
+    Finished `release` profile [optimized] target(s) in 0.09s
+Generated config at: /home/ubuntu/.config/fcvm/rootfs-config.toml
+
+Customize the config file, then run:
+  sudo fcvm setup
+==> /mnt/fcvm-btrfs already on btrfs
+==> Running fcvm setup (default kernel; builds only if release is absent)...
+sudo  ./target/release/fcvm setup --generate-config --force
+Generated config at: /root/.config/fcvm/rootfs-config.toml
+
+Customize the config file, then run:
+  sudo fcvm setup
+./target/release/fcvm setup --kernel-profile default --build-kernels --config "/home/ubuntu/campaign/src/fcvm/rootfs-config.toml"
+Setting up fcvm (this may take 5-10 minutes on first run)...
+  ✓ Kernel ready: /mnt/fcvm-btrfs/kernels/vmlinux-default-7.3.3-aarch64-ca1837829fd0.bin
+  ✓ Pasta ready: /mnt/fcvm-btrfs/pasta/pasta-4707649d2acb.bin
+
+Setting up kernel profile 'default': Default fcvm guest kernel
+  ✓ Profile kernel ready: /mnt/fcvm-btrfs/kernels/vmlinux-default-7.3.3-aarch64-ca1837829fd0.bin
+  ✓ Rootfs ready: /mnt/fcvm-btrfs/rootfs/layer2-8f669c1f42ef.raw
+  ✓ Initrd ready: /mnt/fcvm-btrfs/initrd/fc-agent-028639085ddd.initrd
+
+For 'default' profile, use:
+  fcvm podman run --kernel-profile default --privileged ...
+
+Setup complete! You can now run VMs with: fcvm podman run ...
+
+=== 06:13:41 starting corpus_serve (DNS 127.0.0.1:53 -> 10.0.2.2, HTTP 80, HTTPS 443)
+
+=== 06:13:42 corpus complete: all 14 URLs replay locally
+
+=== 06:13:42 kitesurf over the corpus: 202 measured reps plus 28 warmup per arm, engine /mnt/fcvm-btrfs/kitesurf
+06:13:42 verifying the Kitesurf build seal (4a2903813a22b08d4f3cc64a4b35339d0293a5d1)
+139 captured hosts mapped to 127.0.0.1
+06:13:43 correctness: starting the bench image's Chromium for its own render check
+06:13:59 starting Kitesurf (wrangler dev, workerd) on 127.0.0.1:28787 in scope kitesurf-fa13c8e5ea1b4cc090d4559a8ec500c4-kitesurf
+
+ ⛅️ wrangler 4.131.2
+────────────────────
+kitesurf-local has access to the following bindings:
+Binding                                                                                   Resource                  Mode
+env.FIXTURES (kitesurf-fixtures)                                                          Worker                    local [not connected]
+env.FONT_ASSETS                                                                           Assets                    local
+env.KITESURF_ENV ("local")                                                                Environment Variable      local
+env.KITESURF_VERSION ("dev")                                                              Environment Variable      local
+env.KITESURF_RESOURCE_DRAIN_QUIET_TURNS ("5")                                             Environment Variable      local
+env.KITESURF_SIMULATE_PROD_EVAL ("")                                                      Environment Variable      local
+env.KITESURF_DISABLE_PARTIAL_RASTER ("")                                                  Environment Variable      local
+env.KITESURF_PAGE_CPU_MS_CAP ("")                                                         Environment Variable      local
+env.KITESURF_PAGE_WALL_MS_CAP ("")                                                        Environment Variable      local
+env.KITESURF_LAG_WATCHDOG ("1")                                                           Environment Variable      local
+env.KITESURF_INSPECTOR_BASE_URL ("/inspector/inspector.html")                             Environment Variable      local
+env.KITESURF_INSPECTOR_FALLBACK_URL ("https://chrome-devtools-frontend.apps...")          Environment Variable      local
+env.KITESURF_ALLOW_PRIVATE_NETWORK ("")                                                   Environment Variable      local
+env.WEB_BOT_AUTH_SIGNATURE_AGENT ("")                                                     Environment Variable      local
+env.KITESURF_OTLP_ENDPOINT ("http://localhost:4318/v1/traces")                            Environment Variable      local
+env.LOADER                                                                                Worker Loader             local
+
+
+Service bindings, Durable Object bindings, and Tail consumers connect to other Wrangler or Vite dev processes running locally, with their connection status indicated by [connected] or [not connected]. For more details, refer to https://developers.cloudflare.com/workers/runtime-apis/bindings/service-bindings/#local-development
+
+[wrangler:warn] Unable to fetch the `Request.cf` object! Falling back to a default placeholder...
+Error: getaddrinfo ENOTFOUND workers.cloudflare.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)
+    at GetAddrInfoReqWrap.callbackTrampoline (node:internal/async_hooks:130:17)
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mEACCES: permission denied, mkdir '/home/ubuntu/.config/.wrangler'[0m
+
+
+[32mIf you think this is a bug then please create an issue at https://github.com/cloudflare/workers-sdk/issues/new/choose[0m
+🪵  Logs were written to "/home/ubuntu/campaign/src/fcvm/bench/chromium/results/corpusextra-ks-fa13c8e5ea1b4cc090d4559a8ec500c4/kitesurf/wrangler-logs/wrangler-2026-11-15_06-13-59_899.log"
+FAILED: the engine exited during start-up
+
+=== 06:14:03 stopping corpus_serve job (816723)
+
+=== 06:14:04 corpus_serve exit status: 0
+make: *** [Makefile:1313: bench-chromium-corpus-extra] Error 1

@@ -1,0 +1,237 @@
+
+--- 2026-11-15T06:14:00.063Z debug
+🪵  Writing logs to "/home/ubuntu/campaign/src/fcvm/bench/chromium/results/corpusextra-ks-fa13c8e5ea1b4cc090d4559a8ec500c4/kitesurf/wrangler-logs/wrangler-2026-11-15_06-13-59_899.log"
+---
+
+--- 2026-11-15T06:14:00.063Z debug
+Failed to parse config for metrics. Using defaults. TypeError: configPath.endsWith is not a function
+    at parseRawConfigFile (/mnt/fcvm-btrfs/kitesurf/src/node_modules/.pnpm/wrangler@4.131.2_@cloudflare+workers-types@5.20260911.1_@types+node@25.9.5/node_modules/wrangler/wrangler-dist/cli.js:3519:22)
+    at Object.experimental_readRawConfig (/mnt/fcvm-btrfs/kitesurf/src/node_modules/.pnpm/wrangler@4.131.2_@cloudflare+workers-types@5.20260911.1_@types+node@25.9.5/node_modules/wrangler/wrangler-dist/cli.js:3529:25)
+    at /mnt/fcvm-btrfs/kitesurf/src/node_modules/.pnpm/wrangler@4.131.2_@cloudflare+workers-types@5.20260911.1_@types+node@25.9.5/node_modules/wrangler/wrangler-dist/cli.js:355313:51
+    at /mnt/fcvm-btrfs/kitesurf/src/node_modules/.pnpm/wrangler@4.131.2_@cloudflare+workers-types@5.20260911.1_@types+node@25.9.5/node_modules/wrangler/wrangler-dist/cli.js:193468:22
+    at Array.reduce (<anonymous>)
+    at applyMiddleware (/mnt/fcvm-btrfs/kitesurf/src/node_modules/.pnpm/wrangler@4.131.2_@cloudflare+workers-types@5.20260911.1_@types+node@25.9.5/node_modules/wrangler/wrangler-dist/cli.js:193456:22)
+    at CommandInstance.applyMiddlewareAndGetResult (/mnt/fcvm-btrfs/kitesurf/src/node_modules/.pnpm/wrangler@4.131.2_@cloudflare+workers-types@5.20260911.1_@types+node@25.9.5/node_modules/wrangler/wrangler-dist/cli.js:193819:34)
+    at CommandInstance.runCommand (/mnt/fcvm-btrfs/kitesurf/src/node_modules/.pnpm/wrangler@4.131.2_@cloudflare+workers-types@5.20260911.1_@types+node@25.9.5/node_modules/wrangler/wrangler-dist/cli.js:193727:216)
+    at [runYargsParserAndExecuteCommands] (/mnt/fcvm-btrfs/kitesurf/src/node_modules/.pnpm/wrangler@4.131.2_@cloudflare+workers-types@5.20260911.1_@types+node@25.9.5/node_modules/wrangler/wrangler-dist/cli.js:196549:96)
+    at YargsInstance.parse (/mnt/fcvm-btrfs/kitesurf/src/node_modules/.pnpm/wrangler@4.131.2_@cloudflare+workers-types@5.20260911.1_@types+node@25.9.5/node_modules/wrangler/wrangler-dist/cli.js:195886:63)
+---
+
+--- 2026-11-15T06:14:00.065Z debug
+.env file not found at "/mnt/fcvm-btrfs/kitesurf/src/packages/engine/.env". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-11-15T06:14:00.065Z debug
+.env file not found at "/mnt/fcvm-btrfs/kitesurf/src/packages/engine/.env.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-11-15T06:14:00.066Z debug
+.env file not found at "/mnt/fcvm-btrfs/kitesurf/src/packages/engine/.env.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-11-15T06:14:00.066Z debug
+.env file not found at "/mnt/fcvm-btrfs/kitesurf/src/packages/engine/.env.local.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-11-15T06:14:00.084Z log
+
+ ⛅️ wrangler 4.131.2
+────────────────────
+---
+
+--- 2026-11-15T06:14:00.086Z debug
+Error sending metrics event Error: EACCES: permission denied, mkdir '/home/ubuntu/.config/.wrangler'
+    at Object.mkdirSync (node:fs:1370:26)
+    at writeMetricsConfig (/mnt/fcvm-btrfs/kitesurf/src/node_modules/.pnpm/wrangler@4.131.2_@cloudflare+workers-types@5.20260911.1_@types+node@25.9.5/node_modules/wrangler/wrangler-dist/cli.js:151066:8)
+    at getDeviceId (/mnt/fcvm-btrfs/kitesurf/src/node_modules/.pnpm/wrangler@4.131.2_@cloudflare+workers-types@5.20260911.1_@types+node@25.9.5/node_modules/wrangler/wrangler-dist/cli.js:151101:5)
+    at getMetricsConfig (/mnt/fcvm-btrfs/kitesurf/src/node_modules/.pnpm/wrangler@4.131.2_@cloudflare+workers-types@5.20260911.1_@types+node@25.9.5/node_modules/wrangler/wrangler-dist/cli.js:151034:20)
+    at currentAgentSkillsInstalledForTelemetry (/mnt/fcvm-btrfs/kitesurf/src/node_modules/.pnpm/wrangler@4.131.2_@cloudflare+workers-types@5.20260911.1_@types+node@25.9.5/node_modules/wrangler/wrangler-dist/cli.js:151232:10)
+    at Object.sendCommandEvent (/mnt/fcvm-btrfs/kitesurf/src/node_modules/.pnpm/wrangler@4.131.2_@cloudflare+workers-types@5.20260911.1_@types+node@25.9.5/node_modules/wrangler/wrangler-dist/cli.js:151213:11)
+    at /mnt/fcvm-btrfs/kitesurf/src/node_modules/.pnpm/wrangler@4.131.2_@cloudflare+workers-types@5.20260911.1_@types+node@25.9.5/node_modules/wrangler/wrangler-dist/cli.js:224212:20
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at run (/mnt/fcvm-btrfs/kitesurf/src/node_modules/.pnpm/wrangler@4.131.2_@cloudflare+workers-types@5.20260911.1_@types+node@25.9.5/node_modules/wrangler/wrangler-dist/cli.js:177897:61)
+    at Object.handler (/mnt/fcvm-btrfs/kitesurf/src/node_modules/.pnpm/wrangler@4.131.2_@cloudflare+workers-types@5.20260911.1_@types+node@25.9.5/node_modules/wrangler/wrangler-dist/cli.js:224169:13) {
+  errno: -13,
+  code: 'EACCES',
+  syscall: 'mkdir',
+  path: '/home/ubuntu/.config/.wrangler'
+}
+---
+
+--- 2026-11-15T06:14:00.094Z debug
+setting config
+---
+
+--- 2026-11-15T06:14:00.094Z debug
+Updating config... undefined undefined
+---
+
+--- 2026-11-15T06:14:00.113Z debug
+local dev variables file not found at ".dev.vars.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-11-15T06:14:00.113Z debug
+local dev variables file not found at ".dev.vars". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-11-15T06:14:00.113Z debug
+.env file not found at "/mnt/fcvm-btrfs/kitesurf/src/packages/engine/.env". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-11-15T06:14:00.113Z debug
+.env file not found at "/mnt/fcvm-btrfs/kitesurf/src/packages/engine/.env.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-11-15T06:14:00.113Z debug
+.env file not found at "/mnt/fcvm-btrfs/kitesurf/src/packages/engine/.env.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-11-15T06:14:00.113Z debug
+.env file not found at "/mnt/fcvm-btrfs/kitesurf/src/packages/engine/.env.local.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-11-15T06:14:00.115Z log
+kitesurf-local has access to the following bindings:
+---
+
+--- 2026-11-15T06:14:00.115Z log
+Binding                                                                                   Resource                  Mode
+---
+
+--- 2026-11-15T06:14:00.115Z log
+env.FIXTURES (kitesurf-fixtures)                                                          Worker                    local [not connected]
+---
+
+--- 2026-11-15T06:14:00.115Z log
+env.FONT_ASSETS                                                                           Assets                    local
+---
+
+--- 2026-11-15T06:14:00.115Z log
+env.KITESURF_ENV ("local")                                                                Environment Variable      local
+---
+
+--- 2026-11-15T06:14:00.115Z log
+env.KITESURF_VERSION ("dev")                                                              Environment Variable      local
+---
+
+--- 2026-11-15T06:14:00.115Z log
+env.KITESURF_RESOURCE_DRAIN_QUIET_TURNS ("5")                                             Environment Variable      local
+---
+
+--- 2026-11-15T06:14:00.115Z log
+env.KITESURF_SIMULATE_PROD_EVAL ("")                                                      Environment Variable      local
+---
+
+--- 2026-11-15T06:14:00.116Z log
+env.KITESURF_DISABLE_PARTIAL_RASTER ("")                                                  Environment Variable      local
+---
+
+--- 2026-11-15T06:14:00.116Z log
+env.KITESURF_PAGE_CPU_MS_CAP ("")                                                         Environment Variable      local
+---
+
+--- 2026-11-15T06:14:00.116Z log
+env.KITESURF_PAGE_WALL_MS_CAP ("")                                                        Environment Variable      local
+---
+
+--- 2026-11-15T06:14:00.116Z log
+env.KITESURF_LAG_WATCHDOG ("1")                                                           Environment Variable      local
+---
+
+--- 2026-11-15T06:14:00.116Z log
+env.KITESURF_INSPECTOR_BASE_URL ("/inspector/inspector.html")                             Environment Variable      local
+---
+
+--- 2026-11-15T06:14:00.116Z log
+env.KITESURF_INSPECTOR_FALLBACK_URL ("https://chrome-devtools-frontend.apps...")          Environment Variable      local
+---
+
+--- 2026-11-15T06:14:00.116Z log
+env.KITESURF_ALLOW_PRIVATE_NETWORK ("")                                                   Environment Variable      local
+---
+
+--- 2026-11-15T06:14:00.116Z log
+env.WEB_BOT_AUTH_SIGNATURE_AGENT ("")                                                     Environment Variable      local
+---
+
+--- 2026-11-15T06:14:00.116Z log
+env.KITESURF_OTLP_ENDPOINT ("http://localhost:4318/v1/traces")                            Environment Variable      local
+---
+
+--- 2026-11-15T06:14:00.116Z log
+env.LOADER                                                                                Worker Loader             local
+---
+
+--- 2026-11-15T06:14:00.116Z log
+
+---
+
+--- 2026-11-15T06:14:00.116Z log
+
+Service bindings, Durable Object bindings, and Tail consumers connect to other Wrangler or Vite dev processes running locally, with their connection status indicated by [connected] or [not connected]. For more details, refer to https://developers.cloudflare.com/workers/runtime-apis/bindings/service-bindings/#local-development
+
+---
+
+--- 2026-11-15T06:14:00.132Z debug
+setting config
+---
+
+--- 2026-11-15T06:14:00.132Z debug
+Updating config... undefined undefined
+---
+
+--- 2026-11-15T06:14:00.172Z debug
+local dev variables file not found at "test/fixtures-worker/.dev.vars.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-11-15T06:14:00.172Z debug
+local dev variables file not found at "test/fixtures-worker/.dev.vars". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-11-15T06:14:00.172Z debug
+.env file not found at "/mnt/fcvm-btrfs/kitesurf/src/packages/engine/test/fixtures-worker/.env". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-11-15T06:14:00.172Z debug
+.env file not found at "/mnt/fcvm-btrfs/kitesurf/src/packages/engine/test/fixtures-worker/.env.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-11-15T06:14:00.172Z debug
+.env file not found at "/mnt/fcvm-btrfs/kitesurf/src/packages/engine/test/fixtures-worker/.env.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-11-15T06:14:00.172Z debug
+.env file not found at "/mnt/fcvm-btrfs/kitesurf/src/packages/engine/test/fixtures-worker/.env.local.local". Continuing... For more details, refer to https://developers.cloudflare.com/workers/wrangler/system-environment-variables/
+---
+
+--- 2026-11-15T06:14:01.794Z debug
+Writing additional module to output /mnt/fcvm-btrfs/kitesurf/src/packages/engine/.wrangler/tmp/dev-nYKwpl/540fdfdebf9198ade3b634364ecfe4432461c35b-stylesheet.css
+---
+
+--- 2026-11-15T06:14:01.795Z debug
+Writing additional module to output /mnt/fcvm-btrfs/kitesurf/src/packages/engine/.wrangler/tmp/dev-nYKwpl/94cd05a17ab71d50a930f3626e2630ba768212a5-public-suffix-list.dat
+---
+
+--- 2026-11-15T06:14:01.796Z debug
+Writing additional module to output /mnt/fcvm-btrfs/kitesurf/src/packages/engine/.wrangler/tmp/dev-nYKwpl/145ade5a96436efac9f13ab793a28385ffae6fb9-renderer_core.glue.js
+---
+
+--- 2026-11-15T06:14:01.796Z debug
+Writing additional module to output /mnt/fcvm-btrfs/kitesurf/src/packages/engine/.wrangler/tmp/dev-nYKwpl/d21d41001056add4d8c6239eea7e7b770956c70a-kitesurf_core.glue.js
+---
+
+--- 2026-11-15T06:14:01.796Z debug
+Writing additional module to output /mnt/fcvm-btrfs/kitesurf/src/packages/engine/.wrangler/tmp/dev-nYKwpl/9f2c9ae5a20c0f9011e8c9625b1950dd8beb21ee-stylesheet-level2.css
+---
+
+--- 2026-11-15T06:14:01.796Z debug
+Writing additional module to output /mnt/fcvm-btrfs/kitesurf/src/packages/engine/.wrangler/tmp/dev-nYKwpl/d27054f6d90d83e18e4233cc5840662b98cfaa73-focus.css
+---
+
+--- 2026-11-15T06:14:01.874Z debug
+Writing additional module to output /mnt/fcvm-btrfs/kitesurf/src/packages/engine/.wrangler/tmp/dev-nYKwpl/89d44b13494f94460d64b56308381730da16c373-renderer_core_bg.wasm
+---
+
+--- 2026-11-15T06:14:01.954Z debug
+Writing additional module to output /mnt/fcvm-btrfs/kitesurf/src/packages/engine/.wrangler/tmp/dev-nYKwpl/573a194bd9e0bf4e3f990b34dfde6783d51be049-kitesurf_core_bg.wasm
+---

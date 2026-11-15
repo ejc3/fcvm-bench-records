@@ -1,0 +1,20 @@
+{
+ "arch": "aarch64",
+ "bazel": "9.3.0",
+ "kitesurf_repo": "https://github.com/cloudflare/kitesurf.git",
+ "kitesurf_rev": "4a2903813a22b08d4f3cc64a4b35339d0293a5d1",
+ "miniflare": [
+  "5.20260911.1-alpha"
+ ],
+ "node": "v22.23.4",
+ "node_sha256": "7e48183361053f039294fbbc3ba586722fe756bf296d6cb8195356d10819cd16",
+ "pnpm": "9.15.4",
+ "tree_files": 10821,
+ "tree_sha256": "fc3bc95ec31378ca1dcfb4b983bde383998a46cd5bb6c04cd7084462bcbc2408",
+ "workerd": {
+  "node_modules/.pnpm/@cloudflare+workerd-linux-arm64@1.20260911.1/node_modules/@cloudflare/workerd-linux-arm64/bin/workerd": "3f4542165f63d9018739d14688f462430a055e71b4cf06321c51d77e2ffc6b35"
+ },
+ "wrangler": [
+  "4.131.2"
+ ]
+}
