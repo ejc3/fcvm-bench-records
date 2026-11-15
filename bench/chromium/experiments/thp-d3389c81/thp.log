@@ -1,0 +1,30 @@
+=== 2026-11-09T15:50:47Z thp-a1
+rc=0 thp-a1
+--- a1 clone=746137 firecracker=746538
+Rss:              267524 kB
+Pss:              266049 kB
+Private_Clean:    210744 kB
+Private_Dirty:     55232 kB
+AnonHugePages:         0 kB
+FilePmdMapped:         0 kB
+memory.bin served from huge tmpfs: ShmemHugePages:   864256 kB ShmemPmdMapped:        0 kB 
+=== 2026-11-09T16:08:33Z thp-b
+rc=0 thp-b
+--- b clone=1341074 firecracker=1341475
+Rss:              770036 kB
+Pss:              768567 kB
+Private_Clean:      2304 kB
+Private_Dirty:    766188 kB
+AnonHugePages:         0 kB
+FilePmdMapped:         0 kB
+memory.bin back on btrfs
+=== 2026-11-09T16:26:04Z thp-a2
+rc=0 thp-a2
+--- a2 clone=1936287 firecracker=1936688
+Rss:              303048 kB
+Pss:              301575 kB
+Private_Clean:    246028 kB
+Private_Dirty:     55472 kB
+AnonHugePages:         0 kB
+FilePmdMapped:         0 kB
+=== 2026-11-09T16:43:55Z thp done
